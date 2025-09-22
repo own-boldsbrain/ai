@@ -1,12 +1,19 @@
 import {
+<<<<<<< HEAD
   TranscriptionModelV2,
   TranscriptionModelV2CallOptions,
   TranscriptionModelV2CallWarning,
+=======
+  TranscriptionModelV1,
+  TranscriptionModelV1CallOptions,
+  TranscriptionModelV1CallWarning,
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 } from '@ai-sdk/provider';
 import {
   combineHeaders,
   convertBase64ToUint8Array,
   createJsonResponseHandler,
+<<<<<<< HEAD
   mediaTypeToExtension,
   parseProviderOptions,
   postFormDataToApi,
@@ -15,6 +22,15 @@ import { z } from 'zod/v4';
 import { ElevenLabsConfig } from './elevenlabs-config';
 import { elevenlabsFailedResponseHandler } from './elevenlabs-error';
 import { ElevenLabsTranscriptionModelId } from './elevenlabs-transcription-options';
+=======
+  parseProviderOptions,
+  postFormDataToApi,
+} from '@ai-sdk/provider-utils';
+import { z } from 'zod';
+import { ElevenLabsConfig } from './elevenlabs-config';
+import { elevenlabsFailedResponseHandler } from './elevenlabs-error';
+import { ElevenLabsTranscriptionModelId } from './elevenlabs-transcription-settings';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 import { ElevenLabsTranscriptionAPITypes } from './elevenlabs-api-types';
 
 // https://elevenlabs.io/docs/api-reference/speech-to-text/convert
@@ -27,7 +43,11 @@ const elevenLabsProviderOptionsSchema = z.object({
     .nullish()
     .default('word'),
   diarize: z.boolean().nullish().default(false),
+<<<<<<< HEAD
   fileFormat: z.enum(['pcm_s16le_16', 'other']).nullish().default('other'),
+=======
+  file_format: z.enum(['pcm_s16le_16', 'other']).nullish().default('other'),
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 });
 
 export type ElevenLabsTranscriptionCallOptions = z.infer<
@@ -40,8 +60,13 @@ interface ElevenLabsTranscriptionModelConfig extends ElevenLabsConfig {
   };
 }
 
+<<<<<<< HEAD
 export class ElevenLabsTranscriptionModel implements TranscriptionModelV2 {
   readonly specificationVersion = 'v2';
+=======
+export class ElevenLabsTranscriptionModel implements TranscriptionModelV1 {
+  readonly specificationVersion = 'v1';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
   get provider(): string {
     return this.config.provider;
@@ -52,6 +77,7 @@ export class ElevenLabsTranscriptionModel implements TranscriptionModelV2 {
     private readonly config: ElevenLabsTranscriptionModelConfig,
   ) {}
 
+<<<<<<< HEAD
   private async getArgs({
     audio,
     mediaType,
@@ -61,6 +87,17 @@ export class ElevenLabsTranscriptionModel implements TranscriptionModelV2 {
 
     // Parse provider options
     const elevenlabsOptions = await parseProviderOptions({
+=======
+  private getArgs({
+    audio,
+    mediaType,
+    providerOptions,
+  }: Parameters<TranscriptionModelV1['doGenerate']>[0]) {
+    const warnings: TranscriptionModelV1CallWarning[] = [];
+
+    // Parse provider options
+    const elevenlabsOptions = parseProviderOptions({
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       provider: 'elevenlabs',
       providerOptions,
       schema: elevenLabsProviderOptionsSchema,
@@ -74,12 +111,16 @@ export class ElevenLabsTranscriptionModel implements TranscriptionModelV2 {
         : new Blob([convertBase64ToUint8Array(audio)]);
 
     formData.append('model_id', this.modelId);
+<<<<<<< HEAD
     const fileExtension = mediaTypeToExtension(mediaType);
     formData.append(
       'file',
       new File([blob], 'audio', { type: mediaType }),
       `audio.${fileExtension}`,
     );
+=======
+    formData.append('file', new File([blob], 'audio', { type: mediaType }));
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     formData.append('diarize', 'true');
 
     // Add provider-specific options
@@ -90,7 +131,11 @@ export class ElevenLabsTranscriptionModel implements TranscriptionModelV2 {
         num_speakers: elevenlabsOptions.numSpeakers ?? undefined,
         timestamps_granularity:
           elevenlabsOptions.timestampsGranularity ?? undefined,
+<<<<<<< HEAD
         file_format: elevenlabsOptions.fileFormat ?? undefined,
+=======
+        file_format: elevenlabsOptions.file_format ?? undefined,
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       };
 
       if (typeof elevenlabsOptions.diarize === 'boolean') {
@@ -115,10 +160,17 @@ export class ElevenLabsTranscriptionModel implements TranscriptionModelV2 {
   }
 
   async doGenerate(
+<<<<<<< HEAD
     options: Parameters<TranscriptionModelV2['doGenerate']>[0],
   ): Promise<Awaited<ReturnType<TranscriptionModelV2['doGenerate']>>> {
     const currentDate = this.config._internal?.currentDate?.() ?? new Date();
     const { formData, warnings } = await this.getArgs(options);
+=======
+    options: Parameters<TranscriptionModelV1['doGenerate']>[0],
+  ): Promise<Awaited<ReturnType<TranscriptionModelV1['doGenerate']>>> {
+    const currentDate = this.config._internal?.currentDate?.() ?? new Date();
+    const { formData, warnings } = this.getArgs(options);
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
     const {
       value: response,

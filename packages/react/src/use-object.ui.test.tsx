@@ -1,13 +1,21 @@
 import {
   createTestServer,
   TestResponseController,
+<<<<<<< HEAD
 } from '@ai-sdk/test-server/with-vitest';
+=======
+} from '@ai-sdk/provider-utils/test';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 import '@testing-library/jest-dom/vitest';
 import { cleanup, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { z } from 'zod/v4';
 import { experimental_useObject } from './use-object';
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
+
+const server = createTestServer({
+  '/api/use-object': {},
+});
 
 const server = createTestServer({
   '/api/use-object': {},
@@ -96,7 +104,11 @@ describe('text stream', () => {
       });
 
       it("should send 'test' to the API", async () => {
+<<<<<<< HEAD
         expect(await server.calls[0].requestBodyJson).toBe('test-input');
+=======
+        expect(await server.calls[0].requestBody).toBe('test-input');
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       });
 
       it('should not have an error', async () => {
@@ -161,8 +173,13 @@ describe('text stream', () => {
       });
 
       // this should not be consumed any more:
+<<<<<<< HEAD
       await expect(controller.write('ello, world!"}')).rejects.toThrow();
       await expect(controller.close()).rejects.toThrow();
+=======
+      controller.write('ello, world!"}');
+      controller.close();
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
       // should only show start of object:
       await waitFor(() => {
@@ -170,6 +187,7 @@ describe('text stream', () => {
           '{"content":"h"}',
         );
       });
+<<<<<<< HEAD
     });
 
     it('should stop and clear the object state after a call to submit then clear', async () => {
@@ -201,6 +219,8 @@ describe('text stream', () => {
         expect(screen.getByTestId('error')).toBeEmptyDOMElement();
         expect(screen.getByTestId('object')).toBeEmptyDOMElement();
       });
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     });
 
     describe('when the API returns a 404', () => {
@@ -283,6 +303,7 @@ describe('text stream', () => {
     await userEvent.click(screen.getByTestId('submit-button'));
     expect(server.calls[0].requestCredentials).toBe('include');
   });
+<<<<<<< HEAD
 
   it('should clear the object state after a call to clear', async () => {
     server.urls['/api/use-object'].response = {
@@ -306,4 +327,6 @@ describe('text stream', () => {
       expect(screen.getByTestId('loading')).toHaveTextContent('false');
     });
   });
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 });

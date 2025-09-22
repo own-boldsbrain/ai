@@ -1,5 +1,6 @@
 # @ai-sdk/deepgram
 
+<<<<<<< HEAD
 ## 1.1.0-beta.1
 
 ### Patch Changes
@@ -507,3 +508,10 @@
 ### Patch Changes
 
 - cd47bc4: feat(providers/deepgram): add transcribe
+=======
+## 0.0.1
+
+### Patch Changes
+
+- 3eeb27f: feat(providers/deepgram): add transcribe
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017

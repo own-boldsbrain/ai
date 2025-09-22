@@ -1,11 +1,17 @@
 import {
+<<<<<<< HEAD
   TranscriptionModelV2,
   TranscriptionModelV2CallWarning,
+=======
+  TranscriptionModelV1,
+  TranscriptionModelV1CallWarning,
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 } from '@ai-sdk/provider';
 import {
   combineHeaders,
   convertBase64ToUint8Array,
   createJsonResponseHandler,
+<<<<<<< HEAD
   mediaTypeToExtension,
   parseProviderOptions,
   postFormDataToApi,
@@ -14,6 +20,15 @@ import { z } from 'zod/v4';
 import { GroqConfig } from './groq-config';
 import { groqFailedResponseHandler } from './groq-error';
 import { GroqTranscriptionModelId } from './groq-transcription-options';
+=======
+  parseProviderOptions,
+  postFormDataToApi,
+} from '@ai-sdk/provider-utils';
+import { z } from 'zod';
+import { GroqConfig } from './groq-config';
+import { groqFailedResponseHandler } from './groq-error';
+import { GroqTranscriptionModelId } from './groq-transcription-settings';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 import { GroqTranscriptionAPITypes } from './groq-api-types';
 
 // https://console.groq.com/docs/speech-to-text
@@ -35,8 +50,13 @@ interface GroqTranscriptionModelConfig extends GroqConfig {
   };
 }
 
+<<<<<<< HEAD
 export class GroqTranscriptionModel implements TranscriptionModelV2 {
   readonly specificationVersion = 'v2';
+=======
+export class GroqTranscriptionModel implements TranscriptionModelV1 {
+  readonly specificationVersion = 'v1';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
   get provider(): string {
     return this.config.provider;
@@ -47,6 +67,7 @@ export class GroqTranscriptionModel implements TranscriptionModelV2 {
     private readonly config: GroqTranscriptionModelConfig,
   ) {}
 
+<<<<<<< HEAD
   private async getArgs({
     audio,
     mediaType,
@@ -56,6 +77,17 @@ export class GroqTranscriptionModel implements TranscriptionModelV2 {
 
     // Parse provider options
     const groqOptions = await parseProviderOptions({
+=======
+  private getArgs({
+    audio,
+    mediaType,
+    providerOptions,
+  }: Parameters<TranscriptionModelV1['doGenerate']>[0]) {
+    const warnings: TranscriptionModelV1CallWarning[] = [];
+
+    // Parse provider options
+    const groqOptions = parseProviderOptions({
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       provider: 'groq',
       providerOptions,
       schema: groqProviderOptionsSchema,
@@ -69,12 +101,16 @@ export class GroqTranscriptionModel implements TranscriptionModelV2 {
         : new Blob([convertBase64ToUint8Array(audio)]);
 
     formData.append('model', this.modelId);
+<<<<<<< HEAD
     const fileExtension = mediaTypeToExtension(mediaType);
     formData.append(
       'file',
       new File([blob], 'audio', { type: mediaType }),
       `audio.${fileExtension}`,
     );
+=======
+    formData.append('file', new File([blob], 'audio', { type: mediaType }));
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
     // Add provider-specific options
     if (groqOptions) {
@@ -108,10 +144,17 @@ export class GroqTranscriptionModel implements TranscriptionModelV2 {
   }
 
   async doGenerate(
+<<<<<<< HEAD
     options: Parameters<TranscriptionModelV2['doGenerate']>[0],
   ): Promise<Awaited<ReturnType<TranscriptionModelV2['doGenerate']>>> {
     const currentDate = this.config._internal?.currentDate?.() ?? new Date();
     const { formData, warnings } = await this.getArgs(options);
+=======
+    options: Parameters<TranscriptionModelV1['doGenerate']>[0],
+  ): Promise<Awaited<ReturnType<TranscriptionModelV1['doGenerate']>>> {
+    const currentDate = this.config._internal?.currentDate?.() ?? new Date();
+    const { formData, warnings } = this.getArgs(options);
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
     const {
       value: response,
@@ -140,8 +183,13 @@ export class GroqTranscriptionModel implements TranscriptionModelV2 {
           startSecond: segment.start,
           endSecond: segment.end,
         })) ?? [],
+<<<<<<< HEAD
       language: response.language ?? undefined,
       durationInSeconds: response.duration ?? undefined,
+=======
+      language: response.language,
+      durationInSeconds: response.duration,
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       warnings,
       response: {
         timestamp: currentDate,
@@ -154,6 +202,7 @@ export class GroqTranscriptionModel implements TranscriptionModelV2 {
 }
 
 const groqTranscriptionResponseSchema = z.object({
+<<<<<<< HEAD
   text: z.string(),
   x_groq: z.object({
     id: z.string(),
@@ -178,4 +227,27 @@ const groqTranscriptionResponseSchema = z.object({
       }),
     )
     .nullish(),
+=======
+  task: z.string(),
+  language: z.string(),
+  duration: z.number(),
+  text: z.string(),
+  segments: z.array(
+    z.object({
+      id: z.number(),
+      seek: z.number(),
+      start: z.number(),
+      end: z.number(),
+      text: z.string(),
+      tokens: z.array(z.number()),
+      temperature: z.number(),
+      avg_logprob: z.number(),
+      compression_ratio: z.number(),
+      no_speech_prob: z.number(),
+    }),
+  ),
+  x_groq: z.object({
+    id: z.string(),
+  }),
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 });

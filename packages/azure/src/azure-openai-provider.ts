@@ -3,6 +3,7 @@ import {
   OpenAICompletionLanguageModel,
   OpenAIEmbeddingModel,
   OpenAIImageModel,
+<<<<<<< HEAD
   OpenAIResponsesLanguageModel,
   OpenAISpeechModel,
   OpenAITranscriptionModel,
@@ -14,6 +15,18 @@ import {
   ImageModelV2,
   SpeechModelV2,
   TranscriptionModelV2,
+=======
+  OpenAIImageSettings,
+  OpenAIResponsesLanguageModel,
+  OpenAITranscriptionModel,
+} from '@ai-sdk/openai/internal';
+import {
+  EmbeddingModelV1,
+  LanguageModelV1,
+  ProviderV1,
+  ImageModelV1,
+  TranscriptionModelV1,
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 } from '@ai-sdk/provider';
 import { FetchFunction, loadApiKey, loadSetting } from '@ai-sdk/provider-utils';
 
@@ -34,6 +47,11 @@ Creates an Azure OpenAI chat model for text generation.
 Creates an Azure OpenAI responses API model for text generation.
    */
   responses(deploymentId: string): LanguageModelV2;
+
+  /**
+Creates an Azure OpenAI responses API model for text generation.
+   */
+  responses(deploymentId: string): LanguageModelV1;
 
   /**
 Creates an Azure OpenAI completion model for text generation.
@@ -60,17 +78,28 @@ Creates an Azure OpenAI completion model for text generation.
   /**
 Creates an Azure OpenAI model for text embeddings.
    */
+<<<<<<< HEAD
   textEmbeddingModel(deploymentId: string): EmbeddingModelV2<string>;
+=======
+  textEmbeddingModel(
+    deploymentId: string,
+    settings?: OpenAIEmbeddingSettings,
+  ): EmbeddingModelV1<string>;
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
   /**
    * Creates an Azure OpenAI model for audio transcription.
    */
+<<<<<<< HEAD
   transcription(deploymentId: string): TranscriptionModelV2;
 
   /**
    * Creates an Azure OpenAI model for speech generation.
    */
   speech(deploymentId: string): SpeechModelV2;
+=======
+  transcription(deploymentId: string): TranscriptionModelV1;
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 }
 
 export interface AzureOpenAIProviderSettings {
@@ -141,7 +170,23 @@ export function createAzure(
       description: 'Azure OpenAI resource name',
     });
 
+<<<<<<< HEAD
   const apiVersion = options.apiVersion ?? 'preview';
+=======
+  const apiVersion = options.apiVersion ?? '2025-03-01-preview';
+  const url = ({ path, modelId }: { path: string; modelId: string }) => {
+    if (path === '/responses') {
+      return options.baseURL
+        ? `${options.baseURL}${path}?api-version=${apiVersion}`
+        : `https://${getResourceName()}.openai.azure.com/openai/responses?api-version=${apiVersion}`;
+    }
+
+    // Default URL format for other endpoints
+    return options.baseURL
+      ? `${options.baseURL}/${modelId}${path}?api-version=${apiVersion}`
+      : `https://${getResourceName()}.openai.azure.com/openai/deployments/${modelId}${path}?api-version=${apiVersion}`;
+  };
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
   const url = ({ path, modelId }: { path: string; modelId: string }) => {
     const baseUrlPrefix =
@@ -160,14 +205,32 @@ export function createAzure(
     return fullUrl.toString();
   };
 
+<<<<<<< HEAD
   const createChatModel = (deploymentName: string) =>
     new OpenAIChatLanguageModel(deploymentName, {
       provider: 'azure.chat',
+=======
+  const createResponsesModel = (modelId: string) =>
+    new OpenAIResponsesLanguageModel(modelId, {
+      provider: 'azure-openai.responses',
       url,
       headers: getHeaders,
       fetch: options.fetch,
     });
 
+  const createImageModel = (
+    modelId: string,
+    settings: OpenAIImageSettings = {},
+  ) =>
+    new OpenAIImageModel(modelId, settings, {
+      provider: 'azure-openai.image',
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
+      url,
+      headers: getHeaders,
+      fetch: options.fetch,
+    });
+
+<<<<<<< HEAD
   const createCompletionModel = (modelId: string) =>
     new OpenAICompletionLanguageModel(modelId, {
       provider: 'azure.completion',
@@ -204,11 +267,17 @@ export function createAzure(
   const createTranscriptionModel = (modelId: string) =>
     new OpenAITranscriptionModel(modelId, {
       provider: 'azure.transcription',
+=======
+  const createTranscriptionModel = (modelId: string) =>
+    new OpenAITranscriptionModel(modelId, {
+      provider: 'azure-openai.transcription',
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       url,
       headers: getHeaders,
       fetch: options.fetch,
     });
 
+<<<<<<< HEAD
   const createSpeechModel = (modelId: string) =>
     new OpenAISpeechModel(modelId, {
       provider: 'azure.speech',
@@ -218,6 +287,12 @@ export function createAzure(
     });
 
   const provider = function (deploymentId: string) {
+=======
+  const provider = function (
+    deploymentId: string,
+    settings?: OpenAIChatSettings | OpenAICompletionSettings,
+  ) {
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     if (new.target) {
       throw new Error(
         'The Azure OpenAI model function cannot be called with the new keyword.',
@@ -237,7 +312,10 @@ export function createAzure(
   provider.textEmbeddingModel = createEmbeddingModel;
   provider.responses = createResponsesModel;
   provider.transcription = createTranscriptionModel;
+<<<<<<< HEAD
   provider.speech = createSpeechModel;
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   return provider;
 }
 

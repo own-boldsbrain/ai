@@ -102,6 +102,7 @@ xAI chat models support additional provider options that are not part of
 the [standard call settings](/docs/ai-sdk-core/settings). You can pass them in the `providerOptions` argument:
 
 ```ts
+<<<<<<< HEAD
 const model = xai('grok-3-mini');
 
 await generateText({
@@ -111,6 +112,10 @@ await generateText({
       reasoningEffort: 'high',
     },
   },
+=======
+const model = xai('grok-3', {
+  user: 'test-user', // optional unique user identifier
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 });
 ```
 
@@ -394,6 +399,7 @@ console.log('Sources:', await result.sources);
 
 ## Model Capabilities
 
+<<<<<<< HEAD
 | Model                       | Image Input         | Object Generation   | Tool Usage          | Tool Streaming      | Reasoning           |
 | --------------------------- | ------------------- | ------------------- | ------------------- | ------------------- | ------------------- |
 | `grok-4-fast-non-reasoning` | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> | <Cross size={18} /> |
@@ -416,6 +422,18 @@ console.log('Sources:', await result.sources);
 | `grok-2-vision-1212`        | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> | <Cross size={18} /> |
 | `grok-beta`                 | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> | <Cross size={18} /> |
 | `grok-vision-beta`          | <Check size={18} /> | <Cross size={18} /> | <Cross size={18} /> | <Cross size={18} /> | <Cross size={18} /> |
+=======
+| Model                | Image Input         | Object Generation   | Tool Usage          | Tool Streaming      |
+| -------------------- | ------------------- | ------------------- | ------------------- | ------------------- |
+| `grok-3`             | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+| `grok-3-fast`        | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+| `grok-3-mini`        | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+| `grok-3-mini-fast`   | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+| `grok-2-1212`        | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+| `grok-2-vision-1212` | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+| `grok-beta`          | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+| `grok-vision-beta`   | <Check size={18} /> | <Cross size={18} /> | <Cross size={18} /> | <Cross size={18} /> |
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 <Note>
   The table above lists popular models. Please see the [xAI

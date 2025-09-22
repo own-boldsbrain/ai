@@ -1,22 +1,37 @@
 import {
   AISDKError,
+<<<<<<< HEAD
   TranscriptionModelV2,
   TranscriptionModelV2CallWarning,
+=======
+  TranscriptionModelV1,
+  TranscriptionModelV1CallWarning,
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 } from '@ai-sdk/provider';
 import {
   combineHeaders,
   convertBase64ToUint8Array,
   createJsonResponseHandler,
+<<<<<<< HEAD
   mediaTypeToExtension,
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   delay,
   getFromApi,
   parseProviderOptions,
   postFormDataToApi,
 } from '@ai-sdk/provider-utils';
+<<<<<<< HEAD
 import { z } from 'zod/v4';
 import { RevaiConfig } from './revai-config';
 import { revaiFailedResponseHandler } from './revai-error';
 import { RevaiTranscriptionModelId } from './revai-transcription-options';
+=======
+import { z } from 'zod';
+import { RevaiConfig } from './revai-config';
+import { revaiFailedResponseHandler } from './revai-error';
+import { RevaiTranscriptionModelId } from './revai-transcription-settings';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 import { RevaiTranscriptionAPITypes } from './revai-api-types';
 
 // https://docs.rev.ai/api/asynchronous/reference/#operation/SubmitTranscriptionJob
@@ -220,8 +235,13 @@ interface RevaiTranscriptionModelConfig extends RevaiConfig {
   };
 }
 
+<<<<<<< HEAD
 export class RevaiTranscriptionModel implements TranscriptionModelV2 {
   readonly specificationVersion = 'v2';
+=======
+export class RevaiTranscriptionModel implements TranscriptionModelV1 {
+  readonly specificationVersion = 'v1';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
   get provider(): string {
     return this.config.provider;
@@ -232,6 +252,7 @@ export class RevaiTranscriptionModel implements TranscriptionModelV2 {
     private readonly config: RevaiTranscriptionModelConfig,
   ) {}
 
+<<<<<<< HEAD
   private async getArgs({
     audio,
     mediaType,
@@ -241,6 +262,17 @@ export class RevaiTranscriptionModel implements TranscriptionModelV2 {
 
     // Parse provider options
     const revaiOptions = await parseProviderOptions({
+=======
+  private getArgs({
+    audio,
+    mediaType,
+    providerOptions,
+  }: Parameters<TranscriptionModelV1['doGenerate']>[0]) {
+    const warnings: TranscriptionModelV1CallWarning[] = [];
+
+    // Parse provider options
+    const revaiOptions = parseProviderOptions({
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       provider: 'revai',
       providerOptions,
       schema: revaiProviderOptionsSchema,
@@ -253,12 +285,16 @@ export class RevaiTranscriptionModel implements TranscriptionModelV2 {
         ? new Blob([audio])
         : new Blob([convertBase64ToUint8Array(audio)]);
 
+<<<<<<< HEAD
     const fileExtension = mediaTypeToExtension(mediaType);
     formData.append(
       'media',
       new File([blob], 'audio', { type: mediaType }),
       `audio.${fileExtension}`,
     );
+=======
+    formData.append('media', new File([blob], 'audio', { type: mediaType }));
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     const transcriptionModelOptions: RevaiTranscriptionAPITypes = {
       transcriber: this.modelId,
     };
@@ -314,10 +350,17 @@ export class RevaiTranscriptionModel implements TranscriptionModelV2 {
   }
 
   async doGenerate(
+<<<<<<< HEAD
     options: Parameters<TranscriptionModelV2['doGenerate']>[0],
   ): Promise<Awaited<ReturnType<TranscriptionModelV2['doGenerate']>>> {
     const currentDate = this.config._internal?.currentDate?.() ?? new Date();
     const { formData, warnings } = await this.getArgs(options);
+=======
+    options: Parameters<TranscriptionModelV1['doGenerate']>[0],
+  ): Promise<Awaited<ReturnType<TranscriptionModelV1['doGenerate']>>> {
+    const currentDate = this.config._internal?.currentDate?.() ?? new Date();
+    const { formData, warnings } = this.getArgs(options);
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
     const { value: submissionResponse } = await postFormDataToApi({
       url: this.config.url({

@@ -283,6 +283,7 @@ const { text } = await generateText({
 
 ## Model Capabilities
 
+<<<<<<< HEAD
 | Model                                           | Image Input         | Object Generation   | Tool Usage          | Tool Streaming      |
 | ----------------------------------------------- | ------------------- | ------------------- | ------------------- | ------------------- |
 | `gemma2-9b-it`                                  | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
@@ -305,6 +306,23 @@ const { text } = await generateText({
 | `deepseek-r1-distill-qwen-32b`                  | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
 | `openai/gpt-oss-20b`                            | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
 | `openai/gpt-oss-120b`                           | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+=======
+| Model                                       | Image Input         | Object Generation   | Tool Usage          | Tool Streaming      |
+| ------------------------------------------- | ------------------- | ------------------- | ------------------- | ------------------- |
+| `meta-llama/llama-4-scout-17b-16e-instruct` | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+| `gemma2-9b-it`                              | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+| `llama-3.3-70b-versatile`                   | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+| `llama-3.1-8b-instant`                      | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+| `llama-guard-3-8b`                          | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+| `llama3-70b-8192`                           | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+| `llama3-8b-8192`                            | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+| `mixtral-8x7b-32768`                        | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+| `qwen-qwq-32b`                              | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+| `mistral-saba-24b`                          | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+| `qwen-2.5-32b`                              | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+| `deepseek-r1-distill-qwen-32b`              | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+| `deepseek-r1-distill-llama-70b`             | <Cross size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 <Note>
   The tables above list the most commonly used models. Please see the [Groq
@@ -313,6 +331,7 @@ const { text } = await generateText({
   needed.
 </Note>
 
+<<<<<<< HEAD
 ## Browser Search Tool
 
 Groq provides a browser search tool that offers interactive web browsing capabilities. Unlike traditional web search, browser search navigates websites interactively, providing more detailed and comprehensive results.
@@ -410,6 +429,8 @@ const result = await generateText({
   Documentation](https://console.groq.com/docs/browser-search).
 </Note>
 
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 ## Transcription Models
 
 You can create models that call the [Groq transcription API](https://console.groq.com/docs/speech-to-text)
@@ -461,5 +482,10 @@ The following provider options are available:
 | Model                        | Transcription       | Duration            | Segments            | Language            |
 | ---------------------------- | ------------------- | ------------------- | ------------------- | ------------------- |
 | `whisper-large-v3`           | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+<<<<<<< HEAD
 | `whisper-large-v3-turbo`     | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
 | `distil-whisper-large-v3-en` | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+=======
+| `whisper-large-v3-turbo`     | <Check size={18} /> | <Cross size={18} /> | <Cross size={18} /> | <Cross size={18} /> |
+| `distil-whisper-large-v3-en` | <Check size={18} /> | <Cross size={18} /> | <Cross size={18} /> | <Cross size={18} /> |
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017

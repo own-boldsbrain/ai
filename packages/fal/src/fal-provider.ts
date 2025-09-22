@@ -1,18 +1,31 @@
 import {
+<<<<<<< HEAD
   ImageModelV2,
   NoSuchModelError,
   ProviderV2,
   SpeechModelV2,
   TranscriptionModelV2,
+=======
+  ImageModelV1,
+  NoSuchModelError,
+  ProviderV1,
+  TranscriptionModelV1,
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 } from '@ai-sdk/provider';
 import type { FetchFunction } from '@ai-sdk/provider-utils';
 import { withoutTrailingSlash } from '@ai-sdk/provider-utils';
 import { FalImageModel } from './fal-image-model';
+<<<<<<< HEAD
 import { FalImageModelId } from './fal-image-settings';
 import { FalTranscriptionModelId } from './fal-transcription-options';
 import { FalTranscriptionModel } from './fal-transcription-model';
 import { FalSpeechModelId } from './fal-speech-settings';
 import { FalSpeechModel } from './fal-speech-model';
+=======
+import { FalImageModelId, FalImageSettings } from './fal-image-settings';
+import { FalTranscriptionModelId } from './fal-transcription-settings';
+import { FalTranscriptionModel } from './fal-transcription-model';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 export interface FalProviderSettings {
   /**
@@ -48,17 +61,28 @@ Creates a model for image generation.
   /**
 Creates a model for image generation.
    */
+<<<<<<< HEAD
   imageModel(modelId: FalImageModelId): ImageModelV2;
+=======
+  imageModel(
+    modelId: FalImageModelId,
+    settings?: FalImageSettings,
+  ): ImageModelV1;
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
   /**
 Creates a model for transcription.
    */
+<<<<<<< HEAD
   transcription(modelId: FalTranscriptionModelId): TranscriptionModelV2;
 
   /**
 Creates a model for speech generation.
    */
   speech(modelId: FalSpeechModelId): SpeechModelV2;
+=======
+  transcription(modelId: FalTranscriptionModelId): TranscriptionModelV1;
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 }
 
 const defaultBaseURL = 'https://fal.run';
@@ -124,6 +148,7 @@ export function createFal(options: FalProviderSettings = {}): FalProvider {
       fetch: options.fetch,
     });
 
+<<<<<<< HEAD
   const createSpeechModel = (modelId: FalSpeechModelId) =>
     new FalSpeechModel(modelId, {
       provider: `fal.speech`,
@@ -132,6 +157,8 @@ export function createFal(options: FalProviderSettings = {}): FalProvider {
       fetch: options.fetch,
     });
 
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   const createTranscriptionModel = (modelId: FalTranscriptionModelId) =>
     new FalTranscriptionModel(modelId, {
       provider: `fal.transcription`,

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   TranscriptionModelV2,
   ProviderV2,
@@ -8,6 +9,14 @@ import { RevaiTranscriptionModel } from './revai-transcription-model';
 import { RevaiTranscriptionModelId } from './revai-transcription-options';
 
 export interface RevaiProvider extends ProviderV2 {
+=======
+import { TranscriptionModelV1, ProviderV1 } from '@ai-sdk/provider';
+import { FetchFunction, loadApiKey } from '@ai-sdk/provider-utils';
+import { RevaiTranscriptionModel } from './revai-transcription-model';
+import { RevaiTranscriptionModelId } from './revai-transcription-settings';
+
+export interface RevaiProvider extends Pick<ProviderV1, 'transcriptionModel'> {
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   (
     modelId: 'machine',
     settings?: {},
@@ -18,7 +27,11 @@ export interface RevaiProvider extends ProviderV2 {
   /**
 Creates a model for transcription.
    */
+<<<<<<< HEAD
   transcription(modelId: RevaiTranscriptionModelId): TranscriptionModelV2;
+=======
+  transcription(modelId: RevaiTranscriptionModelId): TranscriptionModelV1;
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 }
 
 export interface RevaiProviderSettings {
@@ -71,6 +84,7 @@ export function createRevai(
   provider.transcription = createTranscriptionModel;
   provider.transcriptionModel = createTranscriptionModel;
 
+<<<<<<< HEAD
   provider.languageModel = () => {
     throw new NoSuchModelError({
       modelId: 'unknown',
@@ -95,6 +109,8 @@ export function createRevai(
     });
   };
 
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   return provider as RevaiProvider;
 }
 

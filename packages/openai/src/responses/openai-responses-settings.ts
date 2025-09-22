@@ -61,6 +61,7 @@ export type OpenAIResponsesModelId =
   | 'o3-mini-2025-01-31'
   | 'o3'
   | 'o3-2025-04-16'
+<<<<<<< HEAD
   | 'gpt-5'
   | 'gpt-5-2025-08-07'
   | 'gpt-5-mini'
@@ -68,6 +69,10 @@ export type OpenAIResponsesModelId =
   | 'gpt-5-nano'
   | 'gpt-5-nano-2025-08-07'
   | 'gpt-5-chat-latest'
+=======
+  | 'o4-mini'
+  | 'o4-mini-2025-04-16'
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   | 'gpt-4.1'
   | 'gpt-4.1-2025-04-14'
   | 'gpt-4.1-mini'
@@ -78,6 +83,13 @@ export type OpenAIResponsesModelId =
   | 'gpt-4o-2024-05-13'
   | 'gpt-4o-2024-08-06'
   | 'gpt-4o-2024-11-20'
+  | 'gpt-4o-audio-preview'
+  | 'gpt-4o-audio-preview-2024-10-01'
+  | 'gpt-4o-audio-preview-2024-12-17'
+  | 'gpt-4o-search-preview'
+  | 'gpt-4o-search-preview-2025-03-11'
+  | 'gpt-4o-mini-search-preview'
+  | 'gpt-4o-mini-search-preview-2025-03-11'
   | 'gpt-4o-mini'
   | 'gpt-4o-mini-2024-07-18'
   | 'gpt-4-turbo'

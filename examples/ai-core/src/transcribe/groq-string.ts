@@ -7,11 +7,14 @@ async function main() {
   const result = await transcribe({
     model: groq.transcription('whisper-large-v3-turbo'),
     audio: Buffer.from(await readFile('./data/galileo.mp3')).toString('base64'),
+<<<<<<< HEAD
     providerOptions: {
       groq: {
         responseFormat: 'verbose_json',
       },
     },
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   });
 
   console.log('Text:', result.text);

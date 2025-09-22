@@ -79,7 +79,17 @@ The models support tool calls and some have multi-modal capabilities.
 const model = google('gemini-2.5-flash');
 ```
 
+<<<<<<< HEAD
 You can use Google Generative AI language models to generate text with the `generateText` function:
+=======
+<Note>
+  You can use fine-tuned models by prefixing the model id with `tunedModels/`,
+  e.g. `tunedModels/my-model`.
+</Note>
+
+Google Generative AI also supports some model specific settings that are not part of the [standard call settings](/docs/ai-sdk-core/settings).
+You can pass them as an options argument:
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 ```ts
 import { google } from '@ai-sdk/google';
@@ -156,6 +166,7 @@ The following optional provider options are available for Google Generative AI m
     - `BLOCK_ONLY_HIGH`
     - `BLOCK_NONE`
 
+<<<<<<< HEAD
 - **responseModalities** _string[]_
   The modalities to use for the response. The following modalities are supported: `TEXT`, `IMAGE`. When not defined or empty, the model defaults to returning only text.
 
@@ -177,6 +188,32 @@ The following optional provider options are available for Google Generative AI m
 The Gemini 2.5 series models use an internal "thinking process" that significantly improves their reasoning and multi-step planning abilities, making them highly effective for complex tasks such as coding, advanced mathematics, and data analysis. For more information see [Google Generative AI thinking documentation](https://ai.google.dev/gemini-api/docs/thinking).
 
 You can control thinking budgets and enable a thought summary by setting the `thinkingConfig` parameter.
+=======
+Further configuration can be done using Google Generative AI provider options. You can validate the provider options using the `GoogleGenerativeAIProviderOptions` type.
+
+```ts
+import { google } from '@ai-sdk/google';
+import { GoogleGenerativeAIProviderOptions } from '@ai-sdk/google';
+import { generateText } from 'ai';
+
+const { text } = await generateText({
+  model: google('gemini-1.5-pro-latest'),
+  providerOptions: {
+    google: {
+      responseModalities: ['TEXT', 'IMAGE'],
+    } satisfies GoogleGenerativeAIProviderOptions,
+  },
+  // ...
+});
+```
+
+The following provider options are available:
+
+- **responseModalities** _string[]_
+  The modalities to use for the response. The following modalities are supported: `TEXT`, `IMAGE`. When not defined or empty, the model defaults to returning only text.
+
+You can use Google Generative AI language models to generate text with the `generateText` function:
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 ```ts
 import { google } from '@ai-sdk/google';

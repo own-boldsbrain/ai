@@ -1,14 +1,25 @@
+<<<<<<< HEAD
 import { SpeechModelV2, SpeechModelV2CallWarning } from '@ai-sdk/provider';
+=======
+import { SpeechModelV1, SpeechModelV1CallWarning } from '@ai-sdk/provider';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 import {
   combineHeaders,
   createBinaryResponseHandler,
   parseProviderOptions,
   postJsonToApi,
 } from '@ai-sdk/provider-utils';
+<<<<<<< HEAD
 import { z } from 'zod/v4';
 import { LMNTConfig } from './lmnt-config';
 import { lmntFailedResponseHandler } from './lmnt-error';
 import { LMNTSpeechModelId } from './lmnt-speech-options';
+=======
+import { z } from 'zod';
+import { LMNTConfig } from './lmnt-config';
+import { lmntFailedResponseHandler } from './lmnt-error';
+import { LMNTSpeechModelId } from './lmnt-speech-settings';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 import { LMNTSpeechAPITypes } from './lmnt-api-types';
 
 // https://docs.lmnt.com/api-reference/speech/synthesize-speech-bytes
@@ -23,6 +34,18 @@ const lmntSpeechCallOptionsSchema = z.object({
     .default('aurora'),
 
   /**
+<<<<<<< HEAD
+=======
+   * The language of the input text.
+   * @default 'auto'
+   */
+  language: z
+    .union([z.enum(['auto', 'en']), z.string()])
+    .nullish()
+    .default('auto'),
+
+  /**
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
    * The audio format of the output.
    * @default 'mp3'
    */
@@ -83,8 +106,13 @@ interface LMNTSpeechModelConfig extends LMNTConfig {
   };
 }
 
+<<<<<<< HEAD
 export class LMNTSpeechModel implements SpeechModelV2 {
   readonly specificationVersion = 'v2';
+=======
+export class LMNTSpeechModel implements SpeechModelV1 {
+  readonly specificationVersion = 'v1';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
   get provider(): string {
     return this.config.provider;
@@ -95,11 +123,16 @@ export class LMNTSpeechModel implements SpeechModelV2 {
     private readonly config: LMNTSpeechModelConfig,
   ) {}
 
+<<<<<<< HEAD
   private async getArgs({
+=======
+  private getArgs({
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     text,
     voice = 'ava',
     outputFormat = 'mp3',
     speed,
+<<<<<<< HEAD
     language,
     providerOptions,
   }: Parameters<SpeechModelV2['doGenerate']>[0]) {
@@ -107,6 +140,14 @@ export class LMNTSpeechModel implements SpeechModelV2 {
 
     // Parse provider options
     const lmntOptions = await parseProviderOptions({
+=======
+    providerOptions,
+  }: Parameters<SpeechModelV1['doGenerate']>[0]) {
+    const warnings: SpeechModelV1CallWarning[] = [];
+
+    // Parse provider options
+    const lmntOptions = parseProviderOptions({
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       provider: 'lmnt',
       providerOptions,
       schema: lmntSpeechCallOptionsSchema,
@@ -156,10 +197,13 @@ export class LMNTSpeechModel implements SpeechModelV2 {
       }
     }
 
+<<<<<<< HEAD
     if (language) {
       requestBody.language = language;
     }
 
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     return {
       requestBody,
       warnings,
@@ -167,10 +211,17 @@ export class LMNTSpeechModel implements SpeechModelV2 {
   }
 
   async doGenerate(
+<<<<<<< HEAD
     options: Parameters<SpeechModelV2['doGenerate']>[0],
   ): Promise<Awaited<ReturnType<SpeechModelV2['doGenerate']>>> {
     const currentDate = this.config._internal?.currentDate?.() ?? new Date();
     const { requestBody, warnings } = await this.getArgs(options);
+=======
+    options: Parameters<SpeechModelV1['doGenerate']>[0],
+  ): Promise<Awaited<ReturnType<SpeechModelV1['doGenerate']>>> {
+    const currentDate = this.config._internal?.currentDate?.() ?? new Date();
+    const { requestBody, warnings } = this.getArgs(options);
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
     const {
       value: audio,

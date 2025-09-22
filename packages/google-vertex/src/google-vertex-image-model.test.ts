@@ -567,5 +567,36 @@ describe('GoogleVertexImageModel', () => {
         });
       });
     });
+
+    it('should only pass valid provider options', async () => {
+      prepareJsonResponse();
+
+      await model.doGenerate({
+        prompt,
+        n: 2,
+        size: undefined,
+        aspectRatio: '16:9',
+        seed: undefined,
+        providerOptions: {
+          vertex: {
+            addWatermark: false,
+            negativePrompt: 'negative prompt',
+            personGeneration: 'allow_all',
+            foo: 'bar',
+          },
+        },
+      });
+
+      expect(await server.calls[0].requestBody).toStrictEqual({
+        instances: [{ prompt }],
+        parameters: {
+          sampleCount: 2,
+          addWatermark: false,
+          negativePrompt: 'negative prompt',
+          personGeneration: 'allow_all',
+          aspectRatio: '16:9',
+        },
+      });
+    });
   });
 });

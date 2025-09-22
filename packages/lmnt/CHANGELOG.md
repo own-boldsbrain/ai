@@ -1,5 +1,6 @@
 # @ai-sdk/lmnt
 
+<<<<<<< HEAD
 ## 1.1.0-beta.1
 
 ### Patch Changes
@@ -505,3 +506,10 @@
 ### Patch Changes
 
 - 40d6708: feat(providers/lmnt): add speech
+=======
+## 0.0.1
+
+### Patch Changes
+
+- 0d7291a: feat(providers/lmnt): add speech
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017

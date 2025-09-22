@@ -63,21 +63,33 @@ importers:
   examples/ai-core:
     dependencies:
       '@ai-sdk/amazon-bedrock':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../../packages/amazon-bedrock
       '@ai-sdk/anthropic':
         specifier: workspace:*
+=======
+        specifier: 2.2.8
+        version: link:../../packages/amazon-bedrock
+      '@ai-sdk/anthropic':
+        specifier: 1.2.10
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/anthropic
       '@ai-sdk/assemblyai':
         specifier: workspace:*
         version: link:../../packages/assemblyai
       '@ai-sdk/azure':
+<<<<<<< HEAD
         specifier: workspace:*
+=======
+        specifier: 1.3.17
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/azure
       '@ai-sdk/baseten':
         specifier: workspace:*
         version: link:../../packages/baseten
       '@ai-sdk/cerebras':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../../packages/cerebras
       '@ai-sdk/cohere':
@@ -151,12 +163,88 @@ importers:
         version: link:../../packages/togetherai
       '@ai-sdk/valibot':
         specifier: workspace:*
+=======
+        specifier: 0.2.11
+        version: link:../../packages/cerebras
+      '@ai-sdk/cohere':
+        specifier: 1.2.9
+        version: link:../../packages/cohere
+      '@ai-sdk/deepgram':
+        specifier: 0.0.1
+        version: link:../../packages/deepgram
+      '@ai-sdk/deepinfra':
+        specifier: 0.2.12
+        version: link:../../packages/deepinfra
+      '@ai-sdk/deepseek':
+        specifier: 0.2.11
+        version: link:../../packages/deepseek
+      '@ai-sdk/elevenlabs':
+        specifier: 0.0.2
+        version: link:../../packages/elevenlabs
+      '@ai-sdk/fal':
+        specifier: 0.1.9
+        version: link:../../packages/fal
+      '@ai-sdk/fireworks':
+        specifier: 0.2.11
+        version: link:../../packages/fireworks
+      '@ai-sdk/gladia':
+        specifier: 0.0.1
+        version: link:../../packages/gladia
+      '@ai-sdk/google':
+        specifier: 1.2.11
+        version: link:../../packages/google
+      '@ai-sdk/google-vertex':
+        specifier: 2.2.15
+        version: link:../../packages/google-vertex
+      '@ai-sdk/groq':
+        specifier: 1.2.8
+        version: link:../../packages/groq
+      '@ai-sdk/hume':
+        specifier: 0.0.1
+        version: link:../../packages/hume
+      '@ai-sdk/lmnt':
+        specifier: 0.0.1
+        version: link:../../packages/lmnt
+      '@ai-sdk/luma':
+        specifier: 0.1.7
+        version: link:../../packages/luma
+      '@ai-sdk/mistral':
+        specifier: 1.2.7
+        version: link:../../packages/mistral
+      '@ai-sdk/openai':
+        specifier: 1.3.16
+        version: link:../../packages/openai
+      '@ai-sdk/openai-compatible':
+        specifier: 0.2.11
+        version: link:../../packages/openai-compatible
+      '@ai-sdk/perplexity':
+        specifier: 1.1.7
+        version: link:../../packages/perplexity
+      '@ai-sdk/provider':
+        specifier: 1.1.3
+        version: link:../../packages/provider
+      '@ai-sdk/replicate':
+        specifier: 0.2.7
+        version: link:../../packages/replicate
+      '@ai-sdk/revai':
+        specifier: 0.0.1
+        version: link:../../packages/revai
+      '@ai-sdk/togetherai':
+        specifier: 0.2.11
+        version: link:../../packages/togetherai
+      '@ai-sdk/valibot':
+        specifier: 0.1.21
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/valibot
       '@ai-sdk/vercel':
         specifier: workspace:*
         version: link:../../packages/vercel
       '@ai-sdk/xai':
+<<<<<<< HEAD
         specifier: workspace:*
+=======
+        specifier: 1.2.13
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/xai
       '@google/generative-ai':
         specifier: 0.21.0
@@ -171,7 +259,11 @@ importers:
         specifier: 1.28.0
         version: 1.28.0(@opentelemetry/api@1.9.0)
       ai:
+<<<<<<< HEAD
         specifier: workspace:*
+=======
+        specifier: 4.3.9
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/ai
       dotenv:
         specifier: 16.4.5
@@ -290,10 +382,17 @@ importers:
   examples/express:
     dependencies:
       '@ai-sdk/openai':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../../packages/openai
       ai:
         specifier: workspace:*
+=======
+        specifier: 1.3.16
+        version: link:../../packages/openai
+      ai:
+        specifier: 4.3.9
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/ai
       dotenv:
         specifier: 16.4.5
@@ -321,10 +420,17 @@ importers:
   examples/fastify:
     dependencies:
       '@ai-sdk/openai':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../../packages/openai
       ai:
         specifier: workspace:*
+=======
+        specifier: 1.3.16
+        version: link:../../packages/openai
+      ai:
+        specifier: 4.3.9
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/ai
       dotenv:
         specifier: 16.4.5
@@ -349,13 +455,21 @@ importers:
   examples/hono:
     dependencies:
       '@ai-sdk/openai':
+<<<<<<< HEAD
         specifier: workspace:*
+=======
+        specifier: 1.3.16
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/openai
       '@hono/node-server':
         specifier: 1.13.7
         version: 1.13.7(hono@4.6.9)
       ai:
+<<<<<<< HEAD
         specifier: workspace:*
+=======
+        specifier: 4.3.9
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/ai
       dotenv:
         specifier: 16.4.5
@@ -380,13 +494,21 @@ importers:
   examples/mcp:
     dependencies:
       '@ai-sdk/openai':
+<<<<<<< HEAD
         specifier: workspace:*
+=======
+        specifier: 1.3.16
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/openai
       '@modelcontextprotocol/sdk':
         specifier: ^1.10.2
         version: 1.10.2
       ai:
+<<<<<<< HEAD
         specifier: workspace:*
+=======
+        specifier: 4.3.9
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/ai
       dotenv:
         specifier: 16.4.5
@@ -417,7 +539,11 @@ importers:
   examples/nest:
     dependencies:
       '@ai-sdk/openai':
+<<<<<<< HEAD
         specifier: workspace:*
+=======
+        specifier: 1.3.16
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/openai
       '@nestjs/common':
         specifier: ^10.4.15
@@ -429,7 +555,11 @@ importers:
         specifier: ^10.4.9
         version: 10.4.9(@nestjs/common@10.4.15(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.2)
       ai:
+<<<<<<< HEAD
         specifier: workspace:*
+=======
+        specifier: 4.3.9
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/ai
       reflect-metadata:
         specifier: ^0.2.0
@@ -508,13 +638,199 @@ importers:
   examples/next:
     dependencies:
       '@ai-sdk/react':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../../packages/react
+=======
+        specifier: 1.2.9
+        version: link:../../packages/react
+      '@ai-sdk/ui-utils':
+        specifier: 1.2.8
+        version: link:../../packages/ui-utils
+      ai:
+        specifier: 4.3.9
+        version: link:../../packages/ai
+      geist:
+        specifier: ^1.3.1
+        version: 1.3.1(next@15.2.2(@opentelemetry/api@1.9.0)(@playwright/test@1.50.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
+      next:
+        specifier: latest
+        version: 15.2.2(@opentelemetry/api@1.9.0)(@playwright/test@1.50.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react:
+        specifier: ^18
+        version: 18.2.0
+      react-dom:
+        specifier: ^18
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@types/node':
+        specifier: 20.17.24
+        version: 20.17.24
+      '@types/react':
+        specifier: ^18
+        version: 18.3.3
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.4
+      autoprefixer:
+        specifier: ^10.4.14
+        version: 10.4.19(postcss@8.4.49)
+      concurrently:
+        specifier: ^9.1.0
+        version: 9.1.0
+      eslint:
+        specifier: 8.57.1
+        version: 8.57.1
+      eslint-config-next:
+        specifier: 14.2.3
+        version: 14.2.3(eslint@8.57.1)(typescript@5.6.3)
+      postcss:
+        specifier: ^8.4.49
+        version: 8.4.49
+      tailwindcss:
+        specifier: ^3.4.15
+        version: 3.4.15(ts-node@10.9.2(@types/node@20.17.24)(typescript@5.6.3))
+      typescript:
+        specifier: 5.6.3
+        version: 5.6.3
+
+  examples/next-google-vertex:
+    dependencies:
+      '@ai-sdk/google-vertex':
+        specifier: 2.2.15
+        version: link:../../packages/google-vertex
+      ai:
+        specifier: 4.3.9
+        version: link:../../packages/ai
+      geist:
+        specifier: ^1.3.1
+        version: 1.3.1(next@15.2.2(@opentelemetry/api@1.9.0)(@playwright/test@1.50.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+      next:
+        specifier: latest
+        version: 15.2.2(@opentelemetry/api@1.9.0)(@playwright/test@1.50.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react:
+        specifier: ^18
+        version: 18.3.1
+      react-dom:
+        specifier: ^18
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@types/node':
+        specifier: 20.17.24
+        version: 20.17.24
+      '@types/react':
+        specifier: ^18
+        version: 18.3.3
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.3.0
+      eslint-config-vercel-ai:
+        specifier: workspace:*
+        version: link:../../tools/eslint-config
+      postcss:
+        specifier: ^8.4.49
+        version: 8.4.49
+      tailwindcss:
+        specifier: ^3.4.15
+        version: 3.4.15(ts-node@10.9.2(@types/node@20.17.24)(typescript@5.6.3))
+      typescript:
+        specifier: 5.6.3
+        version: 5.6.3
+
+  examples/next-langchain:
+    dependencies:
+      '@ai-sdk/react':
+        specifier: 1.2.9
+        version: link:../../packages/react
+      '@langchain/core':
+        specifier: 0.1.63
+        version: 0.1.63(openai@4.52.6)
+      '@langchain/openai':
+        specifier: 0.0.28
+        version: 0.0.28
+      ai:
+        specifier: 4.3.9
+        version: link:../../packages/ai
+      langchain:
+        specifier: 0.1.36
+        version: 0.1.36(@aws-crypto/sha256-js@5.2.0)(@aws-sdk/client-bedrock-runtime@3.663.0)(@aws-sdk/credential-provider-node@3.662.0(@aws-sdk/client-sso-oidc@3.662.0(@aws-sdk/client-sts@3.662.0))(@aws-sdk/client-sts@3.662.0))(@smithy/util-utf8@2.3.0)(@upstash/redis@1.34.3)(@vercel/kv@0.2.4)(fast-xml-parser@4.4.1)(ignore@5.3.2)(ioredis@5.4.1)(jsdom@26.0.0)(lodash@4.17.21)(openai@4.52.6)(playwright@1.50.1)(ws@8.18.0)
+      next:
+        specifier: latest
+        version: 15.2.2(@opentelemetry/api@1.9.0)(@playwright/test@1.50.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react:
+        specifier: ^18
+        version: 18.2.0
+      react-dom:
+        specifier: ^18
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@types/node':
+        specifier: 20.17.24
+        version: 20.17.24
+      '@types/react':
+        specifier: ^18
+        version: 18.3.3
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.4
+      autoprefixer:
+        specifier: ^10.4.14
+        version: 10.4.16(postcss@8.4.49)
+      eslint:
+        specifier: 8.57.1
+        version: 8.57.1
+      eslint-config-next:
+        specifier: 14.2.3
+        version: 14.2.3(eslint@8.57.1)(typescript@5.6.3)
+      postcss:
+        specifier: ^8.4.49
+        version: 8.4.49
+      tailwindcss:
+        specifier: ^3.4.15
+        version: 3.4.15(ts-node@10.9.2(@types/node@20.17.24)(typescript@5.6.3))
+      typescript:
+        specifier: 5.6.3
+        version: 5.6.3
+
+  examples/next-openai:
+    dependencies:
+      '@ai-sdk/anthropic':
+        specifier: 1.2.10
+        version: link:../../packages/anthropic
+      '@ai-sdk/deepseek':
+        specifier: 0.2.11
+        version: link:../../packages/deepseek
+      '@ai-sdk/fireworks':
+        specifier: 0.2.11
+        version: link:../../packages/fireworks
+      '@ai-sdk/google':
+        specifier: 1.2.11
+        version: link:../../packages/google
+      '@ai-sdk/google-vertex':
+        specifier: 2.2.15
+        version: link:../../packages/google-vertex
+      '@ai-sdk/openai':
+        specifier: 1.3.16
+        version: link:../../packages/openai
+      '@ai-sdk/perplexity':
+        specifier: 1.1.7
+        version: link:../../packages/perplexity
+      '@ai-sdk/react':
+        specifier: 1.2.9
+        version: link:../../packages/react
+      '@ai-sdk/ui-utils':
+        specifier: 1.2.8
+        version: link:../../packages/ui-utils
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       '@vercel/blob':
         specifier: ^0.26.0
         version: 0.26.0
       ai:
+<<<<<<< HEAD
         specifier: workspace:*
+=======
+        specifier: 4.3.9
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/ai
       next:
         specifier: latest
@@ -904,16 +1220,27 @@ importers:
   examples/next-openai-kasada-bot-protection:
     dependencies:
       '@ai-sdk/openai':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../../packages/openai
       '@ai-sdk/react':
         specifier: workspace:*
+=======
+        specifier: 1.3.16
+        version: link:../../packages/openai
+      '@ai-sdk/react':
+        specifier: 1.2.9
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/react
       '@vercel/functions':
         specifier: latest
         version: 3.1.0(@aws-sdk/credential-provider-web-identity@3.662.0(@aws-sdk/client-sts@3.662.0))
       ai:
+<<<<<<< HEAD
         specifier: workspace:*
+=======
+        specifier: 4.3.9
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/ai
       next:
         specifier: latest
@@ -962,6 +1289,7 @@ importers:
   examples/next-openai-pages:
     dependencies:
       '@ai-sdk/openai':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../../packages/openai
       '@ai-sdk/react':
@@ -969,6 +1297,15 @@ importers:
         version: link:../../packages/react
       ai:
         specifier: workspace:*
+=======
+        specifier: 1.3.16
+        version: link:../../packages/openai
+      '@ai-sdk/react':
+        specifier: 1.2.9
+        version: link:../../packages/react
+      ai:
+        specifier: 4.3.9
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/ai
       next:
         specifier: latest
@@ -1017,10 +1354,17 @@ importers:
   examples/next-openai-telemetry:
     dependencies:
       '@ai-sdk/openai':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../../packages/openai
       '@ai-sdk/react':
         specifier: workspace:*
+=======
+        specifier: 1.3.16
+        version: link:../../packages/openai
+      '@ai-sdk/react':
+        specifier: 1.2.9
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/react
       '@opentelemetry/api-logs':
         specifier: 0.55.0
@@ -1035,7 +1379,11 @@ importers:
         specifier: 1.10.0
         version: 1.10.0(@opentelemetry/api-logs@0.55.0)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.52.1(@opentelemetry/api@1.9.0))(@opentelemetry/resources@1.29.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-logs@0.55.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@1.29.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.29.0(@opentelemetry/api@1.9.0))
       ai:
+<<<<<<< HEAD
         specifier: workspace:*
+=======
+        specifier: 4.3.9
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/ai
       next:
         specifier: latest
@@ -1081,10 +1429,17 @@ importers:
   examples/next-openai-telemetry-sentry:
     dependencies:
       '@ai-sdk/openai':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../../packages/openai
       '@ai-sdk/react':
         specifier: workspace:*
+=======
+        specifier: 1.3.16
+        version: link:../../packages/openai
+      '@ai-sdk/react':
+        specifier: 1.2.9
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/react
       '@opentelemetry/api-logs':
         specifier: 0.55.0
@@ -1105,7 +1460,11 @@ importers:
         specifier: 1.10.0
         version: 1.10.0(@opentelemetry/api-logs@0.55.0)(@opentelemetry/api@1.9.0)(@opentelemetry/instrumentation@0.52.1(@opentelemetry/api@1.9.0))(@opentelemetry/resources@1.29.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-logs@0.55.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-metrics@1.29.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.28.0(@opentelemetry/api@1.9.0))
       ai:
+<<<<<<< HEAD
         specifier: workspace:*
+=======
+        specifier: 4.3.9
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/ai
       next:
         specifier: latest
@@ -1154,10 +1513,17 @@ importers:
   examples/next-openai-upstash-rate-limits:
     dependencies:
       '@ai-sdk/openai':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../../packages/openai
       '@ai-sdk/react':
         specifier: workspace:*
+=======
+        specifier: 1.3.16
+        version: link:../../packages/openai
+      '@ai-sdk/react':
+        specifier: 1.2.9
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/react
       '@upstash/ratelimit':
         specifier: ^0.4.3
@@ -1166,7 +1532,11 @@ importers:
         specifier: ^0.2.2
         version: 0.2.4
       ai:
+<<<<<<< HEAD
         specifier: workspace:*
+=======
+        specifier: 4.3.9
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/ai
       next:
         specifier: latest
@@ -1215,10 +1585,17 @@ importers:
   examples/node-http-server:
     dependencies:
       '@ai-sdk/openai':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../../packages/openai
       ai:
         specifier: workspace:*
+=======
+        specifier: 1.3.16
+        version: link:../../packages/openai
+      ai:
+        specifier: 4.3.9
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/ai
       dotenv:
         specifier: 16.4.5
@@ -1243,6 +1620,7 @@ importers:
   examples/nuxt-openai:
     dependencies:
       '@ai-sdk/openai':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../../packages/openai
       '@ai-sdk/vue':
@@ -1250,6 +1628,15 @@ importers:
         version: link:../../packages/vue
       ai:
         specifier: workspace:*
+=======
+        specifier: 1.3.16
+        version: link:../../packages/openai
+      '@ai-sdk/vue':
+        specifier: 1.2.8
+        version: link:../../packages/vue
+      ai:
+        specifier: 4.3.9
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/ai
       zod:
         specifier: 3.25.76
@@ -1296,11 +1683,59 @@ importers:
         version: 3.5.13(typescript@5.8.3)
       vue-router:
         specifier: 4.5.0
+<<<<<<< HEAD
         version: 4.5.0(vue@3.5.13(typescript@5.8.3))
+=======
+        version: 4.5.0(vue@3.5.13(typescript@5.6.3))
+
+  examples/solidstart-openai:
+    dependencies:
+      '@ai-sdk/openai':
+        specifier: 1.3.16
+        version: link:../../packages/openai
+      '@ai-sdk/solid':
+        specifier: 1.2.10
+        version: link:../../packages/solid
+      '@ai-sdk/ui-utils':
+        specifier: 1.2.8
+        version: link:../../packages/ui-utils
+      '@solidjs/meta':
+        specifier: 0.29.4
+        version: 0.29.4(solid-js@1.9.3)
+      '@solidjs/router':
+        specifier: ^0.15.1
+        version: 0.15.1(solid-js@1.9.3)
+      '@solidjs/start':
+        specifier: ^1.0.10
+        version: 1.0.10(@testing-library/jest-dom@6.6.3)(solid-js@1.9.3)(vinxi@0.4.3(@types/node@22.7.4)(@upstash/redis@1.34.3)(ioredis@5.4.1)(terser@5.31.3)(typescript@5.6.3))(vite@6.0.3(@types/node@22.7.4)(jiti@2.4.0)(terser@5.31.3)(tsx@4.19.2)(yaml@2.7.0))
+      ai:
+        specifier: 4.3.9
+        version: link:../../packages/ai
+      solid-js:
+        specifier: ^1.9.3
+        version: 1.9.3
+      zod:
+        specifier: ^3.23.8
+        version: 3.23.8
+    devDependencies:
+      autoprefixer:
+        specifier: ^10.4.19
+        version: 10.4.19(postcss@8.4.49)
+      postcss:
+        specifier: ^8.4.49
+        version: 8.4.49
+      tailwindcss:
+        specifier: ^3.4.15
+        version: 3.4.15(ts-node@10.9.2(@types/node@22.7.4)(typescript@5.6.3))
+      vinxi:
+        specifier: ^0.4.3
+        version: 0.4.3(@types/node@22.7.4)(@upstash/redis@1.34.3)(ioredis@5.4.1)(terser@5.31.3)(typescript@5.6.3)
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
   examples/sveltekit-openai:
     devDependencies:
       '@ai-sdk/openai':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../../packages/openai
       '@ai-sdk/provider-utils':
@@ -1309,6 +1744,19 @@ importers:
       '@ai-sdk/svelte':
         specifier: workspace:*
         version: link:../../packages/svelte
+=======
+        specifier: 1.3.16
+        version: link:../../packages/openai
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+        version: link:../../packages/provider-utils
+      '@ai-sdk/svelte':
+        specifier: 2.1.9
+        version: link:../../packages/svelte
+      '@ai-sdk/ui-utils':
+        specifier: 1.2.8
+        version: link:../../packages/ui-utils
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       '@eslint/compat':
         specifier: ^1.2.5
         version: 1.2.7(eslint@9.21.0(jiti@2.4.0))
@@ -1328,7 +1776,11 @@ importers:
         specifier: workspace:*
         version: link:../../tools/tsconfig
       ai:
+<<<<<<< HEAD
         specifier: workspace:*
+=======
+        specifier: 4.3.9
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../../packages/ai
       autoprefixer:
         specifier: ^10.4.20
@@ -1388,6 +1840,7 @@ importers:
         specifier: workspace:*
         version: link:../gateway
       '@ai-sdk/provider':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../provider
       '@ai-sdk/provider-utils':
@@ -1396,6 +1849,19 @@ importers:
       '@ai-sdk/test-server':
         specifier: workspace:*
         version: link:../test-server
+=======
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+        version: link:../provider-utils
+      '@ai-sdk/react':
+        specifier: 1.2.9
+        version: link:../react
+      '@ai-sdk/ui-utils':
+        specifier: 1.2.8
+        version: link:../ui-utils
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       '@opentelemetry/api':
         specifier: 1.9.0
         version: 1.9.0
@@ -1434,10 +1900,17 @@ importers:
         specifier: workspace:*
         version: link:../anthropic
       '@ai-sdk/provider':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../provider
       '@ai-sdk/provider-utils':
         specifier: workspace:*
+=======
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../provider-utils
       '@ai-sdk/test-server':
         specifier: workspace:*
@@ -1514,10 +1987,17 @@ importers:
   packages/anthropic:
     dependencies:
       '@ai-sdk/provider':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../provider
       '@ai-sdk/provider-utils':
         specifier: workspace:*
+=======
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../provider-utils
       '@ai-sdk/test-server':
         specifier: workspace:*
@@ -1541,11 +2021,50 @@ importers:
 
   packages/assemblyai:
     dependencies:
+<<<<<<< HEAD
       '@ai-sdk/provider':
         specifier: workspace:*
         version: link:../provider
       '@ai-sdk/provider-utils':
         specifier: workspace:*
+=======
+      '@ai-sdk/openai':
+        specifier: 1.3.16
+        version: link:../openai
+      '@ai-sdk/provider':
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+        version: link:../provider-utils
+    devDependencies:
+      '@types/node':
+        specifier: 20.17.24
+        version: 20.17.24
+      '@vercel/ai-tsconfig':
+        specifier: workspace:*
+        version: link:../../tools/tsconfig
+      tsup:
+        specifier: ^8
+        version: 8.0.2(postcss@8.5.3)(ts-node@10.9.2(@types/node@20.17.24)(typescript@5.6.3))(typescript@5.6.3)
+      typescript:
+        specifier: 5.6.3
+        version: 5.6.3
+      zod:
+        specifier: 3.23.8
+        version: 3.23.8
+
+  packages/cerebras:
+    dependencies:
+      '@ai-sdk/openai-compatible':
+        specifier: 0.2.11
+        version: link:../openai-compatible
+      '@ai-sdk/provider':
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../provider-utils
       '@ai-sdk/test-server':
         specifier: workspace:*
@@ -1712,10 +2231,17 @@ importers:
   packages/cohere:
     dependencies:
       '@ai-sdk/provider':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../provider
       '@ai-sdk/provider-utils':
         specifier: workspace:*
+=======
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../provider-utils
       '@ai-sdk/test-server':
         specifier: workspace:*
@@ -1765,9 +2291,35 @@ importers:
         specifier: 3.25.76
         version: 3.25.76
 
+  packages/deepgram:
+    dependencies:
+      '@ai-sdk/provider':
+        specifier: 1.1.2
+        version: 1.1.2
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.6
+        version: 2.2.6(zod@3.23.8)
+    devDependencies:
+      '@types/node':
+        specifier: 20.17.24
+        version: 20.17.24
+      '@vercel/ai-tsconfig':
+        specifier: workspace:*
+        version: link:../../tools/tsconfig
+      tsup:
+        specifier: ^8
+        version: 8.3.0(jiti@2.4.0)(postcss@8.5.3)(tsx@4.19.2)(typescript@5.6.3)(yaml@2.7.0)
+      typescript:
+        specifier: 5.6.3
+        version: 5.6.3
+      zod:
+        specifier: 3.23.8
+        version: 3.23.8
+
   packages/deepinfra:
     dependencies:
       '@ai-sdk/openai-compatible':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../openai-compatible
       '@ai-sdk/provider':
@@ -1775,6 +2327,15 @@ importers:
         version: link:../provider
       '@ai-sdk/provider-utils':
         specifier: workspace:*
+=======
+        specifier: 0.2.11
+        version: link:../openai-compatible
+      '@ai-sdk/provider':
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../provider-utils
       '@ai-sdk/test-server':
         specifier: workspace:*
@@ -1799,6 +2360,7 @@ importers:
   packages/deepseek:
     dependencies:
       '@ai-sdk/openai-compatible':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../openai-compatible
       '@ai-sdk/provider':
@@ -1806,6 +2368,40 @@ importers:
         version: link:../provider
       '@ai-sdk/provider-utils':
         specifier: workspace:*
+=======
+        specifier: 0.2.11
+        version: link:../openai-compatible
+      '@ai-sdk/provider':
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+        version: link:../provider-utils
+    devDependencies:
+      '@types/node':
+        specifier: 20.17.24
+        version: 20.17.24
+      '@vercel/ai-tsconfig':
+        specifier: workspace:*
+        version: link:../../tools/tsconfig
+      tsup:
+        specifier: ^8
+        version: 8.3.0(jiti@2.4.0)(postcss@8.5.3)(tsx@4.19.2)(typescript@5.6.3)(yaml@2.7.0)
+      typescript:
+        specifier: 5.6.3
+        version: 5.6.3
+      zod:
+        specifier: 3.23.8
+        version: 3.23.8
+
+  packages/elevenlabs:
+    dependencies:
+      '@ai-sdk/provider':
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../provider-utils
     devDependencies:
       '@types/node':
@@ -1855,10 +2451,17 @@ importers:
   packages/fal:
     dependencies:
       '@ai-sdk/provider':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../provider
       '@ai-sdk/provider-utils':
         specifier: workspace:*
+=======
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../provider-utils
       '@ai-sdk/test-server':
         specifier: workspace:*
@@ -1883,6 +2486,7 @@ importers:
   packages/fireworks:
     dependencies:
       '@ai-sdk/openai-compatible':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../openai-compatible
       '@ai-sdk/provider':
@@ -1890,6 +2494,15 @@ importers:
         version: link:../provider
       '@ai-sdk/provider-utils':
         specifier: workspace:*
+=======
+        specifier: 0.2.11
+        version: link:../openai-compatible
+      '@ai-sdk/provider':
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../provider-utils
       '@ai-sdk/test-server':
         specifier: workspace:*
@@ -1967,13 +2580,45 @@ importers:
         specifier: 3.25.76
         version: 3.25.76
 
+  packages/gladia:
+    dependencies:
+      '@ai-sdk/provider':
+        specifier: 1.1.2
+        version: 1.1.2
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.6
+        version: 2.2.6(zod@3.23.8)
+    devDependencies:
+      '@types/node':
+        specifier: 20.17.24
+        version: 20.17.24
+      '@vercel/ai-tsconfig':
+        specifier: workspace:*
+        version: link:../../tools/tsconfig
+      tsup:
+        specifier: ^8
+        version: 8.3.0(jiti@2.4.0)(postcss@8.5.3)(tsx@4.19.2)(typescript@5.6.3)(yaml@2.7.0)
+      typescript:
+        specifier: 5.6.3
+        version: 5.6.3
+      zod:
+        specifier: 3.23.8
+        version: 3.23.8
+
   packages/google:
     dependencies:
       '@ai-sdk/provider':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../provider
       '@ai-sdk/provider-utils':
         specifier: workspace:*
+=======
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../provider-utils
       '@ai-sdk/test-server':
         specifier: workspace:*
@@ -1998,6 +2643,7 @@ importers:
   packages/google-vertex:
     dependencies:
       '@ai-sdk/anthropic':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../anthropic
       '@ai-sdk/google':
@@ -2008,6 +2654,18 @@ importers:
         version: link:../provider
       '@ai-sdk/provider-utils':
         specifier: workspace:*
+=======
+        specifier: 1.2.10
+        version: link:../anthropic
+      '@ai-sdk/google':
+        specifier: 1.2.11
+        version: link:../google
+      '@ai-sdk/provider':
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../provider-utils
       '@ai-sdk/test-server':
         specifier: workspace:*
@@ -2035,10 +2693,67 @@ importers:
   packages/groq:
     dependencies:
       '@ai-sdk/provider':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../provider
       '@ai-sdk/provider-utils':
         specifier: workspace:*
+=======
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+        version: link:../provider-utils
+    devDependencies:
+      '@types/node':
+        specifier: 20.17.24
+        version: 20.17.24
+      '@vercel/ai-tsconfig':
+        specifier: workspace:*
+        version: link:../../tools/tsconfig
+      tsup:
+        specifier: ^8
+        version: 8.3.0(jiti@2.4.0)(postcss@8.5.3)(tsx@4.19.2)(typescript@5.6.3)(yaml@2.7.0)
+      typescript:
+        specifier: 5.6.3
+        version: 5.6.3
+      zod:
+        specifier: 3.23.8
+        version: 3.23.8
+
+  packages/hume:
+    dependencies:
+      '@ai-sdk/provider':
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+        version: link:../provider-utils
+    devDependencies:
+      '@types/node':
+        specifier: 20.17.24
+        version: 20.17.24
+      '@vercel/ai-tsconfig':
+        specifier: workspace:*
+        version: link:../../tools/tsconfig
+      tsup:
+        specifier: ^8
+        version: 8.3.0(jiti@2.4.0)(postcss@8.5.3)(tsx@4.19.2)(typescript@5.6.3)(yaml@2.7.0)
+      typescript:
+        specifier: 5.6.3
+        version: 5.6.3
+      zod:
+        specifier: 3.23.8
+        version: 3.23.8
+
+  packages/lmnt:
+    dependencies:
+      '@ai-sdk/provider':
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../provider-utils
       '@ai-sdk/test-server':
         specifier: workspace:*
@@ -2157,10 +2872,17 @@ importers:
   packages/luma:
     dependencies:
       '@ai-sdk/provider':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../provider
       '@ai-sdk/provider-utils':
         specifier: workspace:*
+=======
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../provider-utils
       '@ai-sdk/test-server':
         specifier: workspace:*
@@ -2185,10 +2907,17 @@ importers:
   packages/mistral:
     dependencies:
       '@ai-sdk/provider':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../provider
       '@ai-sdk/provider-utils':
         specifier: workspace:*
+=======
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../provider-utils
       '@ai-sdk/test-server':
         specifier: workspace:*
@@ -2213,10 +2942,17 @@ importers:
   packages/openai:
     dependencies:
       '@ai-sdk/provider':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../provider
       '@ai-sdk/provider-utils':
         specifier: workspace:*
+=======
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../provider-utils
       '@ai-sdk/test-server':
         specifier: workspace:*
@@ -2241,10 +2977,17 @@ importers:
   packages/openai-compatible:
     dependencies:
       '@ai-sdk/provider':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../provider
       '@ai-sdk/provider-utils':
         specifier: workspace:*
+=======
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../provider-utils
       '@ai-sdk/test-server':
         specifier: workspace:*
@@ -2269,10 +3012,17 @@ importers:
   packages/perplexity:
     dependencies:
       '@ai-sdk/provider':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../provider
       '@ai-sdk/provider-utils':
         specifier: workspace:*
+=======
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../provider-utils
       '@ai-sdk/test-server':
         specifier: workspace:*
@@ -2319,7 +3069,11 @@ importers:
   packages/provider-utils:
     dependencies:
       '@ai-sdk/provider':
+<<<<<<< HEAD
         specifier: workspace:*
+=======
+        specifier: 1.1.3
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../provider
       '@standard-schema/spec':
         specifier: ^1.0.0
@@ -2350,6 +3104,7 @@ importers:
   packages/react:
     dependencies:
       '@ai-sdk/provider-utils':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../provider-utils
       '@ai-sdk/test-server':
@@ -2358,6 +3113,13 @@ importers:
       ai:
         specifier: workspace:*
         version: link:../ai
+=======
+        specifier: 2.2.7
+        version: link:../provider-utils
+      '@ai-sdk/ui-utils':
+        specifier: 1.2.8
+        version: link:../ui-utils
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       react:
         specifier: ^18 || ^19 || ^19.0.0-rc
         version: 19.0.0-rc.1
@@ -2417,10 +3179,42 @@ importers:
   packages/replicate:
     dependencies:
       '@ai-sdk/provider':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../provider
       '@ai-sdk/provider-utils':
         specifier: workspace:*
+=======
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+        version: link:../provider-utils
+    devDependencies:
+      '@types/node':
+        specifier: 20.17.24
+        version: 20.17.24
+      '@vercel/ai-tsconfig':
+        specifier: workspace:*
+        version: link:../../tools/tsconfig
+      tsup:
+        specifier: ^8
+        version: 8.3.0(jiti@2.4.0)(postcss@8.5.3)(tsx@4.19.2)(typescript@5.6.3)(yaml@2.7.0)
+      typescript:
+        specifier: 5.6.3
+        version: 5.6.3
+      zod:
+        specifier: 3.23.8
+        version: 3.23.8
+
+  packages/revai:
+    dependencies:
+      '@ai-sdk/provider':
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../provider-utils
       '@ai-sdk/test-server':
         specifier: workspace:*
@@ -2476,6 +3270,7 @@ importers:
         specifier: workspace:*
         version: link:../provider
       '@ai-sdk/provider-utils':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../provider-utils
       ai:
@@ -2484,6 +3279,22 @@ importers:
       jsondiffpatch:
         specifier: 0.6.0
         version: 0.6.0
+=======
+        specifier: 2.2.7
+        version: link:../provider-utils
+      '@ai-sdk/ui-utils':
+        specifier: 1.2.8
+        version: link:../ui-utils
+      '@solid-primitives/trigger':
+        specifier: ^1.1.0
+        version: 1.1.0(solid-js@1.8.7)
+      solid-js:
+        specifier: ^1.7.7
+        version: 1.8.7
+      zod:
+        specifier: ^3.23.8
+        version: 3.23.8
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     devDependencies:
       '@testing-library/jest-dom':
         specifier: ^6.6.3
@@ -2558,6 +3369,7 @@ importers:
   packages/svelte:
     dependencies:
       '@ai-sdk/provider-utils':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../provider-utils
       '@ai-sdk/test-server':
@@ -2566,6 +3378,13 @@ importers:
       ai:
         specifier: workspace:*
         version: link:../ai
+=======
+        specifier: 2.2.7
+        version: link:../provider-utils
+      '@ai-sdk/ui-utils':
+        specifier: 1.2.8
+        version: link:../ui-utils
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     devDependencies:
       '@eslint/compat':
         specifier: ^1.2.5
@@ -2649,6 +3468,7 @@ importers:
   packages/togetherai:
     dependencies:
       '@ai-sdk/openai-compatible':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../openai-compatible
       '@ai-sdk/provider':
@@ -2656,6 +3476,15 @@ importers:
         version: link:../provider
       '@ai-sdk/provider-utils':
         specifier: workspace:*
+=======
+        specifier: 0.2.11
+        version: link:../openai-compatible
+      '@ai-sdk/provider':
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../provider-utils
       '@ai-sdk/test-server':
         specifier: workspace:*
@@ -2674,8 +3503,47 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
       zod:
+<<<<<<< HEAD
         specifier: 3.25.76
         version: 3.25.76
+=======
+        specifier: 3.23.8
+        version: 3.23.8
+
+  packages/ui-utils:
+    dependencies:
+      '@ai-sdk/provider':
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+        version: link:../provider-utils
+      zod-to-json-schema:
+        specifier: ^3.24.1
+        version: 3.24.1(zod@3.23.8)
+    devDependencies:
+      '@types/json-schema':
+        specifier: 7.0.15
+        version: 7.0.15
+      '@types/node':
+        specifier: 20.17.24
+        version: 20.17.24
+      '@types/react':
+        specifier: ^18
+        version: 18.3.3
+      '@vercel/ai-tsconfig':
+        specifier: workspace:*
+        version: link:../../tools/tsconfig
+      tsup:
+        specifier: ^8
+        version: 8.0.2(postcss@8.5.3)(ts-node@10.9.2(@types/node@20.17.24)(typescript@5.6.3))(typescript@5.6.3)
+      typescript:
+        specifier: 5.6.3
+        version: 5.6.3
+      zod:
+        specifier: 3.23.8
+        version: 3.23.8
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
   packages/valibot:
     dependencies:
@@ -2687,6 +3555,7 @@ importers:
         specifier: 20.17.24
         version: 20.17.24
       '@valibot/to-json-schema':
+<<<<<<< HEAD
         specifier: ^1.3.0
         version: 1.3.0(valibot@1.1.0(typescript@5.8.3))
       '@vercel/ai-tsconfig':
@@ -2713,6 +3582,13 @@ importers:
       '@ai-sdk/provider-utils':
         specifier: workspace:*
         version: link:../provider-utils
+=======
+        specifier: ^1.0.0-rc.0 || ^1.0.0
+        version: 1.0.0-rc.0(valibot@1.0.0-rc.0(typescript@5.6.3))
+      ai:
+        specifier: 4.3.9
+        version: link:../ai
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     devDependencies:
       '@types/node':
         specifier: 20.17.24
@@ -2733,6 +3609,7 @@ importers:
   packages/vue:
     dependencies:
       '@ai-sdk/provider-utils':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../provider-utils
       '@ai-sdk/test-server':
@@ -2741,6 +3618,13 @@ importers:
       ai:
         specifier: workspace:*
         version: link:../ai
+=======
+        specifier: 2.2.7
+        version: link:../provider-utils
+      '@ai-sdk/ui-utils':
+        specifier: 1.2.8
+        version: link:../ui-utils
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       swrv:
         specifier: ^1.0.4
         version: 1.0.4(vue@3.5.13(typescript@5.8.3))
@@ -2794,6 +3678,7 @@ importers:
   packages/xai:
     dependencies:
       '@ai-sdk/openai-compatible':
+<<<<<<< HEAD
         specifier: workspace:*
         version: link:../openai-compatible
       '@ai-sdk/provider':
@@ -2801,6 +3686,15 @@ importers:
         version: link:../provider
       '@ai-sdk/provider-utils':
         specifier: workspace:*
+=======
+        specifier: 0.2.11
+        version: link:../openai-compatible
+      '@ai-sdk/provider':
+        specifier: 1.1.3
+        version: link:../provider
+      '@ai-sdk/provider-utils':
+        specifier: 2.2.7
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         version: link:../provider-utils
       '@ai-sdk/test-server':
         specifier: workspace:*
@@ -2861,6 +3755,16 @@ packages:
 
   '@adobe/css-tools@4.4.0':
     resolution: {integrity: sha512-Ff9+ksdQQB3rMncgqDK78uLznstjyfIf2Arnh22pW8kBpLs6rpKDwgnZT46hin5Hl1WzazzK64DOrhSwYpS7bQ==}
+
+  '@ai-sdk/provider-utils@2.2.6':
+    resolution: {integrity: sha512-sUlZ7Gnq84DCGWMQRIK8XVbkzIBnvPR1diV4v6JwPgpn5armnLI/j+rqn62MpLrU5ZCQZlDKl/Lw6ed3ulYqaA==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.23.8
+
+  '@ai-sdk/provider@1.1.2':
+    resolution: {integrity: sha512-ITdgNilJZwLKR7X5TnUr1BsQW6UTX5yFp0h66Nfx8XjBYkWD9W3yugr50GOz3CnE9m/U/Cd5OyEbTMI0rgi6ZQ==}
+    engines: {node: '>=18'}
 
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
@@ -8126,8 +9030,18 @@ packages:
       rollup:
         optional: true
 
+<<<<<<< HEAD
   '@rollup/rollup-android-arm-eabi@4.34.8':
     resolution: {integrity: sha512-q217OSE8DTp8AFHuNHXo0Y86e1wtlfVrXiAlwkIvGRQv9zbc6mE3sjIVfwI8sYUyNxwOg0j/Vm1RKM04JcWLJw==}
+=======
+  '@rollup/rollup-android-arm-eabi@4.14.1':
+    resolution: {integrity: sha512-fH8/o8nSUek8ceQnT7K4EQbSiV7jgkHq81m9lWZFIXjJ7lJzpWXbQFpT/Zh6OZYnpFykvzC3fbEvEAFZu03dPA==}
+    cpu: [arm]
+    os: [android]
+
+  '@rollup/rollup-android-arm-eabi@4.20.0':
+    resolution: {integrity: sha512-TSpWzflCc4VGAUJZlPpgAJE1+V60MePDQnBd7PPkpuEmOy8i87aL6tinFGKBFKuEDikYpig72QzdT3QPYIi+oA==}
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     cpu: [arm]
     os: [android]
 
@@ -8136,8 +9050,18 @@ packages:
     cpu: [arm]
     os: [android]
 
+<<<<<<< HEAD
   '@rollup/rollup-android-arm64@4.34.8':
     resolution: {integrity: sha512-Gigjz7mNWaOL9wCggvoK3jEIUUbGul656opstjaUSGC3eT0BM7PofdAJaBfPFWWkXNVAXbaQtC99OCg4sJv70Q==}
+=======
+  '@rollup/rollup-android-arm64@4.14.1':
+    resolution: {integrity: sha512-Y/9OHLjzkunF+KGEoJr3heiD5X9OLa8sbT1lm0NYeKyaM3oMhhQFvPB0bNZYJwlq93j8Z6wSxh9+cyKQaxS7PQ==}
+    cpu: [arm64]
+    os: [android]
+
+  '@rollup/rollup-android-arm64@4.20.0':
+    resolution: {integrity: sha512-u00Ro/nok7oGzVuh/FMYfNoGqxU5CPWz1mxV85S2w9LxHR8OoMQBuSk+3BKVIDYgkpeOET5yXkx90OYFc+ytpQ==}
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     cpu: [arm64]
     os: [android]
 
@@ -8146,8 +9070,18 @@ packages:
     cpu: [arm64]
     os: [android]
 
+<<<<<<< HEAD
   '@rollup/rollup-darwin-arm64@4.34.8':
     resolution: {integrity: sha512-02rVdZ5tgdUNRxIUrFdcMBZQoaPMrxtwSb+/hOfBdqkatYHR3lZ2A2EGyHq2sGOd0Owk80oV3snlDASC24He3Q==}
+=======
+  '@rollup/rollup-darwin-arm64@4.14.1':
+    resolution: {integrity: sha512-+kecg3FY84WadgcuSVm6llrABOdQAEbNdnpi5X3UwWiFVhZIZvKgGrF7kmLguvxHNQy+UuRV66cLVl3S+Rkt+Q==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@rollup/rollup-darwin-arm64@4.20.0':
+    resolution: {integrity: sha512-uFVfvzvsdGtlSLuL0ZlvPJvl6ZmrH4CBwLGEFPe7hUmf7htGAN+aXo43R/V6LATyxlKVC/m6UsLb7jbG+LG39Q==}
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     cpu: [arm64]
     os: [darwin]
 
@@ -8156,8 +9090,18 @@ packages:
     cpu: [arm64]
     os: [darwin]
 
+<<<<<<< HEAD
   '@rollup/rollup-darwin-x64@4.34.8':
     resolution: {integrity: sha512-qIP/elwR/tq/dYRx3lgwK31jkZvMiD6qUtOycLhTzCvrjbZ3LjQnEM9rNhSGpbLXVJYQ3rq39A6Re0h9tU2ynw==}
+=======
+  '@rollup/rollup-darwin-x64@4.14.1':
+    resolution: {integrity: sha512-2pYRzEjVqq2TB/UNv47BV/8vQiXkFGVmPFwJb+1E0IFFZbIX8/jo1olxqqMbo6xCXf8kabANhp5bzCij2tFLUA==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@rollup/rollup-darwin-x64@4.20.0':
+    resolution: {integrity: sha512-xbrMDdlev53vNXexEa6l0LffojxhqDTBeL+VUxuuIXys4x6xyvbKq5XqTXBCEUA8ty8iEJblHvFaWRJTk/icAQ==}
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     cpu: [x64]
     os: [darwin]
 
@@ -8166,28 +9110,44 @@ packages:
     cpu: [x64]
     os: [darwin]
 
+<<<<<<< HEAD
   '@rollup/rollup-freebsd-arm64@4.34.8':
     resolution: {integrity: sha512-IQNVXL9iY6NniYbTaOKdrlVP3XIqazBgJOVkddzJlqnCpRi/yAeSOa8PLcECFSQochzqApIOE1GHNu3pCz+BDA==}
     cpu: [arm64]
     os: [freebsd]
 
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   '@rollup/rollup-freebsd-arm64@4.34.9':
     resolution: {integrity: sha512-2lzjQPJbN5UnHm7bHIUKFMulGTQwdvOkouJDpPysJS+QFBGDJqcfh+CxxtG23Ik/9tEvnebQiylYoazFMAgrYw==}
     cpu: [arm64]
     os: [freebsd]
 
+<<<<<<< HEAD
   '@rollup/rollup-freebsd-x64@4.34.8':
     resolution: {integrity: sha512-TYXcHghgnCqYFiE3FT5QwXtOZqDj5GmaFNTNt3jNC+vh22dc/ukG2cG+pi75QO4kACohZzidsq7yKTKwq/Jq7Q==}
     cpu: [x64]
     os: [freebsd]
 
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   '@rollup/rollup-freebsd-x64@4.34.9':
     resolution: {integrity: sha512-SLl0hi2Ah2H7xQYd6Qaiu01kFPzQ+hqvdYSoOtHYg/zCIFs6t8sV95kaoqjzjFwuYQLtOI0RZre/Ke0nPaQV+g==}
     cpu: [x64]
     os: [freebsd]
 
+<<<<<<< HEAD
   '@rollup/rollup-linux-arm-gnueabihf@4.34.8':
     resolution: {integrity: sha512-A4iphFGNkWRd+5m3VIGuqHnG3MVnqKe7Al57u9mwgbyZ2/xF9Jio72MaY7xxh+Y87VAHmGQr73qoKL9HPbXj1g==}
+=======
+  '@rollup/rollup-linux-arm-gnueabihf@4.14.1':
+    resolution: {integrity: sha512-mS6wQ6Do6/wmrF9aTFVpIJ3/IDXhg1EZcQFYHZLHqw6AzMBjTHWnCG35HxSqUNphh0EHqSM6wRTT8HsL1C0x5g==}
+    cpu: [arm]
+    os: [linux]
+
+  '@rollup/rollup-linux-arm-gnueabihf@4.20.0':
+    resolution: {integrity: sha512-jMYvxZwGmoHFBTbr12Xc6wOdc2xA5tF5F2q6t7Rcfab68TT0n+r7dgawD4qhPEvasDsVpQi+MgDzj2faOLsZjA==}
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     cpu: [arm]
     os: [linux]
 
@@ -8196,8 +9156,13 @@ packages:
     cpu: [arm]
     os: [linux]
 
+<<<<<<< HEAD
   '@rollup/rollup-linux-arm-musleabihf@4.34.8':
     resolution: {integrity: sha512-S0lqKLfTm5u+QTxlFiAnb2J/2dgQqRy/XvziPtDd1rKZFXHTyYLoVL58M/XFwDI01AQCDIevGLbQrMAtdyanpA==}
+=======
+  '@rollup/rollup-linux-arm-musleabihf@4.20.0':
+    resolution: {integrity: sha512-1asSTl4HKuIHIB1GcdFHNNZhxAYEdqML/MW4QmPS4G0ivbEcBr1JKlFLKsIRqjSwOBkdItn3/ZDlyvZ/N6KPlw==}
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     cpu: [arm]
     os: [linux]
 
@@ -8206,8 +9171,18 @@ packages:
     cpu: [arm]
     os: [linux]
 
+<<<<<<< HEAD
   '@rollup/rollup-linux-arm64-gnu@4.34.8':
     resolution: {integrity: sha512-jpz9YOuPiSkL4G4pqKrus0pn9aYwpImGkosRKwNi+sJSkz+WU3anZe6hi73StLOQdfXYXC7hUfsQlTnjMd3s1A==}
+=======
+  '@rollup/rollup-linux-arm64-gnu@4.14.1':
+    resolution: {integrity: sha512-p9rGKYkHdFMzhckOTFubfxgyIO1vw//7IIjBBRVzyZebWlzRLeNhqxuSaZ7kCEKVkm/kuC9fVRW9HkC/zNRG2w==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@rollup/rollup-linux-arm64-gnu@4.20.0':
+    resolution: {integrity: sha512-COBb8Bkx56KldOYJfMf6wKeYJrtJ9vEgBRAOkfw6Ens0tnmzPqvlpjZiLgkhg6cA3DGzCmLmmd319pmHvKWWlQ==}
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     cpu: [arm64]
     os: [linux]
 
@@ -8216,8 +9191,18 @@ packages:
     cpu: [arm64]
     os: [linux]
 
+<<<<<<< HEAD
   '@rollup/rollup-linux-arm64-musl@4.34.8':
     resolution: {integrity: sha512-KdSfaROOUJXgTVxJNAZ3KwkRc5nggDk+06P6lgi1HLv1hskgvxHUKZ4xtwHkVYJ1Rep4GNo+uEfycCRRxht7+Q==}
+=======
+  '@rollup/rollup-linux-arm64-musl@4.14.1':
+    resolution: {integrity: sha512-nDY6Yz5xS/Y4M2i9JLQd3Rofh5OR8Bn8qe3Mv/qCVpHFlwtZSBYSPaU4mrGazWkXrdQ98GB//H0BirGR/SKFSw==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@rollup/rollup-linux-arm64-musl@4.20.0':
+    resolution: {integrity: sha512-+it+mBSyMslVQa8wSPvBx53fYuZK/oLTu5RJoXogjk6x7Q7sz1GNRsXWjn6SwyJm8E/oMjNVwPhmNdIjwP135Q==}
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     cpu: [arm64]
     os: [linux]
 
@@ -8236,8 +9221,18 @@ packages:
     cpu: [loong64]
     os: [linux]
 
+<<<<<<< HEAD
   '@rollup/rollup-linux-powerpc64le-gnu@4.34.8':
     resolution: {integrity: sha512-LMJc999GkhGvktHU85zNTDImZVUCJ1z/MbAJTnviiWmmjyckP5aQsHtcujMjpNdMZPT2rQEDBlJfubhs3jsMfw==}
+=======
+  '@rollup/rollup-linux-powerpc64le-gnu@4.14.1':
+    resolution: {integrity: sha512-im7HE4VBL+aDswvcmfx88Mp1soqL9OBsdDBU8NqDEYtkri0qV0THhQsvZtZeNNlLeCUQ16PZyv7cqutjDF35qw==}
+    cpu: [ppc64le]
+    os: [linux]
+
+  '@rollup/rollup-linux-powerpc64le-gnu@4.20.0':
+    resolution: {integrity: sha512-yAMvqhPfGKsAxHN8I4+jE0CpLWD8cv4z7CK7BMmhjDuz606Q2tFKkWRY8bHR9JQXYcoLfopo5TTqzxgPUjUMfw==}
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     cpu: [ppc64]
     os: [linux]
 
@@ -8246,8 +9241,18 @@ packages:
     cpu: [ppc64]
     os: [linux]
 
+<<<<<<< HEAD
   '@rollup/rollup-linux-riscv64-gnu@4.34.8':
     resolution: {integrity: sha512-xAQCAHPj8nJq1PI3z8CIZzXuXCstquz7cIOL73HHdXiRcKk8Ywwqtx2wrIy23EcTn4aZ2fLJNBB8d0tQENPCmw==}
+=======
+  '@rollup/rollup-linux-riscv64-gnu@4.14.1':
+    resolution: {integrity: sha512-RWdiHuAxWmzPJgaHJdpvUUlDz8sdQz4P2uv367T2JocdDa98iRw2UjIJ4QxSyt077mXZT2X6pKfT2iYtVEvOFw==}
+    cpu: [riscv64]
+    os: [linux]
+
+  '@rollup/rollup-linux-riscv64-gnu@4.20.0':
+    resolution: {integrity: sha512-qmuxFpfmi/2SUkAw95TtNq/w/I7Gpjurx609OOOV7U4vhvUhBcftcmXwl3rqAek+ADBwSjIC4IVNLiszoj3dPA==}
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     cpu: [riscv64]
     os: [linux]
 
@@ -8256,8 +9261,18 @@ packages:
     cpu: [riscv64]
     os: [linux]
 
+<<<<<<< HEAD
   '@rollup/rollup-linux-s390x-gnu@4.34.8':
     resolution: {integrity: sha512-DdePVk1NDEuc3fOe3dPPTb+rjMtuFw89gw6gVWxQFAuEqqSdDKnrwzZHrUYdac7A7dXl9Q2Vflxpme15gUWQFA==}
+=======
+  '@rollup/rollup-linux-s390x-gnu@4.14.1':
+    resolution: {integrity: sha512-VMgaGQ5zRX6ZqV/fas65/sUGc9cPmsntq2FiGmayW9KMNfWVG/j0BAqImvU4KTeOOgYSf1F+k6at1UfNONuNjA==}
+    cpu: [s390x]
+    os: [linux]
+
+  '@rollup/rollup-linux-s390x-gnu@4.20.0':
+    resolution: {integrity: sha512-I0BtGXddHSHjV1mqTNkgUZLnS3WtsqebAXv11D5BZE/gfw5KoyXSAXVqyJximQXNvNzUo4GKlCK/dIwXlz+jlg==}
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     cpu: [s390x]
     os: [linux]
 
@@ -8266,8 +9281,18 @@ packages:
     cpu: [s390x]
     os: [linux]
 
+<<<<<<< HEAD
   '@rollup/rollup-linux-x64-gnu@4.34.8':
     resolution: {integrity: sha512-8y7ED8gjxITUltTUEJLQdgpbPh1sUQ0kMTmufRF/Ns5tI9TNMNlhWtmPKKHCU0SilX+3MJkZ0zERYYGIVBYHIA==}
+=======
+  '@rollup/rollup-linux-x64-gnu@4.14.1':
+    resolution: {integrity: sha512-9Q7DGjZN+hTdJomaQ3Iub4m6VPu1r94bmK2z3UeWP3dGUecRC54tmVu9vKHTm1bOt3ASoYtEz6JSRLFzrysKlA==}
+    cpu: [x64]
+    os: [linux]
+
+  '@rollup/rollup-linux-x64-gnu@4.20.0':
+    resolution: {integrity: sha512-y+eoL2I3iphUg9tN9GB6ku1FA8kOfmF4oUEWhztDJ4KXJy1agk/9+pejOuZkNFhRwHAOxMsBPLbXPd6mJiCwew==}
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     cpu: [x64]
     os: [linux]
 
@@ -8276,8 +9301,18 @@ packages:
     cpu: [x64]
     os: [linux]
 
+<<<<<<< HEAD
   '@rollup/rollup-linux-x64-musl@4.34.8':
     resolution: {integrity: sha512-SCXcP0ZpGFIe7Ge+McxY5zKxiEI5ra+GT3QRxL0pMMtxPfpyLAKleZODi1zdRHkz5/BhueUrYtYVgubqe9JBNQ==}
+=======
+  '@rollup/rollup-linux-x64-musl@4.14.1':
+    resolution: {integrity: sha512-JNEG/Ti55413SsreTguSx0LOVKX902OfXIKVg+TCXO6Gjans/k9O6ww9q3oLGjNDaTLxM+IHFMeXy/0RXL5R/g==}
+    cpu: [x64]
+    os: [linux]
+
+  '@rollup/rollup-linux-x64-musl@4.20.0':
+    resolution: {integrity: sha512-hM3nhW40kBNYUkZb/r9k2FKK+/MnKglX7UYd4ZUy5DJs8/sMsIbqWK2piZtVGE3kcXVNj3B2IrUYROJMMCikNg==}
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     cpu: [x64]
     os: [linux]
 
@@ -8286,8 +9321,18 @@ packages:
     cpu: [x64]
     os: [linux]
 
+<<<<<<< HEAD
   '@rollup/rollup-win32-arm64-msvc@4.34.8':
     resolution: {integrity: sha512-YHYsgzZgFJzTRbth4h7Or0m5O74Yda+hLin0irAIobkLQFRQd1qWmnoVfwmKm9TXIZVAD0nZ+GEb2ICicLyCnQ==}
+=======
+  '@rollup/rollup-win32-arm64-msvc@4.14.1':
+    resolution: {integrity: sha512-ryS22I9y0mumlLNwDFYZRDFLwWh3aKaC72CWjFcFvxK0U6v/mOkM5Up1bTbCRAhv3kEIwW2ajROegCIQViUCeA==}
+    cpu: [arm64]
+    os: [win32]
+
+  '@rollup/rollup-win32-arm64-msvc@4.20.0':
+    resolution: {integrity: sha512-psegMvP+Ik/Bg7QRJbv8w8PAytPA7Uo8fpFjXyCRHWm6Nt42L+JtoqH8eDQ5hRP7/XW2UiIriy1Z46jf0Oa1kA==}
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     cpu: [arm64]
     os: [win32]
 
@@ -8296,8 +9341,18 @@ packages:
     cpu: [arm64]
     os: [win32]
 
+<<<<<<< HEAD
   '@rollup/rollup-win32-ia32-msvc@4.34.8':
     resolution: {integrity: sha512-r3NRQrXkHr4uWy5TOjTpTYojR9XmF0j/RYgKCef+Ag46FWUTltm5ziticv8LdNsDMehjJ543x/+TJAek/xBA2w==}
+=======
+  '@rollup/rollup-win32-ia32-msvc@4.14.1':
+    resolution: {integrity: sha512-TdloItiGk+T0mTxKx7Hp279xy30LspMso+GzQvV2maYePMAWdmrzqSNZhUpPj3CGw12aGj57I026PgLCTu8CGg==}
+    cpu: [ia32]
+    os: [win32]
+
+  '@rollup/rollup-win32-ia32-msvc@4.20.0':
+    resolution: {integrity: sha512-GabekH3w4lgAJpVxkk7hUzUf2hICSQO0a/BLFA11/RMxQT92MabKAqyubzDZmMOC/hcJNlc+rrypzNzYl4Dx7A==}
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     cpu: [ia32]
     os: [win32]
 
@@ -8306,8 +9361,18 @@ packages:
     cpu: [ia32]
     os: [win32]
 
+<<<<<<< HEAD
   '@rollup/rollup-win32-x64-msvc@4.34.8':
     resolution: {integrity: sha512-U0FaE5O1BCpZSeE6gBl3c5ObhePQSfk9vDRToMmTkbhCOgW4jqvtS5LGyQ76L1fH8sM0keRp4uDTsbjiUyjk0g==}
+=======
+  '@rollup/rollup-win32-x64-msvc@4.14.1':
+    resolution: {integrity: sha512-wQGI+LY/Py20zdUPq+XCem7JcPOyzIJBm3dli+56DJsQOHbnXZFEwgmnC6el1TPAfC8lBT3m+z69RmLykNUbew==}
+    cpu: [x64]
+    os: [win32]
+
+  '@rollup/rollup-win32-x64-msvc@4.20.0':
+    resolution: {integrity: sha512-aJ1EJSuTdGnM6qbVC4B5DSmozPTqIag9fSzXRNNo+humQLG89XpPgdt16Ia56ORD7s+H8Pmyx44uczDQ0yDzpg==}
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     cpu: [x64]
     os: [win32]
 
@@ -15329,8 +16394,18 @@ packages:
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
 
+<<<<<<< HEAD
   rollup@4.34.8:
     resolution: {integrity: sha512-489gTVMzAYdiZHFVA/ig/iYFllCcWFHMvUHI1rpFmkoUtRlQxqh6/yiNqnYibjMZ2b/+FUQwldG+aLsEt6bglQ==}
+=======
+  rollup@4.14.1:
+    resolution: {integrity: sha512-4LnHSdd3QK2pa1J6dFbfm1HN0D7vSK/ZuZTsdyUAlA6Rr1yTouUTL13HaDOGJVgby461AhrNGBS7sCGXXtT+SA==}
+    engines: {node: '>=18.0.0', npm: '>=8.0.0'}
+    hasBin: true
+
+  rollup@4.20.0:
+    resolution: {integrity: sha512-6rbWBChcnSGzIlXeIdNIZTopKYad8ZG8ajhl78lGRLsI2rX8IkaotQhVas2Ma+GPxJav19wrSzvRvuiv0YKzWw==}
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
@@ -16148,10 +17223,13 @@ packages:
     resolution: {integrity: sha512-Zc+8eJlFMvgatPZTl6A9L/yht8QqdmUNtURHaKZLmKBE12hNPSrqNkUp2cs3M/UKmNVVAMFQYSjYIVHDjW5zew==}
     engines: {node: '>=12.0.0'}
 
+<<<<<<< HEAD
   tinyglobby@0.2.14:
     resolution: {integrity: sha512-tX5e7OM1HnYr2+a2C/4V0htOcSQcoSTH9KgJnVvNm5zm/cyEWKJ7j7YutsH9CxMdtOkkLFy2AHrMci9IM8IPZQ==}
     engines: {node: '>=12.0.0'}
 
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   tinypool@1.0.1:
     resolution: {integrity: sha512-URZYihUbRPcGv95En+sz6MfghfIc2OJ1sv/RmhWZLouPY0/8Vo80viwPvg3dlaS9fuq7fQMEfgRRK7BBZThBEA==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -17400,6 +18478,17 @@ packages:
 snapshots:
 
   '@adobe/css-tools@4.4.0': {}
+
+  '@ai-sdk/provider-utils@2.2.6(zod@3.23.8)':
+    dependencies:
+      '@ai-sdk/provider': 1.1.2
+      nanoid: 3.3.8
+      secure-json-parse: 2.7.0
+      zod: 3.23.8
+
+  '@ai-sdk/provider@1.1.2':
+    dependencies:
+      json-schema: 0.4.0
 
   '@alloc/quick-lru@5.2.0': {}
 
@@ -24171,30 +25260,59 @@ snapshots:
     optionalDependencies:
       rollup: 4.34.9
 
+<<<<<<< HEAD
   '@rollup/rollup-android-arm-eabi@4.34.8':
+=======
+  '@rollup/rollup-android-arm-eabi@4.14.1':
+    optional: true
+
+  '@rollup/rollup-android-arm-eabi@4.20.0':
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     optional: true
 
   '@rollup/rollup-android-arm-eabi@4.34.9':
     optional: true
 
+<<<<<<< HEAD
   '@rollup/rollup-android-arm64@4.34.8':
+=======
+  '@rollup/rollup-android-arm64@4.14.1':
+    optional: true
+
+  '@rollup/rollup-android-arm64@4.20.0':
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     optional: true
 
   '@rollup/rollup-android-arm64@4.34.9':
     optional: true
 
+<<<<<<< HEAD
   '@rollup/rollup-darwin-arm64@4.34.8':
+=======
+  '@rollup/rollup-darwin-arm64@4.14.1':
+    optional: true
+
+  '@rollup/rollup-darwin-arm64@4.20.0':
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     optional: true
 
   '@rollup/rollup-darwin-arm64@4.34.9':
     optional: true
 
+<<<<<<< HEAD
   '@rollup/rollup-darwin-x64@4.34.8':
+=======
+  '@rollup/rollup-darwin-x64@4.14.1':
+    optional: true
+
+  '@rollup/rollup-darwin-x64@4.20.0':
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     optional: true
 
   '@rollup/rollup-darwin-x64@4.34.9':
     optional: true
 
+<<<<<<< HEAD
   '@rollup/rollup-freebsd-arm64@4.34.8':
     optional: true
 
@@ -24208,24 +25326,54 @@ snapshots:
     optional: true
 
   '@rollup/rollup-linux-arm-gnueabihf@4.34.8':
+=======
+  '@rollup/rollup-freebsd-arm64@4.34.9':
+    optional: true
+
+  '@rollup/rollup-freebsd-x64@4.34.9':
+    optional: true
+
+  '@rollup/rollup-linux-arm-gnueabihf@4.14.1':
+    optional: true
+
+  '@rollup/rollup-linux-arm-gnueabihf@4.20.0':
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     optional: true
 
   '@rollup/rollup-linux-arm-gnueabihf@4.34.9':
     optional: true
 
+<<<<<<< HEAD
   '@rollup/rollup-linux-arm-musleabihf@4.34.8':
+=======
+  '@rollup/rollup-linux-arm-musleabihf@4.20.0':
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     optional: true
 
   '@rollup/rollup-linux-arm-musleabihf@4.34.9':
     optional: true
 
+<<<<<<< HEAD
   '@rollup/rollup-linux-arm64-gnu@4.34.8':
+=======
+  '@rollup/rollup-linux-arm64-gnu@4.14.1':
+    optional: true
+
+  '@rollup/rollup-linux-arm64-gnu@4.20.0':
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     optional: true
 
   '@rollup/rollup-linux-arm64-gnu@4.34.9':
     optional: true
 
+<<<<<<< HEAD
   '@rollup/rollup-linux-arm64-musl@4.34.8':
+=======
+  '@rollup/rollup-linux-arm64-musl@4.14.1':
+    optional: true
+
+  '@rollup/rollup-linux-arm64-musl@4.20.0':
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     optional: true
 
   '@rollup/rollup-linux-arm64-musl@4.34.9':
@@ -24237,49 +25385,105 @@ snapshots:
   '@rollup/rollup-linux-loongarch64-gnu@4.34.9':
     optional: true
 
+<<<<<<< HEAD
   '@rollup/rollup-linux-powerpc64le-gnu@4.34.8':
+=======
+  '@rollup/rollup-linux-powerpc64le-gnu@4.14.1':
+    optional: true
+
+  '@rollup/rollup-linux-powerpc64le-gnu@4.20.0':
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     optional: true
 
   '@rollup/rollup-linux-powerpc64le-gnu@4.34.9':
     optional: true
 
+<<<<<<< HEAD
   '@rollup/rollup-linux-riscv64-gnu@4.34.8':
+=======
+  '@rollup/rollup-linux-riscv64-gnu@4.14.1':
+    optional: true
+
+  '@rollup/rollup-linux-riscv64-gnu@4.20.0':
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     optional: true
 
   '@rollup/rollup-linux-riscv64-gnu@4.34.9':
     optional: true
 
+<<<<<<< HEAD
   '@rollup/rollup-linux-s390x-gnu@4.34.8':
+=======
+  '@rollup/rollup-linux-s390x-gnu@4.14.1':
+    optional: true
+
+  '@rollup/rollup-linux-s390x-gnu@4.20.0':
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     optional: true
 
   '@rollup/rollup-linux-s390x-gnu@4.34.9':
     optional: true
 
+<<<<<<< HEAD
   '@rollup/rollup-linux-x64-gnu@4.34.8':
+=======
+  '@rollup/rollup-linux-x64-gnu@4.14.1':
+    optional: true
+
+  '@rollup/rollup-linux-x64-gnu@4.20.0':
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     optional: true
 
   '@rollup/rollup-linux-x64-gnu@4.34.9':
     optional: true
 
+<<<<<<< HEAD
   '@rollup/rollup-linux-x64-musl@4.34.8':
+=======
+  '@rollup/rollup-linux-x64-musl@4.14.1':
+    optional: true
+
+  '@rollup/rollup-linux-x64-musl@4.20.0':
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     optional: true
 
   '@rollup/rollup-linux-x64-musl@4.34.9':
     optional: true
 
+<<<<<<< HEAD
   '@rollup/rollup-win32-arm64-msvc@4.34.8':
+=======
+  '@rollup/rollup-win32-arm64-msvc@4.14.1':
+    optional: true
+
+  '@rollup/rollup-win32-arm64-msvc@4.20.0':
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     optional: true
 
   '@rollup/rollup-win32-arm64-msvc@4.34.9':
     optional: true
 
+<<<<<<< HEAD
   '@rollup/rollup-win32-ia32-msvc@4.34.8':
+=======
+  '@rollup/rollup-win32-ia32-msvc@4.14.1':
+    optional: true
+
+  '@rollup/rollup-win32-ia32-msvc@4.20.0':
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     optional: true
 
   '@rollup/rollup-win32-ia32-msvc@4.34.9':
     optional: true
 
+<<<<<<< HEAD
   '@rollup/rollup-win32-x64-msvc@4.34.8':
+=======
+  '@rollup/rollup-win32-x64-msvc@4.14.1':
+    optional: true
+
+  '@rollup/rollup-win32-x64-msvc@4.20.0':
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     optional: true
 
   '@rollup/rollup-win32-x64-msvc@4.34.9':
@@ -28163,8 +29367,13 @@ snapshots:
       '@typescript-eslint/parser': 7.2.0(eslint@8.57.1)(typescript@5.6.3)
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
+<<<<<<< HEAD
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.1)
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.1)
+=======
+      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.1))(eslint@8.57.1)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       eslint-plugin-jsx-a11y: 6.9.0(eslint@8.57.1)
       eslint-plugin-react: 7.34.1(eslint@8.57.1)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.57.1)
@@ -28253,11 +29462,19 @@ snapshots:
       debug: 4.4.1(supports-color@9.4.0)
       enhanced-resolve: 5.17.1
       eslint: 8.57.1
+<<<<<<< HEAD
       eslint-module-utils: 2.8.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.1)
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.1)
       fast-glob: 3.3.3
       get-tsconfig: 4.8.1
       is-core-module: 2.16.1
+=======
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
+      fast-glob: 3.3.2
+      get-tsconfig: 4.7.2
+      is-core-module: 2.13.1
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       is-glob: 4.0.3
     transitivePeerDependencies:
       - '@typescript-eslint/parser'
@@ -28299,6 +29516,42 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
+<<<<<<< HEAD
+=======
+  eslint-module-utils@2.8.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.1):
+    dependencies:
+      debug: 3.2.7
+    optionalDependencies:
+      '@typescript-eslint/parser': 7.2.0(eslint@8.57.1)(typescript@5.4.5)
+      eslint: 8.57.1
+      eslint-import-resolver-node: 0.3.9
+      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.1)
+    transitivePeerDependencies:
+      - supports-color
+
+  eslint-module-utils@2.8.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1):
+    dependencies:
+      debug: 3.2.7
+    optionalDependencies:
+      '@typescript-eslint/parser': 7.2.0(eslint@8.57.1)(typescript@5.6.3)
+      eslint: 8.57.1
+      eslint-import-resolver-node: 0.3.9
+      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.1))(eslint@8.57.1)
+    transitivePeerDependencies:
+      - supports-color
+
+  eslint-module-utils@2.8.0(@typescript-eslint/parser@7.2.0(eslint@9.21.0(jiti@2.4.0))(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@9.21.0(jiti@2.4.0)):
+    dependencies:
+      debug: 3.2.7
+    optionalDependencies:
+      '@typescript-eslint/parser': 7.2.0(eslint@9.21.0(jiti@2.4.0))(typescript@5.6.3)
+      eslint: 9.21.0(jiti@2.4.0)
+      eslint-import-resolver-node: 0.3.9
+      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@7.2.0(eslint@9.21.0(jiti@2.4.0))(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@9.21.0(jiti@2.4.0))
+    transitivePeerDependencies:
+      - supports-color
+
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   eslint-module-utils@2.8.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.1):
     dependencies:
       debug: 3.2.7
@@ -28310,7 +29563,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.8.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.1):
+  eslint-module-utils@2.8.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -28370,7 +29623,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.1):
+  eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1):
     dependencies:
       array-includes: 3.1.8
       array.prototype.findlastindex: 1.2.5
@@ -28380,7 +29633,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.1)
+      eslint-module-utils: 2.8.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
@@ -33644,6 +34897,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
+<<<<<<< HEAD
   rollup@4.34.8:
     dependencies:
       '@types/estree': 1.0.6
@@ -33667,6 +34921,49 @@ snapshots:
       '@rollup/rollup-win32-arm64-msvc': 4.34.8
       '@rollup/rollup-win32-ia32-msvc': 4.34.8
       '@rollup/rollup-win32-x64-msvc': 4.34.8
+=======
+  rollup@4.14.1:
+    dependencies:
+      '@types/estree': 1.0.5
+    optionalDependencies:
+      '@rollup/rollup-android-arm-eabi': 4.14.1
+      '@rollup/rollup-android-arm64': 4.14.1
+      '@rollup/rollup-darwin-arm64': 4.14.1
+      '@rollup/rollup-darwin-x64': 4.14.1
+      '@rollup/rollup-linux-arm-gnueabihf': 4.14.1
+      '@rollup/rollup-linux-arm64-gnu': 4.14.1
+      '@rollup/rollup-linux-arm64-musl': 4.14.1
+      '@rollup/rollup-linux-powerpc64le-gnu': 4.14.1
+      '@rollup/rollup-linux-riscv64-gnu': 4.14.1
+      '@rollup/rollup-linux-s390x-gnu': 4.14.1
+      '@rollup/rollup-linux-x64-gnu': 4.14.1
+      '@rollup/rollup-linux-x64-musl': 4.14.1
+      '@rollup/rollup-win32-arm64-msvc': 4.14.1
+      '@rollup/rollup-win32-ia32-msvc': 4.14.1
+      '@rollup/rollup-win32-x64-msvc': 4.14.1
+      fsevents: 2.3.3
+
+  rollup@4.20.0:
+    dependencies:
+      '@types/estree': 1.0.5
+    optionalDependencies:
+      '@rollup/rollup-android-arm-eabi': 4.20.0
+      '@rollup/rollup-android-arm64': 4.20.0
+      '@rollup/rollup-darwin-arm64': 4.20.0
+      '@rollup/rollup-darwin-x64': 4.20.0
+      '@rollup/rollup-linux-arm-gnueabihf': 4.20.0
+      '@rollup/rollup-linux-arm-musleabihf': 4.20.0
+      '@rollup/rollup-linux-arm64-gnu': 4.20.0
+      '@rollup/rollup-linux-arm64-musl': 4.20.0
+      '@rollup/rollup-linux-powerpc64le-gnu': 4.20.0
+      '@rollup/rollup-linux-riscv64-gnu': 4.20.0
+      '@rollup/rollup-linux-s390x-gnu': 4.20.0
+      '@rollup/rollup-linux-x64-gnu': 4.20.0
+      '@rollup/rollup-linux-x64-musl': 4.20.0
+      '@rollup/rollup-win32-arm64-msvc': 4.20.0
+      '@rollup/rollup-win32-ia32-msvc': 4.20.0
+      '@rollup/rollup-win32-x64-msvc': 4.20.0
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       fsevents: 2.3.3
 
   rollup@4.34.9:
@@ -34819,11 +36116,14 @@ snapshots:
       fdir: 6.4.2(picomatch@4.0.2)
       picomatch: 4.0.2
 
+<<<<<<< HEAD
   tinyglobby@0.2.14:
     dependencies:
       fdir: 6.4.6(picomatch@4.0.2)
       picomatch: 4.0.2
 
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   tinypool@1.0.1: {}
 
   tinypool@1.0.2: {}
@@ -35076,7 +36376,7 @@ snapshots:
       cac: 6.7.14
       chokidar: 3.6.0
       consola: 3.2.3
-      debug: 4.3.7
+      debug: 4.4.0(supports-color@9.4.0)
       esbuild: 0.23.1
       execa: 5.1.1
       joycon: 3.1.1
@@ -35086,7 +36386,11 @@ snapshots:
       rollup: 4.34.9
       source-map: 0.8.0-beta.0
       sucrase: 3.35.0
+<<<<<<< HEAD
       tinyglobby: 0.2.14
+=======
+      tinyglobby: 0.2.10
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       tree-kill: 1.2.2
     optionalDependencies:
       postcss: 8.5.3
@@ -35695,7 +36999,11 @@ snapshots:
   vite@5.4.11(@types/node@20.17.24)(less@4.2.2)(sass@1.85.0)(terser@5.39.0):
     dependencies:
       esbuild: 0.21.5
+<<<<<<< HEAD
       postcss: 8.5.3
+=======
+      postcss: 8.4.49
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       rollup: 4.34.9
     optionalDependencies:
       '@types/node': 20.17.24
@@ -35707,7 +37015,11 @@ snapshots:
   vite@5.4.11(@types/node@22.7.4)(less@4.2.2)(sass@1.85.0)(terser@5.39.0):
     dependencies:
       esbuild: 0.21.5
+<<<<<<< HEAD
       postcss: 8.5.3
+=======
+      postcss: 8.4.49
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       rollup: 4.34.9
     optionalDependencies:
       '@types/node': 22.7.4

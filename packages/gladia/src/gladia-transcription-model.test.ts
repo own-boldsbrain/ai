@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 import { createTestServer } from '@ai-sdk/test-server/with-vitest';
+=======
+import { createTestServer } from '@ai-sdk/provider-utils/test';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 import { GladiaTranscriptionModel } from './gladia-transcription-model';
 import { createGladia } from './gladia-provider';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
+<<<<<<< HEAD
 import { describe, it, expect } from 'vitest';
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 const audioData = await readFile(path.join(__dirname, 'transcript-test.mp3'));
 const provider = createGladia({ apiKey: 'test-api-key' });
@@ -123,7 +130,11 @@ describe('doGenerate', () => {
       mediaType: 'audio/wav',
     });
 
+<<<<<<< HEAD
     expect(await server.calls[1].requestBodyJson).toMatchObject({
+=======
+    expect(await server.calls[1].requestBody).toMatchObject({
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       audio_url: 'https://storage.gladia.io/mock-upload-url',
     });
   });

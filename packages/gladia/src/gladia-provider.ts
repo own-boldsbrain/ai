@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   TranscriptionModelV2,
   ProviderV2,
@@ -7,6 +8,13 @@ import { FetchFunction, loadApiKey } from '@ai-sdk/provider-utils';
 import { GladiaTranscriptionModel } from './gladia-transcription-model';
 
 export interface GladiaProvider extends ProviderV2 {
+=======
+import { TranscriptionModelV1, ProviderV1 } from '@ai-sdk/provider';
+import { FetchFunction, loadApiKey } from '@ai-sdk/provider-utils';
+import { GladiaTranscriptionModel } from './gladia-transcription-model';
+
+export interface GladiaProvider extends Pick<ProviderV1, 'transcriptionModel'> {
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   (): {
     transcription: GladiaTranscriptionModel;
   };
@@ -14,7 +22,11 @@ export interface GladiaProvider extends ProviderV2 {
   /**
 Creates a model for transcription.
    */
+<<<<<<< HEAD
   transcription(): TranscriptionModelV2;
+=======
+  transcription(): TranscriptionModelV1;
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 }
 
 export interface GladiaProviderSettings {
@@ -67,6 +79,7 @@ export function createGladia(
   provider.transcription = createTranscriptionModel;
   provider.transcriptionModel = createTranscriptionModel;
 
+<<<<<<< HEAD
   // Required ProviderV2 methods that are not supported
   provider.languageModel = () => {
     throw new NoSuchModelError({
@@ -92,6 +105,8 @@ export function createGladia(
     });
   };
 
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   return provider as GladiaProvider;
 }
 

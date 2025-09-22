@@ -1,6 +1,10 @@
 # AI SDK - Rev.ai Provider
 
+<<<<<<< HEAD
 The **[Rev.ai provider](https://ai-sdk.dev/providers/ai-sdk-providers/revai)** for the [AI SDK](https://ai-sdk.dev/docs)
+=======
+The **[Rev.ai provider](https://sdk.vercel.ai/providers/ai-sdk-providers/revai)** for the [AI SDK](https://sdk.vercel.ai/docs)
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 contains language model support for the Rev.ai transcription API.
 
 ## Setup
@@ -35,4 +39,8 @@ const { text } = await transcribe({
 
 ## Documentation
 
+<<<<<<< HEAD
 Please check out the **[Rev.ai provider documentation](https://ai-sdk.dev/providers/ai-sdk-providers/revai)** for more information.
+=======
+Please check out the **[Rev.ai provider documentation](https://sdk.vercel.ai/providers/ai-sdk-providers/revai)** for more information.
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017

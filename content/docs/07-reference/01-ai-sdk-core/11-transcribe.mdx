@@ -14,7 +14,11 @@ import { experimental_transcribe as transcribe } from 'ai';
 import { openai } from '@ai-sdk/openai';
 import { readFile } from 'fs/promises';
 
+<<<<<<< HEAD
 const { text: transcript } = await transcribe({
+=======
+const { transcript } = await transcribe({
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   model: openai.transcription('whisper-1'),
   audio: await readFile('audio.mp3'),
 });
@@ -37,7 +41,11 @@ console.log(transcript);
   content={[
     {
       name: 'model',
+<<<<<<< HEAD
       type: 'TranscriptionModelV2',
+=======
+      type: 'TranscriptionModelV1',
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       description: 'The transcription model to use.',
     },
     {

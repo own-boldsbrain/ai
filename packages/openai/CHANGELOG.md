@@ -1,5 +1,6 @@
 # @ai-sdk/openai
 
+<<<<<<< HEAD
 ## 2.1.0-beta.1
 
 ### Patch Changes
@@ -1042,6 +1043,79 @@
 - Updated dependencies [d5f588f]
   - @ai-sdk/provider-utils@3.0.0-canary.0
   - @ai-sdk/provider@2.0.0-canary.0
+=======
+## 1.3.16
+
+### Patch Changes
+
+- bd6e457: feat (provider/openai): o4 updates for responses api
+
+## 1.3.15
+
+### Patch Changes
+
+- 98d954e: feat (providers/openai): add o3 and o4-mini models
+
+## 1.3.14
+
+### Patch Changes
+
+- 980141c: fix (openai): structure output for responses model
+
+## 1.3.13
+
+### Patch Changes
+
+- 75b9849: adding support for gpt-4o-search-preview and handling unsupported parameters
+
+## 1.3.12
+
+### Patch Changes
+
+- 575339f: feat (providers/openai): add gpt-4.1 models
+
+## 1.3.11
+
+### Patch Changes
+
+- beef951: feat: add speech with experimental_generateSpeech
+- Updated dependencies [beef951]
+  - @ai-sdk/provider@1.1.3
+  - @ai-sdk/provider-utils@2.2.7
+
+## 1.3.10
+
+### Patch Changes
+
+- dbe53e7: adding support for gpt-4o-search-preview and handling unsupported parameters
+- 84ffaba: fix: propagate openai transcription fixes
+
+## 1.3.9
+
+### Patch Changes
+
+- 013faa8: core (ai): change transcription model mimeType to mediaType
+- 013faa8: fix (provider/openai): increase transcription model resilience
+- Updated dependencies [013faa8]
+  - @ai-sdk/provider@1.1.2
+  - @ai-sdk/provider-utils@2.2.6
+
+## 1.3.8
+
+### Patch Changes
+
+- c21fa6d: feat: add transcription with experimental_transcribe
+- Updated dependencies [c21fa6d]
+  - @ai-sdk/provider-utils@2.2.5
+  - @ai-sdk/provider@1.1.1
+
+## 1.3.7
+
+### Patch Changes
+
+- Updated dependencies [2c19b9a]
+  - @ai-sdk/provider-utils@2.2.4
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 ## 1.3.6
 

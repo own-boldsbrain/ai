@@ -14,6 +14,7 @@ body:
         Reproduction steps, code examples, background, etc...
     validations:
       required: true
+<<<<<<< HEAD
   - type: textarea
     attributes:
       label: AI SDK Version
@@ -33,3 +34,5 @@ body:
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017

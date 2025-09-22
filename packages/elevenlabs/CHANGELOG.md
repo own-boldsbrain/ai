@@ -1,5 +1,6 @@
 # @ai-sdk/elevenlabs
 
+<<<<<<< HEAD
 ## 1.1.0-beta.1
 
 ### Patch Changes
@@ -527,3 +528,18 @@
 - Updated dependencies [3795467]
   - @ai-sdk/provider-utils@3.0.0-canary.8
   - @ai-sdk/provider@2.0.0-canary.7
+=======
+## 0.0.2
+
+### Patch Changes
+
+- Updated dependencies [beef951]
+  - @ai-sdk/provider@1.1.3
+  - @ai-sdk/provider-utils@2.2.7
+
+## 0.0.1
+
+### Patch Changes
+
+- 01888d9: feat (provider/elevenlabs): add transcription provider
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017

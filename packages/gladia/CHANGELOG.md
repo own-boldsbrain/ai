@@ -1,5 +1,6 @@
 # @ai-sdk/gladia
 
+<<<<<<< HEAD
 ## 1.1.0-beta.1
 
 ### Patch Changes
@@ -471,3 +472,10 @@
 ### Patch Changes
 
 - cf822aa: feat(providers/gladia): add transcribe
+=======
+## 0.0.1
+
+### Patch Changes
+
+- e6e1cd9: feat(providers/gladia): add transcribe
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017

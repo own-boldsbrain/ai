@@ -1,5 +1,6 @@
 # @ai-sdk/hume
 
+<<<<<<< HEAD
 ## 1.1.0-beta.1
 
 ### Patch Changes
@@ -505,3 +506,10 @@
 ### Patch Changes
 
 - 018f3c7: feat(providers/hume): add speech
+=======
+## 0.0.1
+
+### Patch Changes
+
+- 69e8344: feat(providers/hume): add speech
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017

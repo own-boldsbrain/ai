@@ -95,6 +95,10 @@ export type ConsumeStreamOptions = {
   onError?: ErrorHandler;
 };
 
+export type ConsumeStreamOptions = {
+  onError?: (error: unknown) => void;
+};
+
 /**
 A result object for accessing different stream types and additional information.
  */

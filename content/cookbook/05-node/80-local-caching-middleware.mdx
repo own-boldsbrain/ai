@@ -6,8 +6,11 @@ tags: ['streaming', 'caching', 'middleware']
 
 # Local Caching Middleware
 
+<<<<<<< HEAD
 <Note type="warning">This example is not yet updated to v5.</Note>
 
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 When developing AI applications, you'll often find yourself repeatedly making the same API calls during development. This can lead to increased costs and slower development cycles. A caching middleware allows you to store responses locally and reuse them when the same inputs are provided.
 
 This approach is particularly useful in two scenarios:
@@ -40,7 +43,11 @@ The middleware handles all transformations needed to make cached responses indis
 ```ts
 import {
   type LanguageModelV1,
+<<<<<<< HEAD
   type LanguageModelV2Middleware,
+=======
+  type LanguageModelV1Middleware,
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   LanguageModelV1Prompt,
   type LanguageModelV1StreamPart,
   simulateReadableStream,
@@ -115,7 +122,11 @@ const cleanPrompt = (prompt: LanguageModelV1Prompt) => {
   });
 };
 
+<<<<<<< HEAD
 export const cacheMiddleware: LanguageModelV2Middleware = {
+=======
+export const cacheMiddleware: LanguageModelV1Middleware = {
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   wrapGenerate: async ({ doGenerate, params }) => {
     const cacheKey = JSON.stringify({
       ...cleanPrompt(params.prompt),
@@ -172,6 +183,10 @@ export const cacheMiddleware: LanguageModelV2Middleware = {
           chunkDelayInMs: 10,
           chunks: formattedChunks,
         }),
+<<<<<<< HEAD
+=======
+        rawCall: { rawPrompt: null, rawSettings: {} },
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       };
     }
 
@@ -216,7 +231,11 @@ import { cached } from '../middleware/your-cache-middleware';
 async function main() {
   const result = streamText({
     model: cached(openai('gpt-4o')),
+<<<<<<< HEAD
     maxOutputTokens: 512,
+=======
+    maxTokens: 512,
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     temperature: 0.3,
     maxRetries: 5,
     prompt: 'Invent a new holiday and describe its traditions.',

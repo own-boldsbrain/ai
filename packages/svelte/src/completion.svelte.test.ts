@@ -1,7 +1,12 @@
 import {
   createTestServer,
   TestResponseController,
+<<<<<<< HEAD
 } from '@ai-sdk/test-server/with-vitest';
+=======
+} from '@ai-sdk/provider-utils/test';
+import { Completion } from './completion.svelte.js';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 import { render } from '@testing-library/svelte';
 import type { UIMessageChunk } from 'ai';
 import { Completion } from './completion.svelte.js';
@@ -16,10 +21,15 @@ const server = createTestServer({
   '/api/completion': {},
 });
 
+const server = createTestServer({
+  '/api/completion': {},
+});
+
 describe('Completion', () => {
   it('should render a data stream', async () => {
     server.urls['/api/completion'].response = {
       type: 'stream-chunks',
+<<<<<<< HEAD
       chunks: [
         formatChunk({ type: 'text-start', id: '0' }),
         formatChunk({ type: 'text-delta', id: '0', delta: 'Hello' }),
@@ -28,6 +38,9 @@ describe('Completion', () => {
         formatChunk({ type: 'text-delta', id: '0', delta: '.' }),
         formatChunk({ type: 'text-end', id: '0' }),
       ],
+=======
+      chunks: ['0:"Hello"\n', '0:","\n', '0:" world"\n', '0:"."\n'],
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     };
 
     const completion = new Completion();
@@ -49,6 +62,7 @@ describe('Completion', () => {
   it('should call `onFinish` callback', async () => {
     server.urls['/api/completion'].response = {
       type: 'stream-chunks',
+<<<<<<< HEAD
       chunks: [
         formatChunk({ type: 'text-start', id: '0' }),
         formatChunk({ type: 'text-delta', id: '0', delta: 'Hello' }),
@@ -57,6 +71,9 @@ describe('Completion', () => {
         formatChunk({ type: 'text-delta', id: '0', delta: '.' }),
         formatChunk({ type: 'text-end', id: '0' }),
       ],
+=======
+      chunks: ['0:"Hello"\n', '0:","\n', '0:" world"\n', '0:"."\n'],
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     };
 
     const onFinish = vi.fn();
@@ -103,6 +120,7 @@ describe('Completion', () => {
       },
       {
         type: 'stream-chunks',
+<<<<<<< HEAD
         chunks: [
           formatChunk({ type: 'text-start', id: '0' }),
           formatChunk({ type: 'text-delta', id: '0', delta: 'Hello' }),
@@ -111,6 +129,9 @@ describe('Completion', () => {
           formatChunk({ type: 'text-delta', id: '0', delta: '.' }),
           formatChunk({ type: 'text-end', id: '0' }),
         ],
+=======
+        chunks: ['0:"Hello"\n', '0:","\n', '0:" world"\n', '0:"."\n'],
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       },
     ];
 
@@ -128,6 +149,7 @@ describe('synchronization', () => {
   it('correctly synchronizes content between hook instances', async () => {
     server.urls['/api/completion'].response = {
       type: 'stream-chunks',
+<<<<<<< HEAD
       chunks: [
         formatChunk({ type: 'text-start', id: '0' }),
         formatChunk({ type: 'text-delta', id: '0', delta: 'Hello' }),
@@ -136,6 +158,9 @@ describe('synchronization', () => {
         formatChunk({ type: 'text-delta', id: '0', delta: '.' }),
         formatChunk({ type: 'text-end', id: '0' }),
       ],
+=======
+      chunks: ['0:"Hello"\n', '0:","\n', '0:" world"\n', '0:"."\n'],
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     };
 
     const {
@@ -166,11 +191,15 @@ describe('synchronization', () => {
       expect(completion2.loading).toBe(true);
     });
 
+<<<<<<< HEAD
     controller.write(formatChunk({ type: 'text-start', id: '0' }));
     controller.write(
       formatChunk({ type: 'text-delta', id: '0', delta: 'Hello' }),
     );
     controller.write(formatChunk({ type: 'text-end', id: '0' }));
+=======
+    controller.write('0:"Hello"\n');
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     await vi.waitFor(() => {
       expect(completion1.completion).toBe('Hello');
       expect(completion2.completion).toBe('Hello');

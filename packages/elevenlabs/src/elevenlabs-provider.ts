@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   TranscriptionModelV2,
   SpeechModelV2,
@@ -11,6 +12,15 @@ import { ElevenLabsSpeechModel } from './elevenlabs-speech-model';
 import { ElevenLabsSpeechModelId } from './elevenlabs-speech-options';
 
 export interface ElevenLabsProvider extends ProviderV2 {
+=======
+import { TranscriptionModelV1, ProviderV1 } from '@ai-sdk/provider';
+import { FetchFunction, loadApiKey } from '@ai-sdk/provider-utils';
+import { ElevenLabsTranscriptionModel } from './elevenlabs-transcription-model';
+import { ElevenLabsTranscriptionModelId } from './elevenlabs-transcription-settings';
+
+export interface ElevenLabsProvider
+  extends Pick<ProviderV1, 'transcriptionModel'> {
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   (
     modelId: 'scribe_v1',
     settings?: {},
@@ -21,12 +31,16 @@ export interface ElevenLabsProvider extends ProviderV2 {
   /**
 Creates a model for transcription.
    */
+<<<<<<< HEAD
   transcription(modelId: ElevenLabsTranscriptionModelId): TranscriptionModelV2;
 
   /**
 Creates a model for speech generation.
    */
   speech(modelId: ElevenLabsSpeechModelId): SpeechModelV2;
+=======
+  transcription(modelId: ElevenLabsTranscriptionModelId): TranscriptionModelV1;
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 }
 
 export interface ElevenLabsProviderSettings {
@@ -70,6 +84,7 @@ export function createElevenLabs(
       fetch: options.fetch,
     });
 
+<<<<<<< HEAD
   const createSpeechModel = (modelId: ElevenLabsSpeechModelId) =>
     new ElevenLabsSpeechModel(modelId, {
       provider: `elevenlabs.speech`,
@@ -78,6 +93,8 @@ export function createElevenLabs(
       fetch: options.fetch,
     });
 
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   const provider = function (modelId: ElevenLabsTranscriptionModelId) {
     return {
       transcription: createTranscriptionModel(modelId),
@@ -86,6 +103,7 @@ export function createElevenLabs(
 
   provider.transcription = createTranscriptionModel;
   provider.transcriptionModel = createTranscriptionModel;
+<<<<<<< HEAD
   provider.speech = createSpeechModel;
   provider.speechModel = createSpeechModel;
 
@@ -112,6 +130,8 @@ export function createElevenLabs(
       message: 'ElevenLabs does not provide image models',
     });
   };
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
   return provider as ElevenLabsProvider;
 }

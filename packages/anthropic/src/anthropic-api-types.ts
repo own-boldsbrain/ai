@@ -62,11 +62,14 @@ type AnthropicContentSource =
   | {
       type: 'url';
       url: string;
+<<<<<<< HEAD
     }
   | {
       type: 'text';
       media_type: 'text/plain';
       data: string;
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     };
 
 export interface AnthropicImageContent {
@@ -78,9 +81,12 @@ export interface AnthropicImageContent {
 export interface AnthropicDocumentContent {
   type: 'document';
   source: AnthropicContentSource;
+<<<<<<< HEAD
   title?: string;
   context?: string;
   citations?: { enabled: boolean };
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   cache_control: AnthropicCacheControl | undefined;
 }
 

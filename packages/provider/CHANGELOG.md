@@ -1,5 +1,6 @@
 # @ai-sdk/provider
 
+<<<<<<< HEAD
 ## 2.1.0-beta.0
 
 ### Minor Changes
@@ -404,6 +405,25 @@
 ### Major Changes
 
 - d5f588f: AI SDK 5
+=======
+## 1.1.3
+
+### Patch Changes
+
+- beef951: feat: add speech with experimental_generateSpeech
+
+## 1.1.2
+
+### Patch Changes
+
+- 013faa8: core (ai): change transcription model mimeType to mediaType
+
+## 1.1.1
+
+### Patch Changes
+
+- c21fa6d: feat: add transcription with experimental_transcribe
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 ## 1.1.0
 

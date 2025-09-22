@@ -183,7 +183,11 @@ import { openai } from '@ai-sdk/openai';
 
 // Completions API
 const { text } = await generateText({
+<<<<<<< HEAD:content/cookbook/00-guides/19-openai-responses.mdx
   model: openai('gpt-4o'),
+=======
+  model: openai('gpt-4o', { parallelToolCalls: false }),
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017:content/docs/02-guides/19-openai-responses.mdx
   prompt: 'Explain the concept of quantum entanglement.',
   providerOptions: {
     openai: {

@@ -1,5 +1,6 @@
 # @ai-sdk/valibot
 
+<<<<<<< HEAD
 ## 1.1.0-beta.1
 
 ### Patch Changes
@@ -475,6 +476,86 @@
 - Updated dependencies [9477ebb]
 - Updated dependencies [8026705]
   - ai@5.0.0-canary.0
+=======
+## 0.1.21
+
+### Patch Changes
+
+- Updated dependencies [b69a253]
+  - ai@4.3.9
+
+## 0.1.20
+
+### Patch Changes
+
+- Updated dependencies [6e8a73b]
+  - ai@4.3.8
+
+## 0.1.19
+
+### Patch Changes
+
+- Updated dependencies [f4f3945]
+  - ai@4.3.7
+
+## 0.1.18
+
+### Patch Changes
+
+- Updated dependencies [beef951]
+- Updated dependencies [bd41167]
+  - ai@4.3.6
+
+## 0.1.17
+
+### Patch Changes
+
+- Updated dependencies [452bf12]
+  - ai@4.3.5
+
+## 0.1.16
+
+### Patch Changes
+
+- Updated dependencies [013faa8]
+  - ai@4.3.4
+
+## 0.1.15
+
+### Patch Changes
+
+- Updated dependencies [3e88f4d]
+- Updated dependencies [c21fa6d]
+  - ai@4.3.3
+
+## 0.1.14
+
+### Patch Changes
+
+- Updated dependencies [665a567]
+  - ai@4.3.2
+
+## 0.1.13
+
+### Patch Changes
+
+- Updated dependencies [3d1bd38]
+  - ai@4.3.1
+
+## 0.1.12
+
+### Patch Changes
+
+- Updated dependencies [772a2d7]
+  - ai@4.3.0
+
+## 0.1.11
+
+### Patch Changes
+
+- Updated dependencies [c45d100]
+  - ai@4.2.11
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 ## 0.1.10
 

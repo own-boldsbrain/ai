@@ -1,6 +1,10 @@
 # AI SDK - Deepgram Provider
 
+<<<<<<< HEAD
 The **[Deepgram provider](https://ai-sdk.dev/providers/ai-sdk-providers/deepgram)** for the [AI SDK](https://ai-sdk.dev/docs)
+=======
+The **[Deepgram provider](https://sdk.vercel.ai/providers/ai-sdk-providers/deepgram)** for the [AI SDK](https://sdk.vercel.ai/docs)
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 contains transcription model support for the Deepgram transcription API.
 
 ## Setup
@@ -35,4 +39,8 @@ const { text } = await transcribe({
 
 ## Documentation
 
+<<<<<<< HEAD
 Please check out the **[Deepgram provider documentation](https://ai-sdk.dev/providers/ai-sdk-providers/deepgram)** for more information.
+=======
+Please check out the **[Deepgram provider documentation](https://sdk.vercel.ai/providers/ai-sdk-providers/deepgram)** for more information.
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017

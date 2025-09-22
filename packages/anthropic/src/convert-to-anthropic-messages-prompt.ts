@@ -140,6 +140,7 @@ export async function convertToAnthropicMessagesPrompt({
                   }
 
                   case 'file': {
+<<<<<<< HEAD
                     if (part.mediaType.startsWith('image/')) {
                       anthropicContent.push({
                         type: 'image',
@@ -225,6 +226,32 @@ export async function convertToAnthropicMessagesPrompt({
                       });
                     }
 
+=======
+                    if (part.mimeType !== 'application/pdf') {
+                      throw new UnsupportedFunctionalityError({
+                        functionality: 'Non-PDF files in user messages',
+                      });
+                    }
+
+                    betas.add('pdfs-2024-09-25');
+
+                    anthropicContent.push({
+                      type: 'document',
+                      source:
+                        part.data instanceof URL
+                          ? {
+                              type: 'url',
+                              url: part.data.toString(),
+                            }
+                          : {
+                              type: 'base64',
+                              media_type: 'application/pdf',
+                              data: part.data,
+                            },
+                      cache_control: cacheControl,
+                    });
+
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
                     break;
                   }
                 }

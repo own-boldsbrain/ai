@@ -424,18 +424,31 @@ describe('doGenerate', () => {
     prepareJsonResponse({});
 
     await model.doGenerate({
+<<<<<<< HEAD
+=======
+      inputFormat: 'prompt',
+      mode: { type: 'regular' },
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       prompt: [
         { role: 'system', content: 'test system instruction' },
         { role: 'user', content: [{ type: 'text', text: 'Hello' }] },
       ],
       seed: 123,
       temperature: 0.5,
+<<<<<<< HEAD
       providerOptions: {
+=======
+      providerMetadata: {
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         google: { foo: 'bar', responseModalities: ['TEXT', 'IMAGE'] },
       },
     });
 
+<<<<<<< HEAD
     expect(await server.calls[0].requestBodyJson).toStrictEqual({
+=======
+    expect(await server.calls[0].requestBody).toStrictEqual({
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       contents: [
         {
           role: 'user',
@@ -2553,14 +2566,25 @@ describe('doStream', () => {
     prepareStreamResponse({ content: [''] });
 
     await model.doStream({
+<<<<<<< HEAD
       prompt: TEST_PROMPT,
       includeRawChunks: false,
       providerOptions: {
+=======
+      inputFormat: 'prompt',
+      mode: { type: 'regular' },
+      prompt: TEST_PROMPT,
+      providerMetadata: {
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         google: { foo: 'bar', responseModalities: ['TEXT', 'IMAGE'] },
       },
     });
 
+<<<<<<< HEAD
     expect(await server.calls[0].requestBodyJson).toMatchObject({
+=======
+    expect(await server.calls[0].requestBody).toMatchObject({
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       contents: [
         {
           role: 'user',
@@ -2572,6 +2596,7 @@ describe('doStream', () => {
       },
     });
   });
+<<<<<<< HEAD
 
   it('should stream reasoning parts separately from text parts', async () => {
     server.urls[TEST_URL_GEMINI_PRO].response = {
@@ -3230,4 +3255,6 @@ describe('GEMMA Model System Instruction Fix', () => {
       }
     `);
   });
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 });

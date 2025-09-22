@@ -1,20 +1,32 @@
 import {
   AISDKError,
+<<<<<<< HEAD
   TranscriptionModelV2,
   TranscriptionModelV2CallWarning,
+=======
+  TranscriptionModelV1,
+  TranscriptionModelV1CallWarning,
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 } from '@ai-sdk/provider';
 import {
   combineHeaders,
   convertBase64ToUint8Array,
   createJsonResponseHandler,
+<<<<<<< HEAD
   mediaTypeToExtension,
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   delay,
   getFromApi,
   parseProviderOptions,
   postFormDataToApi,
   postJsonToApi,
 } from '@ai-sdk/provider-utils';
+<<<<<<< HEAD
 import { z } from 'zod/v4';
+=======
+import { z } from 'zod';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 import { GladiaConfig } from './gladia-config';
 import { gladiaFailedResponseHandler } from './gladia-error';
 import { GladiaTranscriptionInitiateAPITypes } from './gladia-api-types';
@@ -259,7 +271,11 @@ const gladiaProviderOptionsSchema = z.object({
       /**
        * Dictionary of custom spellings.
        */
+<<<<<<< HEAD
       spellingDictionary: z.record(z.string(), z.array(z.string())),
+=======
+      spellingDictionary: z.record(z.array(z.string())),
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     })
     .nullish(),
 
@@ -305,7 +321,11 @@ const gladiaProviderOptionsSchema = z.object({
   /**
    * Custom metadata to include with the transcription.
    */
+<<<<<<< HEAD
   customMetadata: z.record(z.string(), z.any()).nullish(),
+=======
+  customMetadata: z.record(z.any()).nullish(),
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
   /**
    * Whether to include sentence-level segmentation.
@@ -333,8 +353,13 @@ interface GladiaTranscriptionModelConfig extends GladiaConfig {
   };
 }
 
+<<<<<<< HEAD
 export class GladiaTranscriptionModel implements TranscriptionModelV2 {
   readonly specificationVersion = 'v2';
+=======
+export class GladiaTranscriptionModel implements TranscriptionModelV1 {
+  readonly specificationVersion = 'v1';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
   get provider(): string {
     return this.config.provider;
@@ -347,11 +372,19 @@ export class GladiaTranscriptionModel implements TranscriptionModelV2 {
 
   private async getArgs({
     providerOptions,
+<<<<<<< HEAD
   }: Parameters<TranscriptionModelV2['doGenerate']>[0]) {
     const warnings: TranscriptionModelV2CallWarning[] = [];
 
     // Parse provider options
     const gladiaOptions = await parseProviderOptions({
+=======
+  }: Parameters<TranscriptionModelV1['doGenerate']>[0]) {
+    const warnings: TranscriptionModelV1CallWarning[] = [];
+
+    // Parse provider options
+    const gladiaOptions = parseProviderOptions({
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       provider: 'gladia',
       providerOptions,
       schema: gladiaProviderOptionsSchema,
@@ -487,8 +520,13 @@ export class GladiaTranscriptionModel implements TranscriptionModelV2 {
   }
 
   async doGenerate(
+<<<<<<< HEAD
     options: Parameters<TranscriptionModelV2['doGenerate']>[0],
   ): Promise<Awaited<ReturnType<TranscriptionModelV2['doGenerate']>>> {
+=======
+    options: Parameters<TranscriptionModelV1['doGenerate']>[0],
+  ): Promise<Awaited<ReturnType<TranscriptionModelV1['doGenerate']>>> {
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     const currentDate = this.config._internal?.currentDate?.() ?? new Date();
 
     // Create form data with base fields
@@ -498,11 +536,18 @@ export class GladiaTranscriptionModel implements TranscriptionModelV2 {
         ? new Blob([options.audio])
         : new Blob([convertBase64ToUint8Array(options.audio)]);
 
+<<<<<<< HEAD
     const fileExtension = mediaTypeToExtension(options.mediaType);
     formData.append(
       'audio',
       new File([blob], 'audio', { type: options.mediaType }),
       `audio.${fileExtension}`,
+=======
+    formData.append('model', this.modelId);
+    formData.append(
+      'audio',
+      new File([blob], 'audio', { type: options.mediaType }),
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     );
 
     const { value: uploadResponse } = await postFormDataToApi({

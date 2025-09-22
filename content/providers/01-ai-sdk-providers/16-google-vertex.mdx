@@ -677,10 +677,17 @@ Further configuration can be done using Google Vertex provider options. You can 
 ```ts
 import { vertex } from '@ai-sdk/google-vertex';
 import { GoogleVertexImageProviderOptions } from '@ai-sdk/google-vertex';
+<<<<<<< HEAD
 import { experimental_generateImage as generateImage } from 'ai';
 
 const { image } = await generateImage({
   model: vertex.image('imagen-3.0-generate-002'),
+=======
+import { generateImage } from 'ai';
+
+const { image } = await generateImage({
+  model: vertex.image('imagen-3.0-generate-001'),
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   providerOptions: {
     vertex: {
       negativePrompt: 'pixelated, blurry, low-quality',

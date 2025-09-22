@@ -10,7 +10,11 @@ async function main() {
 
   const result = streamText({
     model: xai('grok-3-beta'),
+<<<<<<< HEAD
     maxOutputTokens: 512,
+=======
+    maxTokens: 512,
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     tools: {
       weather: weatherTool,
     },

@@ -79,6 +79,7 @@ export function createVertexAnthropic(
     withoutTrailingSlash(options.baseURL) ??
     `https://${location === 'global' ? '' : location + '-'}aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/anthropic/models`;
 
+<<<<<<< HEAD
   const createChatModel = (modelId: GoogleVertexAnthropicMessagesModelId) =>
     new AnthropicMessagesLanguageModel(modelId, {
       provider: 'vertex.anthropic.messages',
@@ -97,6 +98,33 @@ export function createVertexAnthropic(
           ...rest,
           anthropic_version: 'vertex-2023-10-16',
         };
+=======
+  const createChatModel = (
+    modelId: GoogleVertexAnthropicMessagesModelId,
+    settings: GoogleVertexAnthropicMessagesSettings = {},
+  ) =>
+    new AnthropicMessagesLanguageModel(
+      modelId as AnthropicMessagesModelId,
+      settings,
+      {
+        provider: 'vertex.anthropic.messages',
+        baseURL,
+        headers: options.headers ?? {},
+        fetch: options.fetch,
+        supportsImageUrls: false,
+        buildRequestUrl: (baseURL, isStreaming) =>
+          `${baseURL}/${modelId}:${
+            isStreaming ? 'streamRawPredict' : 'rawPredict'
+          }`,
+        transformRequestBody: args => {
+          // Remove model from args and add anthropic version
+          const { model, ...rest } = args;
+          return {
+            ...rest,
+            anthropic_version: 'vertex-2023-10-16',
+          };
+        },
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       },
       // Google Vertex Anthropic doesn't support URL sources, force download and base64 conversion
       supportedUrls: () => ({}),

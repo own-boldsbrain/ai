@@ -300,8 +300,13 @@ The following provider options are available:
 - **reasoningEffort** _'low' | 'medium' | 'high'_
   Reasoning effort for reasoning models. Defaults to `medium`. If you use `providerOptions` to set the `reasoningEffort` option, this model setting will be ignored.
 
+<<<<<<< HEAD:content/providers/01-ai-sdk-providers/04-azure.mdx
 - **strictJsonSchema** _boolean_
   Whether to use strict JSON schema validation. Defaults to `false`.
+=======
+- **strictSchemas** _boolean_
+  Whether to use strict JSON schemas in tools and when generating JSON outputs. Defaults to `true`.
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017:content/providers/01-ai-sdk-providers/03-azure.mdx
 
 The Azure OpenAI responses provider also returns provider-specific metadata:
 
@@ -324,6 +329,38 @@ The following OpenAI-specific metadata is returned:
 - **reasoningTokens** _number_
   The number of reasoning tokens that the model generated.
 
+<<<<<<< HEAD:content/providers/01-ai-sdk-providers/04-azure.mdx
+=======
+#### Web Search
+
+The Azure OpenAI responses provider supports web search through the `azure.tools.webSearchPreview` tool.
+
+You can force the use of the web search tool by setting the `toolChoice` parameter to `{ type: 'tool', toolName: 'web_search_preview' }`.
+
+```ts
+const result = await generateText({
+  model: azure.responses('your-deployment-name'),
+  prompt: 'What happened in San Francisco last week?',
+  tools: {
+    web_search_preview: azure.tools.webSearchPreview({
+      // optional configuration:
+      searchContextSize: 'high',
+      userLocation: {
+        type: 'approximate',
+        city: 'San Francisco',
+        region: 'California',
+      },
+    }),
+  },
+  // Force web search tool:
+  toolChoice: { type: 'tool', toolName: 'web_search_preview' },
+});
+
+// URL sources
+const sources = result.sources;
+```
+
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017:content/providers/01-ai-sdk-providers/03-azure.mdx
 #### PDF support
 
 The Azure OpenAI Responses API supports reading PDF files.
@@ -343,7 +380,11 @@ const result = await generateText({
         {
           type: 'file',
           data: fs.readFileSync('./data/ai.pdf'),
+<<<<<<< HEAD:content/providers/01-ai-sdk-providers/04-azure.mdx
           mediaType: 'application/pdf',
+=======
+          mimeType: 'application/pdf',
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017:content/providers/01-ai-sdk-providers/03-azure.mdx
           filename: 'ai.pdf', // optional
         },
       ],
@@ -355,7 +396,11 @@ const result = await generateText({
 The model will have access to the contents of the PDF file and
 respond to questions about it.
 The PDF file should be passed using the `data` field,
+<<<<<<< HEAD:content/providers/01-ai-sdk-providers/04-azure.mdx
 and the `mediaType` should be set to `'application/pdf'`.
+=======
+and the `mimeType` should be set to `'application/pdf'`.
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017:content/providers/01-ai-sdk-providers/03-azure.mdx
 
 ### Completion Models
 
@@ -544,6 +589,7 @@ The first argument is the model id e.g. `whisper-1`.
 const model = azure.transcription('whisper-1');
 ```
 
+<<<<<<< HEAD:content/providers/01-ai-sdk-providers/04-azure.mdx
 <Note>
   If you encounter a "DeploymentNotFound" error with transcription models,
   try enabling deployment-based URLs:
@@ -557,6 +603,8 @@ const model = azure.transcription('whisper-1');
   This uses the legacy endpoint format which may be required for certain Azure OpenAI deployments.
 </Note>
 
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017:content/providers/01-ai-sdk-providers/03-azure.mdx
 You can also pass additional provider-specific options using the `providerOptions` argument. For example, supplying the input language in ISO-639-1 (e.g. `en`) format will improve accuracy and latency.
 
 ```ts highlight="6"
@@ -567,7 +615,11 @@ import { readFile } from 'fs/promises';
 const result = await transcribe({
   model: azure.transcription('whisper-1'),
   audio: await readFile('audio.mp3'),
+<<<<<<< HEAD:content/providers/01-ai-sdk-providers/04-azure.mdx
   providerOptions: { openai: { language: 'en' } },
+=======
+  providerOptions: { azure: { language: 'en' } },
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017:content/providers/01-ai-sdk-providers/03-azure.mdx
 });
 ```
 

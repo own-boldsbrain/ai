@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import { createTestServer } from '@ai-sdk/test-server/with-vitest';
 import { HumeSpeechModel } from './hume-speech-model';
 import { createHume } from './hume-provider';
 import { describe, it, expect } from 'vitest';
+=======
+import { createTestServer } from '@ai-sdk/provider-utils/test';
+import { HumeSpeechModel } from './hume-speech-model';
+import { createHume } from './hume-provider';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 const provider = createHume({ apiKey: 'test-api-key' });
 const model = provider.speech();
@@ -37,7 +43,11 @@ describe('doGenerate', () => {
       text: 'Hello from the AI SDK!',
     });
 
+<<<<<<< HEAD
     expect(await server.calls[0].requestBodyJson).toMatchObject({
+=======
+    expect(await server.calls[0].requestBody).toMatchObject({
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       utterances: [
         {
           text: 'Hello from the AI SDK!',
@@ -88,7 +98,11 @@ describe('doGenerate', () => {
       speed: 1.5,
     });
 
+<<<<<<< HEAD
     expect(await server.calls[0].requestBodyJson).toMatchObject({
+=======
+    expect(await server.calls[0].requestBody).toMatchObject({
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       utterances: [
         {
           text: 'Hello from the AI SDK!',

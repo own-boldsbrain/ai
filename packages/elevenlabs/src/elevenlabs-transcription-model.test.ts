@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 import { createTestServer } from '@ai-sdk/test-server/with-vitest';
+=======
+import { createTestServer } from '@ai-sdk/provider-utils/test';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 import { ElevenLabsTranscriptionModel } from './elevenlabs-transcription-model';
 import { createElevenLabs } from './elevenlabs-provider';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
+<<<<<<< HEAD
 import { describe, it, expect } from 'vitest';
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 const audioData = await readFile(path.join(__dirname, 'transcript-test.mp3'));
 const provider = createElevenLabs({ apiKey: 'test-api-key' });
@@ -343,6 +350,7 @@ describe('doGenerate', () => {
       }
     `);
   });
+<<<<<<< HEAD
 
   it('should pass provider options correctly', async () => {
     prepareJsonResponse();
@@ -379,4 +387,6 @@ describe('doGenerate', () => {
       }
     `);
   });
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 });

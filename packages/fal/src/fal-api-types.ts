@@ -147,6 +147,7 @@ export type FalTranscriptionAPITypes = {
    */
   num_speakers?: number | null;
 };
+<<<<<<< HEAD
 
 export const FAL_LANGUAGE_BOOSTS = [
   'Chinese',
@@ -187,3 +188,5 @@ export const FAL_EMOTIONS = [
   'neutral',
 ] as const;
 export type FalEmotion = (typeof FAL_EMOTIONS)[number];
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017

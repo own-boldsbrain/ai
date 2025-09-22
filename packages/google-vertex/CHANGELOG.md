@@ -1,5 +1,6 @@
 # @ai-sdk/google-vertex
 
+<<<<<<< HEAD
 ## 3.1.0-beta.2
 
 ### Patch Changes
@@ -1124,6 +1125,76 @@
   - @ai-sdk/anthropic@2.0.0-canary.0
   - @ai-sdk/google@2.0.0-canary.0
   - @ai-sdk/provider@2.0.0-canary.0
+=======
+## 2.2.15
+
+### Patch Changes
+
+- Updated dependencies [beef951]
+  - @ai-sdk/provider@1.1.3
+  - @ai-sdk/anthropic@1.2.10
+  - @ai-sdk/google@1.2.11
+  - @ai-sdk/provider-utils@2.2.7
+
+## 2.2.14
+
+### Patch Changes
+
+- Updated dependencies [aeba38e]
+  - @ai-sdk/anthropic@1.2.9
+
+## 2.2.13
+
+### Patch Changes
+
+- Updated dependencies [013faa8]
+  - @ai-sdk/provider@1.1.2
+  - @ai-sdk/anthropic@1.2.8
+  - @ai-sdk/google@1.2.10
+  - @ai-sdk/provider-utils@2.2.6
+
+## 2.2.12
+
+### Patch Changes
+
+- Updated dependencies [c21fa6d]
+  - @ai-sdk/provider-utils@2.2.5
+  - @ai-sdk/provider@1.1.1
+  - @ai-sdk/anthropic@1.2.7
+  - @ai-sdk/google@1.2.9
+
+## 2.2.11
+
+### Patch Changes
+
+- Updated dependencies [1e8e66d]
+  - @ai-sdk/google@1.2.8
+
+## 2.2.10
+
+### Patch Changes
+
+- 1789884: feat: add provider option schemas for vertex imagegen and google genai
+- Updated dependencies [1789884]
+  - @ai-sdk/google@1.2.7
+
+## 2.2.9
+
+### Patch Changes
+
+- Updated dependencies [2c19b9a]
+  - @ai-sdk/provider-utils@2.2.4
+  - @ai-sdk/anthropic@1.2.6
+  - @ai-sdk/google@1.2.6
+
+## 2.2.8
+
+### Patch Changes
+
+- 292f543: fix (provider/google-vertex): fix anthropic support for image urls in messages
+- Updated dependencies [292f543]
+  - @ai-sdk/anthropic@1.2.5
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 ## 2.2.7
 

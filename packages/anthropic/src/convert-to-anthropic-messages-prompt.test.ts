@@ -125,7 +125,11 @@ describe('user messages', () => {
   });
 
   it('should add PDF file parts for base64 PDFs', async () => {
+<<<<<<< HEAD
     const result = await convertToAnthropicMessagesPrompt({
+=======
+    const result = convertToAnthropicMessagesPrompt({
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       prompt: [
         {
           role: 'user',
@@ -166,7 +170,11 @@ describe('user messages', () => {
   });
 
   it('should add PDF file parts for URL PDFs', async () => {
+<<<<<<< HEAD
     const result = await convertToAnthropicMessagesPrompt({
+=======
+    const result = convertToAnthropicMessagesPrompt({
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       prompt: [
         {
           role: 'user',
@@ -174,7 +182,11 @@ describe('user messages', () => {
             {
               type: 'file',
               data: new URL('https://example.com/document.pdf'),
+<<<<<<< HEAD
               mediaType: 'application/pdf',
+=======
+              mimeType: 'application/pdf',
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
             },
           ],
         },
@@ -186,6 +198,32 @@ describe('user messages', () => {
     expect(result).toEqual({
       prompt: {
         messages: [
+<<<<<<< HEAD
+=======
+          {
+            role: 'user',
+            content: [
+              {
+                type: 'document',
+                source: {
+                  type: 'url',
+                  url: 'https://example.com/document.pdf',
+                },
+              },
+            ],
+          },
+        ],
+        system: undefined,
+      },
+      betas: new Set(['pdfs-2024-09-25']),
+    });
+  });
+
+  it('should throw error for non-PDF file types', async () => {
+    expect(() =>
+      convertToAnthropicMessagesPrompt({
+        prompt: [
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
           {
             role: 'user',
             content: [

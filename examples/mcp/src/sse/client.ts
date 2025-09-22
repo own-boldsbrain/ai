@@ -16,9 +16,15 @@ async function main() {
   const tools = await mcpClient.tools();
 
   const { text: answer } = await generateText({
+<<<<<<< HEAD
     model: openai('gpt-4o-mini'),
     tools,
     stopWhen: stepCountIs(10),
+=======
+    model: openai('gpt-4o-mini', { structuredOutputs: true }),
+    tools,
+    maxSteps: 10,
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     onStepFinish: async ({ toolResults }) => {
       console.log(`STEP RESULTS: ${JSON.stringify(toolResults, null, 2)}`);
     },

@@ -59,7 +59,11 @@ export async function POST(req: Request) {
           'You are a helpful assistant with a different system prompt. Repeat the extract user goal in your answer.',
         // continue the workflow stream with the messages from the previous step:
         messages: [
+<<<<<<< HEAD
           ...convertToModelMessages(messages),
+=======
+          ...convertToCoreMessages(messages),
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
           ...(await result1.response).messages,
         ],
       });

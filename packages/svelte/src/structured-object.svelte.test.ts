@@ -1,12 +1,20 @@
 import {
   createTestServer,
   TestResponseController,
+<<<<<<< HEAD
 } from '@ai-sdk/test-server/with-vitest';
+=======
+} from '@ai-sdk/provider-utils/test';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 import { render } from '@testing-library/svelte';
 import { z } from 'zod/v4';
 import { StructuredObject } from './structured-object.svelte.js';
 import StructuredObjectSynchronization from './tests/structured-object-synchronization.svelte';
 import { vi, describe, beforeEach, expect, it } from 'vitest';
+
+const server = createTestServer({
+  '/api/object': {},
+});
 
 const server = createTestServer({
   '/api/object': {},
@@ -37,7 +45,11 @@ describe('text stream', () => {
     });
 
     it('should send the correct input to the API', async () => {
+<<<<<<< HEAD
       expect(await server.calls[0].requestBodyJson).toBe('test-input');
+=======
+      expect(await server.calls[0].requestBody).toBe('test-input');
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     });
 
     it('should not have an error', () => {
@@ -92,8 +104,13 @@ describe('text stream', () => {
         expect(structuredObject.loading).toBe(false);
       });
 
+<<<<<<< HEAD
       await expect(controller.write('ello, world!"}')).rejects.toThrow();
       await expect(controller.close()).rejects.toThrow();
+=======
+      controller.write('ello, world!"}');
+      controller.close();
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       await submitOperation;
 
       expect(structuredObject.loading).toBe(false);
@@ -101,6 +118,7 @@ describe('text stream', () => {
         content: 'h',
       });
     });
+<<<<<<< HEAD
 
     it('should stop and clear the object state after a call to submit then clear', async () => {
       const controller = new TestResponseController();
@@ -133,6 +151,8 @@ describe('text stream', () => {
       expect(structuredObject.error).toBeUndefined();
       expect(structuredObject.object).toBeUndefined();
     });
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   });
 
   describe('when the API returns a 404', () => {
@@ -232,6 +252,7 @@ describe('text stream', () => {
 
     expect(server.calls[0].requestCredentials).toBe('include');
   });
+<<<<<<< HEAD
 
   it('should clear the object state after a call to clear', async () => {
     server.urls['/api/object'].response = {
@@ -254,6 +275,8 @@ describe('text stream', () => {
     expect(structuredObjectWithOnFinish.error).toBeUndefined();
     expect(structuredObjectWithOnFinish.loading).toBe(false);
   });
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 });
 
 describe('synchronization', () => {

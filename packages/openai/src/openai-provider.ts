@@ -1,16 +1,26 @@
 import {
+<<<<<<< HEAD
   EmbeddingModelV2,
   ImageModelV2,
   LanguageModelV2,
   ProviderV2,
   SpeechModelV2,
   TranscriptionModelV2,
+=======
+  EmbeddingModelV1,
+  ImageModelV1,
+  TranscriptionModelV1,
+  LanguageModelV1,
+  ProviderV1,
+  SpeechModelV1,
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 } from '@ai-sdk/provider';
 import {
   FetchFunction,
   loadApiKey,
   withoutTrailingSlash,
 } from '@ai-sdk/provider-utils';
+<<<<<<< HEAD
 import { OpenAIChatLanguageModel } from './chat/openai-chat-language-model';
 import { OpenAIChatModelId } from './chat/openai-chat-options';
 import { OpenAICompletionLanguageModel } from './completion/openai-completion-language-model';
@@ -26,6 +36,32 @@ import { OpenAISpeechModel } from './speech/openai-speech-model';
 import { OpenAISpeechModelId } from './speech/openai-speech-options';
 import { OpenAITranscriptionModel } from './transcription/openai-transcription-model';
 import { OpenAITranscriptionModelId } from './transcription/openai-transcription-options';
+=======
+import { OpenAIChatLanguageModel } from './openai-chat-language-model';
+import { OpenAIChatModelId, OpenAIChatSettings } from './openai-chat-settings';
+import { OpenAICompletionLanguageModel } from './openai-completion-language-model';
+import {
+  OpenAICompletionModelId,
+  OpenAICompletionSettings,
+} from './openai-completion-settings';
+import { OpenAIEmbeddingModel } from './openai-embedding-model';
+import {
+  OpenAIEmbeddingModelId,
+  OpenAIEmbeddingSettings,
+} from './openai-embedding-settings';
+import { OpenAIImageModel } from './openai-image-model';
+import {
+  OpenAIImageModelId,
+  OpenAIImageSettings,
+} from './openai-image-settings';
+import { OpenAITranscriptionModel } from './openai-transcription-model';
+import { OpenAITranscriptionModelId } from './openai-transcription-settings';
+import { OpenAIResponsesLanguageModel } from './responses/openai-responses-language-model';
+import { OpenAIResponsesModelId } from './responses/openai-responses-settings';
+import { openaiTools } from './openai-tools';
+import { OpenAISpeechModel } from './openai-speech-model';
+import { OpenAISpeechModelId } from './openai-speech-settings';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 export interface OpenAIProvider extends ProviderV2 {
   (modelId: OpenAIResponsesModelId): LanguageModelV2;
@@ -84,6 +120,16 @@ Creates a model for transcription.
 Creates a model for speech generation.
    */
   speech(modelId: OpenAISpeechModelId): SpeechModelV2;
+
+  /**
+Creates a model for transcription.
+   */
+  transcription(modelId: OpenAITranscriptionModelId): TranscriptionModelV1;
+
+  /**
+Creates a model for speech generation.
+   */
+  speech(modelId: OpenAISpeechModelId): SpeechModelV1;
 
   /**
 OpenAI-specific tools.
@@ -199,7 +245,14 @@ export function createOpenAI(
       fetch: options.fetch,
     });
 
+<<<<<<< HEAD
   const createLanguageModel = (modelId: OpenAIResponsesModelId) => {
+=======
+  const createLanguageModel = (
+    modelId: OpenAIChatModelId | OpenAICompletionModelId,
+    settings?: OpenAIChatSettings | OpenAICompletionSettings,
+  ) => {
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     if (new.target) {
       throw new Error(
         'The OpenAI model function cannot be called with the new keyword.',

@@ -18,7 +18,11 @@ async function main() {
             data: new URL(
               'https://github.com/vercel/ai/blob/main/examples/ai-core/data/ai.pdf?raw=true',
             ),
+<<<<<<< HEAD
             mediaType: 'application/pdf',
+=======
+            mimeType: 'application/pdf',
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
           },
         ],
       },

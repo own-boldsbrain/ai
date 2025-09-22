@@ -31,6 +31,7 @@ const server = createTestServer({
   'https://test-resource.openai.azure.com/openai/v1/audio/speech': {},
   'https://test-resource.openai.azure.com/openai/deployments/whisper-1/audio/transcriptions':
     {},
+  'https://test-resource.openai.azure.com/openai/responses': {},
 });
 
 describe('chat', () => {
@@ -74,7 +75,11 @@ describe('chat', () => {
 
       expect(
         server.calls[0].requestUrlSearchParams.get('api-version'),
+<<<<<<< HEAD
       ).toStrictEqual('preview');
+=======
+      ).toStrictEqual('2025-03-01-preview');
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     });
 
     it('should set the correct modified api version', async () => {
@@ -127,7 +132,11 @@ describe('chat', () => {
         prompt: TEST_PROMPT,
       });
       expect(server.calls[0].requestUrl).toStrictEqual(
+<<<<<<< HEAD
         'https://test-resource.openai.azure.com/openai/v1/chat/completions?api-version=preview',
+=======
+        'https://test-resource.openai.azure.com/openai/deployments/test-deployment/chat/completions?api-version=2025-03-01-preview',
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       );
     });
   });
@@ -181,7 +190,11 @@ describe('completion', () => {
       });
       expect(
         server.calls[0].requestUrlSearchParams.get('api-version'),
+<<<<<<< HEAD
       ).toStrictEqual('preview');
+=======
+      ).toStrictEqual('2025-03-01-preview');
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     });
 
     it('should pass headers', async () => {
@@ -329,7 +342,11 @@ describe('embedding', () => {
       });
       expect(
         server.calls[0].requestUrlSearchParams.get('api-version'),
+<<<<<<< HEAD
       ).toStrictEqual('preview');
+=======
+      ).toStrictEqual('2025-03-01-preview');
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     });
 
     it('should pass headers', async () => {
@@ -399,7 +416,11 @@ describe('image', () => {
 
       expect(
         server.calls[0].requestUrlSearchParams.get('api-version'),
+<<<<<<< HEAD
       ).toStrictEqual('preview');
+=======
+      ).toStrictEqual('2025-03-01-preview');
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     });
 
     it('should set the correct modified api version', async () => {
@@ -470,7 +491,11 @@ describe('image', () => {
       });
 
       expect(server.calls[0].requestUrl).toStrictEqual(
+<<<<<<< HEAD
         'https://test-resource.openai.azure.com/openai/v1/images/generations?api-version=preview',
+=======
+        'https://test-resource.openai.azure.com/openai/deployments/dalle-deployment/images/generations?api-version=2025-03-01-preview',
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       );
     });
 
@@ -534,7 +559,11 @@ describe('responses', () => {
       },
     } = {}) {
       server.urls[
+<<<<<<< HEAD
         'https://test-resource.openai.azure.com/openai/v1/responses'
+=======
+        'https://test-resource.openai.azure.com/openai/responses'
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       ].response = {
         type: 'json-value',
         body: {
@@ -568,12 +597,21 @@ describe('responses', () => {
       prepareJsonResponse();
 
       await provider.responses('test-deployment').doGenerate({
+<<<<<<< HEAD
+=======
+        inputFormat: 'prompt',
+        mode: { type: 'regular' },
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         prompt: TEST_PROMPT,
       });
 
       expect(
         server.calls[0].requestUrlSearchParams.get('api-version'),
+<<<<<<< HEAD
       ).toStrictEqual('preview');
+=======
+      ).toStrictEqual('2025-03-01-preview');
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     });
 
     it('should pass headers', async () => {
@@ -588,6 +626,11 @@ describe('responses', () => {
       });
 
       await provider.responses('test-deployment').doGenerate({
+<<<<<<< HEAD
+=======
+        inputFormat: 'prompt',
+        mode: { type: 'regular' },
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         prompt: TEST_PROMPT,
         headers: {
           'Custom-Request-Header': 'request-header-value',
@@ -611,10 +654,16 @@ describe('responses', () => {
       });
 
       await provider.responses('test-deployment').doGenerate({
+<<<<<<< HEAD
+=======
+        inputFormat: 'prompt',
+        mode: { type: 'regular' },
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
         prompt: TEST_PROMPT,
       });
 
       expect(server.calls[0].requestUrl).toStrictEqual(
+<<<<<<< HEAD
         'https://test-resource.openai.azure.com/openai/v1/responses?api-version=preview',
       );
     });
@@ -720,5 +769,10 @@ describe('responses', () => {
         },
       ]);
     });
+=======
+        'https://test-resource.openai.azure.com/openai/responses?api-version=2025-03-01-preview',
+      );
+    });
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   });
 });

@@ -86,10 +86,14 @@ export function createAnthropic(
       baseURL,
       headers: getHeaders,
       fetch: options.fetch,
+<<<<<<< HEAD
       generateId: options.generateId ?? generateId,
       supportedUrls: () => ({
         'image/*': [/^https?:\/\/.*$/],
       }),
+=======
+      supportsImageUrls: true,
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     });
 
   const provider = function (modelId: AnthropicMessagesModelId) {

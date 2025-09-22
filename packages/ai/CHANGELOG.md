@@ -1,5 +1,6 @@
 # ai
 
+<<<<<<< HEAD
 ## 5.1.0-beta.4
 
 ### Patch Changes
@@ -1848,6 +1849,97 @@
   - @ai-sdk/ui-utils@2.0.0-canary.0
   - @ai-sdk/react@2.0.0-canary.0
   - @ai-sdk/provider@2.0.0-canary.0
+=======
+## 4.3.9
+
+### Patch Changes
+
+- b69a253: fix(utils/detect-mimetype): add support for detecting id3 tags
+
+## 4.3.8
+
+### Patch Changes
+
+- 6e8a73b: feat(providers/fal): add transcribe
+
+## 4.3.7
+
+### Patch Changes
+
+- f4f3945: fix (ai/core): refactor `toResponseMessages` to filter out empty string/content
+
+## 4.3.6
+
+### Patch Changes
+
+- beef951: feat: add speech with experimental_generateSpeech
+- bd41167: fix(ai/core): properly handle custom separator in provider registry
+- Updated dependencies [beef951]
+  - @ai-sdk/provider@1.1.3
+  - @ai-sdk/provider-utils@2.2.7
+  - @ai-sdk/ui-utils@1.2.8
+  - @ai-sdk/react@1.2.9
+
+## 4.3.5
+
+### Patch Changes
+
+- 452bf12: fix (ai/mcp): better support for zero-argument MCP tools
+
+## 4.3.4
+
+### Patch Changes
+
+- 013faa8: core (ai): change transcription model mimeType to mediaType
+- Updated dependencies [013faa8]
+  - @ai-sdk/provider@1.1.2
+  - @ai-sdk/provider-utils@2.2.6
+  - @ai-sdk/ui-utils@1.2.7
+  - @ai-sdk/react@1.2.8
+
+## 4.3.3
+
+### Patch Changes
+
+- 3e88f4d: fix (ai/mcp): prevent mutation of customEnv
+- c21fa6d: feat: add transcription with experimental_transcribe
+- Updated dependencies [c21fa6d]
+  - @ai-sdk/provider-utils@2.2.5
+  - @ai-sdk/provider@1.1.1
+  - @ai-sdk/react@1.2.7
+  - @ai-sdk/ui-utils@1.2.6
+
+## 4.3.2
+
+### Patch Changes
+
+- 665a567: fix (core): improve error handling in streamText's consumeStream method
+
+## 4.3.1
+
+### Patch Changes
+
+- 3d1bd38: feat(smooth-stream): chunking callbacks
+
+## 4.3.0
+
+### Minor Changes
+
+- 772a2d7: feat (core): Add finishReason field to NoObjectGeneratedError
+
+### Patch Changes
+
+- Updated dependencies [2c19b9a]
+  - @ai-sdk/provider-utils@2.2.4
+  - @ai-sdk/react@1.2.6
+  - @ai-sdk/ui-utils@1.2.5
+
+## 4.2.11
+
+### Patch Changes
+
+- c45d100: fix (core): send buffered text in smooth stream when stream parts change
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 ## 4.2.10
 

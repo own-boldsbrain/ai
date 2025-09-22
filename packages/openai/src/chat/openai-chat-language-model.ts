@@ -256,6 +256,94 @@ export class OpenAIChatLanguageModel implements LanguageModelV2 {
           details:
             'temperature is not supported for the search preview models and has been removed.',
         });
+<<<<<<< HEAD:packages/openai/src/chat/openai-chat-language-model.ts
+=======
+      }
+    }
+    switch (type) {
+      case 'regular': {
+        const { tools, tool_choice, functions, function_call, toolWarnings } =
+          prepareTools({
+            mode,
+            useLegacyFunctionCalling,
+            structuredOutputs: this.supportsStructuredOutputs,
+          });
+
+        return {
+          args: {
+            ...baseArgs,
+            tools,
+            tool_choice,
+            functions,
+            function_call,
+          },
+          warnings: [...warnings, ...toolWarnings],
+        };
+      }
+
+      case 'object-json': {
+        return {
+          args: {
+            ...baseArgs,
+            response_format:
+              this.supportsStructuredOutputs && mode.schema != null
+                ? {
+                    type: 'json_schema',
+                    json_schema: {
+                      schema: mode.schema,
+                      strict: true,
+                      name: mode.name ?? 'response',
+                      description: mode.description,
+                    },
+                  }
+                : { type: 'json_object' },
+          },
+          warnings,
+        };
+      }
+
+      case 'object-tool': {
+        return {
+          args: useLegacyFunctionCalling
+            ? {
+                ...baseArgs,
+                function_call: {
+                  name: mode.tool.name,
+                },
+                functions: [
+                  {
+                    name: mode.tool.name,
+                    description: mode.tool.description,
+                    parameters: mode.tool.parameters,
+                  },
+                ],
+              }
+            : {
+                ...baseArgs,
+                tool_choice: {
+                  type: 'function',
+                  function: { name: mode.tool.name },
+                },
+                tools: [
+                  {
+                    type: 'function',
+                    function: {
+                      name: mode.tool.name,
+                      description: mode.tool.description,
+                      parameters: mode.tool.parameters,
+                      strict: this.supportsStructuredOutputs ? true : undefined,
+                    },
+                  },
+                ],
+              },
+          warnings,
+        };
+      }
+
+      default: {
+        const _exhaustiveCheck: never = type;
+        throw new Error(`Unsupported type: ${_exhaustiveCheck}`);
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017:packages/openai/src/openai-chat-language-model.ts
       }
     }
 
@@ -844,10 +932,14 @@ const openaiChatChunkSchema = z.union([
 ]);
 
 function isReasoningModel(modelId: string) {
+<<<<<<< HEAD:packages/openai/src/chat/openai-chat-language-model.ts
   return (
     (modelId.startsWith('o') || modelId.startsWith('gpt-5')) &&
     !modelId.startsWith('gpt-5-chat')
   );
+=======
+  return modelId.startsWith('o');
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017:packages/openai/src/openai-chat-language-model.ts
 }
 
 function supportsFlexProcessing(modelId: string) {

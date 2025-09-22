@@ -146,6 +146,7 @@ const handleSubmit = (e: Event) => {
 </script>
 
 <template>
+<<<<<<< HEAD
     <div>
         <div v-for="(m, index) in chat.messages" :key="m.id ? m.id : index">
             {{ m.role === "user" ? "User: " : "AI: " }}
@@ -161,6 +162,26 @@ const handleSubmit = (e: Event) => {
             <input v-model="input" placeholder="Say something..." />
         </form>
     </div>
+=======
+  <div>
+    <div
+      v-for="m in messages"
+      :key="m.id ? m.id : index"
+    >
+      {{ m.role === 'user' ? 'User: ' : 'AI: ' }}
+      <div v-for="part in m.parts" :key="part.id">
+        <div v-if="part.type === 'text'">{{ part.text }}</div>
+      </div>
+    </div>
+
+    <form @submit="handleSubmit">
+      <input
+        v-model="input"
+        placeholder="Say something..."
+      />
+    </form>
+  </div>
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 </template>
 ```
 
@@ -172,9 +193,16 @@ const handleSubmit = (e: Event) => {
 This page utilizes the `useChat` hook, which will, by default, use the API route you created earlier (`/api/chat`). The hook provides functions and state for handling user input and form submission. The `useChat` hook provides multiple utility functions and state variables:
 
 - `messages` - the current chat messages (an array of objects with `id`, `role`, and `parts` properties).
+<<<<<<< HEAD
 - `sendMessage` - a function to send a message to the chat API.
 
 The component uses local state (`ref`) to manage the input field value, and handles form submission by calling `sendMessage` with the input text and then clearing the input field.
+
+The LLM's response is accessed through the message `parts` array. Each message contains an ordered array of `parts` that represents everything the model generated in its response. These parts can include plain text, reasoning tokens, and more that you will see later. The `parts` array preserves the sequence of the model's outputs, allowing you to display or process each component in the order it was generated.
+=======
+- `input` - the current value of the user's input field.
+- `handleSubmit` - function to handle form submission.
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 The LLM's response is accessed through the message `parts` array. Each message contains an ordered array of `parts` that represents everything the model generated in its response. These parts can include plain text, reasoning tokens, and more that you will see later. The `parts` array preserves the sequence of the model's outputs, allowing you to display or process each component in the order it was generated.
 
@@ -251,6 +279,7 @@ In this updated code:
    - Defines `inputSchema` using a Zod schema, specifying that it requires a `location` string to execute this tool. The model will attempt to extract this input from the context of the conversation. If it can't, it will ask the user for the missing information.
    - Defines an `execute` function that simulates getting weather data (in this case, it returns a random temperature). This is an asynchronous function running on the server so you can fetch real data from an external API.
 
+<<<<<<< HEAD
 Now your chatbot can "fetch" weather information for any location the user asks about. When the model determines it needs to use the weather tool, it will generate a tool call with the necessary input. The `execute` function will then be automatically run, and the tool output will be added to the `messages` as a `tool` message.
 
 Try asking something like "What's the weather in New York?" and see how the model uses the new tool.
@@ -262,6 +291,13 @@ Notice the blank response in the UI? This is because instead of generating a tex
   you used when defining the tool. In this case, since we defined the tool as
   `weather`, the part type is `tool-weather`.
 </Note>
+=======
+Now your chatbot can "fetch" weather information for any location the user asks about. When the model determines it needs to use the weather tool, it will generate a tool call with the necessary parameters. The `execute` function will then be automatically run, and you can access the results via `tool-invocations` part that is available on the `message.parts` array.
+
+Try asking something like "What's the weather in New York?" and see how the model uses the new tool.
+
+Notice the blank response in the UI? This is because instead of generating a text response, the model generated a tool call. You can access the tool call and subsequent tool result via the `tool-invocation` part of the `message.parts` array.
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 ### Update the UI
 
@@ -283,6 +319,7 @@ const handleSubmit = (e: Event) => {
 </script>
 
 <template>
+<<<<<<< HEAD
     <div>
         <div v-for="(m, index) in chat.messages" :key="m.id ? m.id : index">
             {{ m.role === "user" ? "User: " : "AI: " }}
@@ -303,6 +340,33 @@ const handleSubmit = (e: Event) => {
 ```
 
 With this change, you're updating the UI to handle different message parts. For text parts, you display the text content as before. For weather tool invocations, you display a JSON representation of the tool call and its result.
+=======
+  <div>
+    <div
+      v-for="m in messages"
+      :key="m.id ? m.id : index"
+    >
+      {{ m.role === 'user' ? 'User: ' : 'AI: ' }}
+      <div v-for="part in m.parts" :key="part.id">
+        <div v-if="part.type === 'text'">{{ part.text }}</div>
+        <div v-if="part.type === 'tool-invocation'">
+          {{ part.toolInvocation }}
+        </div>
+      </div>
+    </div>
+
+    <form @submit="handleSubmit">
+      <input
+        v-model="input"
+        placeholder="Say something..."
+      />
+    </form>
+  </div>
+</template>
+```
+
+With this change, you're updating the UI to handle different message parts. For text parts, you display the text content as before. For tool invocations, you display a JSON representation of the tool call and its result.
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 Now, when you ask about the weather, you'll see the tool call and its result displayed in your chat interface.
 

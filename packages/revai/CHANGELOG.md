@@ -1,5 +1,6 @@
 # @ai-sdk/revai
 
+<<<<<<< HEAD
 ## 1.1.0-beta.1
 
 ### Patch Changes
@@ -508,3 +509,10 @@
 ### Patch Changes
 
 - 4ac442e: feat(providers/revai): add transcribe
+=======
+## 0.0.1
+
+### Patch Changes
+
+- a7cb932: feat(providers/revai): add transcribe
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017

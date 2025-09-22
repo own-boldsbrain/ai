@@ -36,6 +36,7 @@ import {
 import { prepareResponsesTools } from './openai-responses-prepare-tools';
 import { OpenAIResponsesModelId } from './openai-responses-settings';
 
+<<<<<<< HEAD
 const webSearchCallItem = z.object({
   type: z.literal('web_search_call'),
   id: z.string(),
@@ -121,6 +122,12 @@ const LOGPROBS_SCHEMA = z.array(
 
 export class OpenAIResponsesLanguageModel implements LanguageModelV2 {
   readonly specificationVersion = 'v2';
+=======
+export class OpenAIResponsesLanguageModel implements LanguageModelV1 {
+  readonly specificationVersion = 'v1';
+  readonly defaultObjectGenerationMode = 'json';
+  readonly supportsStructuredOutputs = true;
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
   readonly modelId: OpenAIResponsesModelId;
 

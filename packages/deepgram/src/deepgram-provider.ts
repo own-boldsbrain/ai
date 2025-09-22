@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   TranscriptionModelV2,
   ProviderV2,
@@ -8,6 +9,15 @@ import { DeepgramTranscriptionModel } from './deepgram-transcription-model';
 import { DeepgramTranscriptionModelId } from './deepgram-transcription-options';
 
 export interface DeepgramProvider extends ProviderV2 {
+=======
+import { TranscriptionModelV1, ProviderV1 } from '@ai-sdk/provider';
+import { FetchFunction, loadApiKey } from '@ai-sdk/provider-utils';
+import { DeepgramTranscriptionModel } from './deepgram-transcription-model';
+import { DeepgramTranscriptionModelId } from './deepgram-transcription-settings';
+
+export interface DeepgramProvider
+  extends Pick<ProviderV1, 'transcriptionModel'> {
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   (
     modelId: 'nova-3',
     settings?: {},
@@ -18,7 +28,11 @@ export interface DeepgramProvider extends ProviderV2 {
   /**
 Creates a model for transcription.
    */
+<<<<<<< HEAD
   transcription(modelId: DeepgramTranscriptionModelId): TranscriptionModelV2;
+=======
+  transcription(modelId: DeepgramTranscriptionModelId): TranscriptionModelV1;
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 }
 
 export interface DeepgramProviderSettings {
@@ -71,6 +85,7 @@ export function createDeepgram(
   provider.transcription = createTranscriptionModel;
   provider.transcriptionModel = createTranscriptionModel;
 
+<<<<<<< HEAD
   // Required ProviderV2 methods that are not supported
   provider.languageModel = () => {
     throw new NoSuchModelError({
@@ -96,6 +111,8 @@ export function createDeepgram(
     });
   };
 
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   return provider as DeepgramProvider;
 }
 

@@ -273,7 +273,11 @@ For more on prompt caching with Anthropic, see [Anthropic's Cache Control docume
 
 <Note type="warning">
   Because the `UIMessage` type (used by AI SDK UI hooks like `useChat`) does not
+<<<<<<< HEAD
   support the `providerOptions` property, you can use `convertToModelMessages`
+=======
+  support the `providerOptions` property, you can use `convertToCoreMessages`
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   first before passing the messages to functions like `generateText` or
   `streamText`. For more details on `providerOptions` usage, see
   [here](/docs/foundations/prompts#provider-options).

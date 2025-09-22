@@ -1,5 +1,6 @@
 # @ai-sdk/amazon-bedrock
 
+<<<<<<< HEAD
 ## 3.1.0-beta.1
 
 ### Patch Changes
@@ -797,6 +798,38 @@
 - Updated dependencies [d5f588f]
   - @ai-sdk/provider-utils@3.0.0-canary.0
   - @ai-sdk/provider@2.0.0-canary.0
+=======
+## 2.2.8
+
+### Patch Changes
+
+- Updated dependencies [beef951]
+  - @ai-sdk/provider@1.1.3
+  - @ai-sdk/provider-utils@2.2.7
+
+## 2.2.7
+
+### Patch Changes
+
+- Updated dependencies [013faa8]
+  - @ai-sdk/provider@1.1.2
+  - @ai-sdk/provider-utils@2.2.6
+
+## 2.2.6
+
+### Patch Changes
+
+- Updated dependencies [c21fa6d]
+  - @ai-sdk/provider-utils@2.2.5
+  - @ai-sdk/provider@1.1.1
+
+## 2.2.5
+
+### Patch Changes
+
+- Updated dependencies [2c19b9a]
+  - @ai-sdk/provider-utils@2.2.4
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 ## 2.2.4
 

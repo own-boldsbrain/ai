@@ -118,9 +118,13 @@ const { text } = await generateText({
 For granular control over applying provider options at the message level, you can pass `providerOptions` to the message object:
 
 ```ts
+<<<<<<< HEAD
 import { ModelMessage } from 'ai';
 
 const messages: ModelMessage[] = [
+=======
+const messages = [
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   {
     role: 'system',
     content: 'Cached system message',
@@ -137,9 +141,13 @@ const messages: ModelMessage[] = [
 Certain provider-specific options require configuration at the message part level:
 
 ```ts
+<<<<<<< HEAD
 import { ModelMessage } from 'ai';
 
 const messages: ModelMessage[] = [
+=======
+const messages = [
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   {
     role: 'user',
     content: [
@@ -168,9 +176,15 @@ const messages: ModelMessage[] = [
   AI SDK UI hooks like [`useChat`](/docs/reference/ai-sdk-ui/use-chat) return
   arrays of `UIMessage` objects, which do not support provider options. We
   recommend using the
+<<<<<<< HEAD
   [`convertToModelMessages`](/docs/reference/ai-sdk-ui/convert-to-core-messages)
   function to convert `UIMessage` objects to
   [`ModelMessage`](/docs/reference/ai-sdk-core/model-message) objects before
+=======
+  [`convertToCoreMessages`](/docs/reference/ai-sdk-ui/convert-to-core-messages)
+  function to convert `UIMessage` objects to
+  [`CoreMessage`](/docs/reference/ai-sdk-core/core-message) objects before
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   applying or appending message(s) or message parts with `providerOptions`.
 </Note>
 

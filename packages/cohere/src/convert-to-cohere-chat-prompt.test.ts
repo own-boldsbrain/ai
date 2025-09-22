@@ -26,7 +26,18 @@ describe('convert to cohere chat prompt', () => {
             content: 'Analyze this file: ',
           },
         ],
+<<<<<<< HEAD
         documents: [
+=======
+      },
+    ]);
+
+    expect(result).toEqual([
+      {
+        content: undefined,
+        role: 'assistant',
+        tool_calls: [
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
           {
             data: {
               text: 'This is file content',

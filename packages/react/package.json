@@ -9,7 +9,7 @@
   "scripts": {
     "build": "pnpm clean && tsup --tsconfig tsconfig.build.json",
     "build:watch": "pnpm clean && tsup --watch --tsconfig tsconfig.build.json",
-    "clean": "rm -rf dist *.tsbuildinfo",
+    "clean": "rimraf dist *.tsbuildinfo",
     "lint": "eslint \"./**/*.ts*\"",
     "type-check": "tsc --build",
     "prettier-check": "prettier --check \"./**/*.ts*\"",
@@ -49,6 +49,7 @@
     "jsdom": "^24.0.0",
     "msw": "2.6.4",
     "react-dom": "^18 || ^19 || ^19.0.0-rc",
+    "rimraf": "^6",
     "tsup": "^7.2.0",
     "typescript": "5.8.3",
     "zod": "3.25.76"

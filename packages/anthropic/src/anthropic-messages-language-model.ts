@@ -1,4 +1,5 @@
 import {
+<<<<<<< HEAD
   JSONObject,
   JSONValue,
   LanguageModelV2,
@@ -10,6 +11,14 @@ import {
   LanguageModelV2StreamPart,
   LanguageModelV2Usage,
   SharedV2ProviderMetadata,
+=======
+  LanguageModelV1,
+  LanguageModelV1CallWarning,
+  LanguageModelV1FinishReason,
+  LanguageModelV1FunctionToolCall,
+  LanguageModelV1ProviderMetadata,
+  LanguageModelV1StreamPart,
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   UnsupportedFunctionalityError,
 } from '@ai-sdk/provider';
 import {
@@ -143,6 +152,7 @@ type AnthropicMessagesConfig = {
   provider: string;
   baseURL: string;
   headers: Resolvable<Record<string, string | undefined>>;
+  supportsImageUrls: boolean;
   fetch?: FetchFunction;
   buildRequestUrl?: (baseURL: string, isStreaming: boolean) => string;
   transformRequestBody?: (args: Record<string, any>) => Record<string, any>;
@@ -150,8 +160,14 @@ type AnthropicMessagesConfig = {
   generateId?: () => string;
 };
 
+<<<<<<< HEAD
 export class AnthropicMessagesLanguageModel implements LanguageModelV2 {
   readonly specificationVersion = 'v2';
+=======
+export class AnthropicMessagesLanguageModel implements LanguageModelV1 {
+  readonly specificationVersion = 'v1';
+  readonly defaultObjectGenerationMode = 'tool';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
   readonly modelId: AnthropicMessagesModelId;
 
@@ -171,12 +187,21 @@ export class AnthropicMessagesLanguageModel implements LanguageModelV2 {
     return url.protocol === 'https:';
   }
 
+  supportsUrl(url: URL): boolean {
+    return url.protocol === 'https:';
+  }
+
   get provider(): string {
     return this.config.provider;
   }
 
+<<<<<<< HEAD
   get supportedUrls() {
     return this.config.supportedUrls?.() ?? {};
+=======
+  get supportsImageUrls(): boolean {
+    return this.config.supportsImageUrls;
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
   }
 
   private async getArgs({

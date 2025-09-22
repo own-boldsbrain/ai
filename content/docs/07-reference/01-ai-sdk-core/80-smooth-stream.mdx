@@ -52,6 +52,7 @@ const result = streamText({
 
 #### Word chunking caveats with non-latin languages
 
+<<<<<<< HEAD
 The word based chunking **does not work well** with the following languages that do not delimit words with spaces:
 
 For these languages we recommend using a custom regex, like the following:
@@ -88,6 +89,23 @@ For these languages you could pass your own language aware chunking function:
 - Vietnamese
 - Thai
 - Javanese (Aksara Jawa)
+=======
+<Note>
+    The word based chunking **does not work well** with the following languages that do not delimit words with spaces:
+
+    For these languages we recommend using a custom regex, like the following:
+
+    - Chinese - `/[\u4E00-\u9FFF]|\S+\s+/`
+    - Japanese - `/[\u3040-\u309F\u30A0-\u30FF]|\S+\s+/`
+
+    For these languages you could pass your own language aware chunking function:
+
+    - Vietnamese
+    - Thai
+    - Javanese (Aksara Jawa)
+
+</Note>
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 #### Regex based chunking
 

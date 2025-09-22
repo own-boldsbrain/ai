@@ -12,16 +12,24 @@ Generates speech audio from text.
 ```ts
 import { experimental_generateSpeech as generateSpeech } from 'ai';
 import { openai } from '@ai-sdk/openai';
+<<<<<<< HEAD
+=======
+import { readFile } from 'fs/promises';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 const { audio } = await generateSpeech({
   model: openai.speech('tts-1'),
   text: 'Hello from the AI SDK!',
+<<<<<<< HEAD
   voice: 'alloy',
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 });
 
 console.log(audio);
 ```
 
+<<<<<<< HEAD
 ## Examples
 
 ### OpenAI
@@ -50,6 +58,8 @@ const { audio } = await generateSpeech({
 });
 ```
 
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 ## Import
 
 <Snippet
@@ -65,7 +75,11 @@ const { audio } = await generateSpeech({
   content={[
     {
       name: 'model',
+<<<<<<< HEAD
       type: 'SpeechModelV2',
+=======
+      type: 'SpeechModelV1',
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       description: 'The speech model to use.',
     },
     {
@@ -99,6 +113,7 @@ const { audio } = await generateSpeech({
       description: 'The speed of the speech generation.',
     },
     {
+<<<<<<< HEAD
       name: 'language',
       type: 'string',
       isOptional: true,
@@ -106,6 +121,8 @@ const { audio } = await generateSpeech({
         'The language for speech generation. This should be an ISO 639-1 language code (e.g. "en", "es", "fr") or "auto" for automatic language detection. Provider support varies.',
     },
     {
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       name: 'providerOptions',
       type: 'Record<string, Record<string, JSONValue>>',
       isOptional: true,
@@ -195,12 +212,15 @@ const { audio } = await generateSpeech({
                 'The ID of the response model that was used to generate the response.',
             },
             {
+<<<<<<< HEAD
               name: 'body',
               isOptional: true,
               type: 'unknown',
               description: 'Optional response body.',
             },
             {
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
               name: 'headers',
               type: 'Record<string, string>',
               isOptional: true,

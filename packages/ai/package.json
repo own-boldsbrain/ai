@@ -17,7 +17,7 @@
   "scripts": {
     "build": "pnpm clean && tsup --tsconfig tsconfig.build.json",
     "build:watch": "pnpm clean && tsup --watch --tsconfig tsconfig.build.json",
-    "clean": "rm -rf dist *.tsbuildinfo",
+    "clean": "rimraf dist *.tsbuildinfo",
     "lint": "eslint \"./**/*.ts*\"",
     "type-check": "tsc --build",
     "prettier-check": "prettier --check \"./**/*.ts*\"",
@@ -58,7 +58,10 @@
     "@ai-sdk/gateway": "workspace:*",
     "@ai-sdk/provider": "workspace:*",
     "@ai-sdk/provider-utils": "workspace:*",
-    "@opentelemetry/api": "1.9.0"
+    "@ai-sdk/react": "workspace:*",
+    "@ai-sdk/ui-utils": "workspace:*",
+    "@opentelemetry/api": "1.9.0",
+    "jsondiffpatch": "0.6.0"
   },
   "devDependencies": {
     "@edge-runtime/vm": "^5.0.0",
@@ -67,6 +70,7 @@
     "@vercel/ai-tsconfig": "workspace:*",
     "eslint": "8.57.1",
     "eslint-config-vercel-ai": "workspace:*",
+    "rimraf": "^5.0.5",
     "tsup": "^7.2.0",
     "typescript": "5.8.3",
     "zod": "3.25.76"

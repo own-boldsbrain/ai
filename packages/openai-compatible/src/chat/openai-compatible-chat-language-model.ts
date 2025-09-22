@@ -759,6 +759,10 @@ const createOpenAICompatibleChatChunkSchema = <
                   z.object({
                     index: z.number(),
                     id: z.string().nullish(),
+<<<<<<< HEAD:packages/openai-compatible/src/chat/openai-compatible-chat-language-model.ts
+=======
+                    type: z.literal('function').nullish(),
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017:packages/openai-compatible/src/openai-compatible-chat-language-model.ts
                     function: z.object({
                       name: z.string().nullish(),
                       arguments: z.string().nullish(),

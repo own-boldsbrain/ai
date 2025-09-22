@@ -27,6 +27,14 @@ import {
   LanguageModelUsage,
 } from '../types';
 import { ObjectStreamPart } from './stream-object-result';
+<<<<<<< HEAD:packages/ai/src/generate-object/output-strategy.ts
+=======
+import {
+  FinishReason,
+  LanguageModelResponseMetadata,
+  LanguageModelUsage,
+} from '../types';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017:packages/ai/core/generate-object/output-strategy.ts
 
 export interface OutputStrategy<PARTIAL, RESULT, ELEMENT_STREAM> {
   readonly type: 'object' | 'array' | 'enum' | 'no-schema';

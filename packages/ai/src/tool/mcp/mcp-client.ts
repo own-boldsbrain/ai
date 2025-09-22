@@ -333,6 +333,18 @@ class DefaultMCPClient implements MCPClient {
           continue;
         }
 
+<<<<<<< HEAD:packages/ai/src/tool/mcp/mcp-client.ts
+=======
+        const parameters =
+          schemas === 'automatic'
+            ? jsonSchema({
+                ...inputSchema,
+                properties: inputSchema.properties ?? {},
+                additionalProperties: false,
+              } as JSONSchema7)
+            : schemas[name].parameters;
+
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017:packages/ai/core/tool/mcp/mcp-client.ts
         const self = this;
 
         const execute = async (

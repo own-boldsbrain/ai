@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import { createTestServer } from '@ai-sdk/test-server/with-vitest';
 import { LMNTSpeechModel } from './lmnt-speech-model';
 import { createLMNT } from './lmnt-provider';
 import { describe, it, expect } from 'vitest';
+=======
+import { createTestServer } from '@ai-sdk/provider-utils/test';
+import { LMNTSpeechModel } from './lmnt-speech-model';
+import { createLMNT } from './lmnt-provider';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 const provider = createLMNT({ apiKey: 'test-api-key' });
 const model = provider.speech('aurora');
@@ -37,7 +43,11 @@ describe('doGenerate', () => {
       text: 'Hello from the AI SDK!',
     });
 
+<<<<<<< HEAD
     expect(await server.calls[0].requestBodyJson).toMatchObject({
+=======
+    expect(await server.calls[0].requestBody).toMatchObject({
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       model: 'aurora',
       text: 'Hello from the AI SDK!',
     });
@@ -78,7 +88,11 @@ describe('doGenerate', () => {
       speed: 1.5,
     });
 
+<<<<<<< HEAD
     expect(await server.calls[0].requestBodyJson).toMatchObject({
+=======
+    expect(await server.calls[0].requestBody).toMatchObject({
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       model: 'aurora',
       text: 'Hello from the AI SDK!',
       voice: 'nova',

@@ -20,7 +20,10 @@ createFeatureTestSuite({
   models: {
     invalidModel: provider.chat('no-such-model'),
     languageModels: [
+<<<<<<< HEAD
       createChatModel('grok-4'),
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       createChatModel('grok-3-beta'),
       createChatModel('grok-3-fast-beta'),
       createChatModel('grok-3-mini-beta'),

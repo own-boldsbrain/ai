@@ -18,8 +18,13 @@ const audioFormatMap = {
 export async function saveAudioFile(audio: GeneratedAudioFile) {
   const timestamp = Date.now();
   const extension =
+<<<<<<< HEAD
     audio.mediaType in audioFormatMap
       ? audioFormatMap[audio.mediaType as keyof typeof audioFormatMap]
+=======
+    audio.mimeType in audioFormatMap
+      ? audioFormatMap[audio.mimeType as keyof typeof audioFormatMap]
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       : 'mp3';
 
   // Save the audio file to disk.

@@ -16,7 +16,7 @@
     "test": "vitest --run",
     "test:update": "vitest --run -u",
     "test:watch": "vitest",
-    "clean": "rm -rf dist *.tsbuildinfo"
+    "clean": "rimraf dist *.tsbuildinfo"
   },
   "files": [
     "dist",
@@ -70,6 +70,7 @@
     "globals": "^16.0.0",
     "jsdom": "^26.0.0",
     "publint": "^0.3.2",
+    "rimraf": "^6.0.1",
     "svelte": "^5.31.0",
     "svelte-check": "^4.0.0",
     "typescript": "^5.0.0",

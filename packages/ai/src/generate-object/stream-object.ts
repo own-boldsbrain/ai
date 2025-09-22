@@ -730,6 +730,7 @@ class DefaultStreamObjectResult<PARTIAL, RESULT, ELEMENT_STREAM>
                     // log warnings:
                     logWarnings(warnings ?? []);
 
+<<<<<<< HEAD:packages/ai/src/generate-object/stream-object.ts
                     // resolve promises that can be resolved now:
                     self._usage.resolve(usage);
                     self._providerMetadata.resolve(providerMetadata);
@@ -755,6 +756,22 @@ class DefaultStreamObjectResult<PARTIAL, RESULT, ELEMENT_STREAM>
                     } catch (e) {
                       error = e;
                       self._object.reject(e);
+=======
+                    if (validationResult.success) {
+                      object = validationResult.value;
+                      self.objectPromise.resolve(object);
+                    } else {
+                      error = new NoObjectGeneratedError({
+                        message:
+                          'No object generated: response did not match schema.',
+                        cause: validationResult.error,
+                        text: accumulatedText,
+                        response,
+                        usage,
+                        finishReason: finishReason,
+                      });
+                      self.objectPromise.reject(error);
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017:packages/ai/core/generate-object/stream-object.ts
                     }
                     break;
                   }

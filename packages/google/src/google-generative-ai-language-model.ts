@@ -95,8 +95,13 @@ export class GoogleGenerativeAILanguageModel implements LanguageModelV2 {
 
     const googleOptions = await parseProviderOptions({
       provider: 'google',
+<<<<<<< HEAD
       providerOptions,
       schema: googleGenerativeAIProviderOptions,
+=======
+      providerOptions: providerMetadata,
+      schema: googleGenerativeAIProviderOptionsSchema,
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
     });
 
     // Add warning if includeThoughts is used with a non-Vertex Google provider
@@ -795,3 +800,10 @@ const chunkSchema = z.object({
     })
     .nullish(),
 });
+
+const googleGenerativeAIProviderOptionsSchema = z.object({
+  responseModalities: z.array(z.enum(['TEXT', 'IMAGE'])).nullish(),
+});
+export type GoogleGenerativeAIProviderOptions = z.infer<
+  typeof googleGenerativeAIProviderOptionsSchema
+>;

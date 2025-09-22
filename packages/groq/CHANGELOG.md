@@ -1,5 +1,6 @@
 # @ai-sdk/groq
 
+<<<<<<< HEAD
 ## 2.1.0-beta.1
 
 ### Patch Changes
@@ -697,6 +698,45 @@
 - Updated dependencies [d5f588f]
   - @ai-sdk/provider-utils@3.0.0-canary.0
   - @ai-sdk/provider@2.0.0-canary.0
+=======
+## 1.2.8
+
+### Patch Changes
+
+- 74688db: feat(providers/groq): add transcribe
+- Updated dependencies [beef951]
+  - @ai-sdk/provider@1.1.3
+  - @ai-sdk/provider-utils@2.2.7
+
+## 1.2.7
+
+### Patch Changes
+
+- Updated dependencies [013faa8]
+  - @ai-sdk/provider@1.1.2
+  - @ai-sdk/provider-utils@2.2.6
+
+## 1.2.6
+
+### Patch Changes
+
+- Updated dependencies [c21fa6d]
+  - @ai-sdk/provider-utils@2.2.5
+  - @ai-sdk/provider@1.1.1
+
+## 1.2.5
+
+### Patch Changes
+
+- 8fdc8fe: feat (provider/groq): add llama 4 model
+
+## 1.2.4
+
+### Patch Changes
+
+- Updated dependencies [2c19b9a]
+  - @ai-sdk/provider-utils@2.2.4
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 ## 1.2.3
 

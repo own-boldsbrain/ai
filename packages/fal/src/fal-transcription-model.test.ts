@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 import { createTestServer } from '@ai-sdk/test-server/with-vitest';
+=======
+import { createTestServer } from '@ai-sdk/provider-utils/test';
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 import { createFal } from './fal-provider';
 import { FalTranscriptionModel } from './fal-transcription-model';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
+<<<<<<< HEAD
 import { describe, it, expect } from 'vitest';
+=======
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 const audioData = await readFile(path.join(__dirname, 'transcript-test.mp3'));
 const provider = createFal({ apiKey: 'test-api-key' });
@@ -78,7 +85,11 @@ describe('doGenerate', () => {
       mediaType: 'audio/wav',
     });
 
+<<<<<<< HEAD
     expect(await server.calls[0].requestBodyJson).toMatchObject({
+=======
+    expect(await server.calls[0].requestBody).toMatchObject({
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
       audio_url: expect.stringMatching(/^data:audio\//),
       task: 'transcribe',
       diarize: true,

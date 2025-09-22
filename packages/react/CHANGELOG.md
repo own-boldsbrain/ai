@@ -1,5 +1,6 @@
 # @ai-sdk/react
 
+<<<<<<< HEAD
 ## 2.1.0-beta.4
 
 ### Patch Changes
@@ -1412,6 +1413,37 @@
 - Updated dependencies [9477ebb]
   - @ai-sdk/provider-utils@3.0.0-canary.0
   - @ai-sdk/ui-utils@2.0.0-canary.0
+=======
+## 1.2.9
+
+### Patch Changes
+
+- @ai-sdk/provider-utils@2.2.7
+- @ai-sdk/ui-utils@1.2.8
+
+## 1.2.8
+
+### Patch Changes
+
+- @ai-sdk/provider-utils@2.2.6
+- @ai-sdk/ui-utils@1.2.7
+
+## 1.2.7
+
+### Patch Changes
+
+- Updated dependencies [c21fa6d]
+  - @ai-sdk/provider-utils@2.2.5
+  - @ai-sdk/ui-utils@1.2.6
+
+## 1.2.6
+
+### Patch Changes
+
+- Updated dependencies [2c19b9a]
+  - @ai-sdk/provider-utils@2.2.4
+  - @ai-sdk/ui-utils@1.2.5
+>>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017
 
 ## 1.2.5
 
