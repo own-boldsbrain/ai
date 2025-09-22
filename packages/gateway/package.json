@@ -14,7 +14,7 @@
   "scripts": {
     "build": "pnpm clean && tsup --tsconfig tsconfig.build.json",
     "build:watch": "pnpm clean && tsup --watch",
-    "clean": "rm -rf dist *.tsbuildinfo",
+    "clean": "rimraf dist && del *.tsbuildinfo 2>nul || echo.",
     "lint": "eslint \"./**/*.ts*\"",
     "type-check": "tsc --build",
     "prettier-check": "prettier --check \"./**/*.ts*\"",
@@ -40,6 +40,7 @@
     "@ai-sdk/test-server": "workspace:*",
     "@types/node": "18.15.11",
     "@vercel/ai-tsconfig": "workspace:*",
+    "rimraf": "^6.0.1",
     "tsup": "^8",
     "typescript": "5.8.3",
     "zod": "3.25.76"
