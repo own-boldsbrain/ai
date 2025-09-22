@@ -4,7 +4,6 @@ import {
   safeParseJSON,
   safeValidateTypes,
   Schema,
-<<<<<<< HEAD:packages/ai/src/generate-text/output.ts
 } from '@ai-sdk/provider-utils';
 import * as z3 from 'zod/v3';
 import * as z4 from 'zod/v4';
@@ -12,17 +11,6 @@ import { NoObjectGeneratedError } from '../error/no-object-generated-error';
 import { DeepPartial } from '../util/deep-partial';
 import { parsePartialJson } from '../util/parse-partial-json';
 import { FinishReason } from '../types/language-model';
-=======
-} from '@ai-sdk/ui-utils';
-import { z } from 'zod';
-import { NoObjectGeneratedError } from '../../errors';
-import { injectJsonInstruction } from '../generate-object/inject-json-instruction';
-import {
-  FinishReason,
-  LanguageModel,
-  LanguageModelV1CallOptions,
-} from '../types/language-model';
->>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017:packages/ai/core/generate-text/output.ts
 import { LanguageModelResponseMetadata } from '../types/language-model-response-metadata';
 import { LanguageModelUsage } from '../types/usage';
 

@@ -317,13 +317,8 @@ describe('MCPClient', () => {
     });
     const tools = await client.tools();
     const tool = tools['mock-tool-no-args'];
-<<<<<<< HEAD:packages/ai/src/tool/mcp/mcp-client.test.ts
     expect(tool).toHaveProperty('inputSchema');
     expect(tool.inputSchema).toMatchObject({
-=======
-    expect(tool).toHaveProperty('parameters');
-    expect(tool.parameters).toMatchObject({
->>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017:packages/ai/core/tool/mcp/mcp-client.test.ts
       jsonSchema: {
         type: 'object',
         properties: {},
@@ -332,7 +327,6 @@ describe('MCPClient', () => {
     });
 
     const result = await tool.execute({}, { messages: [], toolCallId: '1' });
-<<<<<<< HEAD:packages/ai/src/tool/mcp/mcp-client.test.ts
     expect(result).toMatchInlineSnapshot(`
       {
         "content": [
@@ -344,10 +338,5 @@ describe('MCPClient', () => {
         "isError": false,
       }
     `);
-=======
-    expect(result).toEqual({
-      content: [{ type: 'text', text: 'Mock tool call result' }],
-    });
->>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017:packages/ai/core/tool/mcp/mcp-client.test.ts
   });
 });
