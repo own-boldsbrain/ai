@@ -7,7 +7,7 @@
     "build:packages": "turbo build --filter=@ai-sdk/* --filter=ai",
     "changeset": "changeset",
     "clean": "turbo clean",
-    "dev": "turbo dev --no-cache --concurrency 25 --continue",
+    "dev": "turbo dev --no-cache --concurrency 35 --continue",
     "lint": "turbo lint",
     "prepare": "husky install",
     "update-references": "update-ts-references",
