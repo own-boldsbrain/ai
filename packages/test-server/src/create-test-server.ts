@@ -66,12 +66,7 @@ class TestServerCall {
     return this.request!.headers.get('content-type')?.startsWith(
       'multipart/form-data',
     )
-<<<<<<< HEAD:packages/test-server/src/create-test-server.ts
       ? this.request!.formData().then(formData => {
-=======
-      ? // For multipart/form-data, return the form data entries as an object
-        this.request!.formData().then(formData => {
->>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017:packages/provider-utils/src/test/unified-test-server.ts
           const entries: Record<string, any> = {};
           formData.forEach((value, key) => {
             entries[key] = value;
