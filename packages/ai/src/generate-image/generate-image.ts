@@ -178,7 +178,7 @@ Only applicable for HTTP-based providers.
         image =>
           new DefaultGeneratedFile({
             data: image,
-            mimeType:
+            mediaType:
               detectMimeType({
                 data: image,
                 signatures: imageMimeTypeSignatures,
