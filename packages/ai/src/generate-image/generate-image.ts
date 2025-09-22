@@ -2,9 +2,9 @@ import { ImageModelV2, ImageModelV2ProviderMetadata } from '@ai-sdk/provider';
 import { ProviderOptions, withUserAgentSuffix } from '@ai-sdk/provider-utils';
 import { NoImageGeneratedError } from '../error/no-image-generated-error';
 import {
-  detectMediaType,
-  imageMediaTypeSignatures,
-} from '../util/detect-media-type';
+  detectMimeType,
+  imageMimeTypeSignatures,
+} from '../util/detect-mimetype';
 import { prepareRetries } from '../util/prepare-retries';
 import { UnsupportedModelVersionError } from '../error/unsupported-model-version-error';
 import {
@@ -14,15 +14,8 @@ import {
 import { ImageGenerationWarning } from '../types/image-model';
 import { ImageModelResponseMetadata } from '../types/image-model-response-metadata';
 import { GenerateImageResult } from './generate-image-result';
-<<<<<<< HEAD:packages/ai/src/generate-image/generate-image.ts
 import { logWarnings } from '../logger/log-warnings';
 import { VERSION } from '../version';
-=======
-import {
-  detectMimeType,
-  imageMimeTypeSignatures,
-} from '../util/detect-mimetype';
->>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017:packages/ai/core/generate-image/generate-image.ts
 
 /**
 Generates images using an image model.
@@ -185,17 +178,10 @@ Only applicable for HTTP-based providers.
         image =>
           new DefaultGeneratedFile({
             data: image,
-<<<<<<< HEAD:packages/ai/src/generate-image/generate-image.ts
-            mediaType:
-              detectMediaType({
-                data: image,
-                signatures: imageMediaTypeSignatures,
-=======
             mimeType:
               detectMimeType({
                 data: image,
                 signatures: imageMimeTypeSignatures,
->>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017:packages/ai/core/generate-image/generate-image.ts
               }) ?? 'image/png',
           }),
       ),
