@@ -333,8 +333,6 @@ class DefaultMCPClient implements MCPClient {
           continue;
         }
 
-<<<<<<< HEAD:packages/ai/src/tool/mcp/mcp-client.ts
-=======
         const parameters =
           schemas === 'automatic'
             ? jsonSchema({
@@ -342,9 +340,8 @@ class DefaultMCPClient implements MCPClient {
                 properties: inputSchema.properties ?? {},
                 additionalProperties: false,
               } as JSONSchema7)
-            : schemas[name].parameters;
+            : schemas[name].inputSchema;
 
->>>>>>> 7206b1f58a6c3fc6d4442999569e2679c28e9017:packages/ai/core/tool/mcp/mcp-client.ts
         const self = this;
 
         const execute = async (
@@ -359,11 +356,7 @@ class DefaultMCPClient implements MCPClient {
           schemas === 'automatic'
             ? dynamicTool({
                 description,
-                inputSchema: jsonSchema({
-                  ...inputSchema,
-                  properties: inputSchema.properties ?? {},
-                  additionalProperties: false,
-                } as JSONSchema7),
+                inputSchema: parameters,
                 execute,
               })
             : tool({
